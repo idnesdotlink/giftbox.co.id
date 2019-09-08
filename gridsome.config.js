@@ -5,33 +5,39 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Giftbox Promosindo",
-  siteUrl: "https://idnesdotlink.github.io",
-  pathPrefix: "giftbox.co.id",
-  siteDescription: "Giftbox Promosindo",
+  siteName: 'Giftbox Promosindo',
+  siteUrl: 'https://idnesdotlink.github.io',
+  pathPrefix: 'giftbox.co.id',
+  siteDescription: 'Giftbox Promosindo',
   plugins: [
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-filesystem',
       options: {
-        path: "content/posts/**/*.md",
-        typeName: "Post",
-        route: "/blog/:slug",
-      },
+        path: 'content/posts/**/*.md',
+        typeName: 'Post',
+        route: '/blog/:slug'
+      }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/products/**/*.md',
+        typeName: 'Product',
+        route: '/product/:slug'
+      }
+    }
   ],
   transformers: {
-    //Add markdown support to all file-system sources
+    // Add markdown support to all file-system sources
     remark: {
-      externalLinksTarget: "_blank",
-      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-      plugins: ["@gridsome/remark-prismjs"],
-    },
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: ['@gridsome/remark-prismjs']
+    }
   },
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
   }
-};
+}

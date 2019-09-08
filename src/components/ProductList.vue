@@ -1,21 +1,21 @@
 <template>
-  <div class="post-list">
+  <div class="product-list">
     <hr class="line" />
     <p
       class="date"
-      v-html="post.date"
+      v-html="product.date"
     />
     <h1
       class="title"
-      v-html="post.title"
+      v-html="product.title"
     />
     <p
       class="description"
-      v-html="post.description"
+      v-html="product.description"
     />
-    <b> {{post.timeToRead}} min read </b> &nbsp;
+    <b> {{product.timeToRead}} min read </b> &nbsp;
     <g-link
-      :to="post.path"
+      :to="product.path"
       class="read"
     >Read More...</g-link>
   </div>
@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  props: ["post"],
+  props: ["product"],
 };
 </script>

@@ -2,9 +2,9 @@
   <Layout>
     <h1>Products</h1>
     <ProductList
-      v-for="edge in $page.allPost.edges"
+      v-for="edge in $page.allProduct.edges"
       :key="edge.node.id"
-      :post="edge.node"
+      :product="edge.node"
     />
   </Layout>
 </template>
@@ -15,7 +15,7 @@ query {
     siteName
     siteDescription
   }
-  allPost {
+  allProduct {
     totalCount
     edges {
       node {
@@ -27,7 +27,6 @@ query {
         path
       }
     }
-
   }
 }
 </page-query>

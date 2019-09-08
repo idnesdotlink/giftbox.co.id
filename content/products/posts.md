@@ -1,5 +1,5 @@
 ---
-title: "Writing In Markdown"
+title: "Writing In Markdown 2"
 description: "Markdown post content stress test. See how your post content is being styled with Tailwind CSS."
 date: 2019-05-23
 ---
@@ -45,8 +45,6 @@ The image illustrated above shows the emotion of a girl. The idea therefore, is 
 2. **Decorative Images:** Decorative images are images that don't necessarily convey meaning or information. These images don't add information to the content of the page mainly because the content description is already provided or the image is used for styling purposes. Therefore, the `alt` attribute is not provided or left empty `(alt="")`. The reason for this is to avoid assistive technologies such as screen readers from reading a redundant text to its users. Leaving the `alt` attribute out entirely is not a good practice because some screen readers will announce the file name of the image instead. An example is shown below:
 
 3. **Group of Images:** This type of images represent images that are grouped together to convey a single piece of information. An example can be a collection of heart icons to represent a rating. When adding descriptive text for each image, the alt attribute for only one of the image should have a description of the group of images, while the other images have an empty `alt` attribute so they are ignored by screen readers. Here's an example:
-
-![Alternative text](~/giftbox-logo.png)
 
 ```html
 <img src="full-heart.png" alt="1.5 of 3 hearts" />
