@@ -23,7 +23,14 @@ module.exports = {
       options: {
         path: 'content/products/**/*.md',
         typeName: 'Product',
-        route: '/product/:slug'
+        route: '/product/:slug',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            route: 'tag/:id',
+            create: true
+          }
+        }
       }
     }
   ],

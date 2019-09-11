@@ -2,6 +2,15 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "/home/idnes/Projects/gridsome-project/gridsome-portfolio-starter"
+    },
+    {
+      "path": "/home/idnes/Projects/gridsome-project/gridsome-test"
+    },
+    {
+      "path": "/home/idnes/Projects/vue-project/giv"
     }
   ],
   "settings": {
