@@ -30,6 +30,7 @@ query Product($page: Int) {
           description
           date (format: "D MMMM YYYY")
           path
+          image
         }
       }
     }

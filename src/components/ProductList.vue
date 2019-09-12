@@ -5,6 +5,7 @@
       class="date"
       v-html="product.date"
     />
+    <g-image :src="product.image" />
     <h1
       class="title"
       v-html="product.title"
