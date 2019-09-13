@@ -1,9 +1,11 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
+      <g-image
+        alt="Example image"
+        src="~/giftbox-logo.png"
+        width="415"
+      />
       <nav class="nav">
         <g-link
           class="nav__link"

@@ -1,12 +1,7 @@
 <template>
   <Layout>
-
+    <Slide :products="$page.allProduct.edges"></Slide>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image
-      alt="Example image"
-      src="~/giftbox-logo.png"
-      width="415"
-    />
 
     <h1>Hello, world!</h1>
 
@@ -33,9 +28,11 @@
 
 <script>
 import PostList from "@/components/PostList"
+import Slide from "@/components/Slide"
 export default {
   components: {
-    PostList
+    PostList,
+    Slide
   },
   metaInfo: {
     title: 'Hello, world!'
@@ -48,6 +45,14 @@ query {
   metaData {
     siteName
     siteDescription
+  }
+  allProduct {
+    edges {
+        node {
+          id
+          image
+        }
+    }
   }
   allPost {
     totalCount
