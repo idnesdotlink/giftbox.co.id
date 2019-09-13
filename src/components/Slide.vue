@@ -1,24 +1,33 @@
 <template>
   <div>HALLO
-    <slick>
+    <!-- <slick>
       <div
         v-for="product in products"
         :key="product.node.id"
       >{{ product.node.id }}
         <g-image :src="product.node.image" />
       </div>
-    </slick>
+    </slick> -->
+    <ClientOnly>
+      <TinySlider
+        :mouse-drag="true"
+        :loop="false"
+        items="1"
+        gutter="20"
+      >
+        <div>Slider item #1</div>
+        <div>Slider item #2</div>
+      </TinySlider>
+    </ClientOnly>
   </div>
 </template>
 
 <script>
-import Slick from "vue-slick";
-import Jquery from 'jquery';
 // import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import "tiny-slider/dist/tiny-slider.css";
 export default {
   components: {
-    Slick
+    TinySlider: () => import('vue-tiny-slider')
   },
   props: ['products'],
   mounted () {

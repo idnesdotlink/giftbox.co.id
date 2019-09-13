@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <Slide :products="$page.allProduct.edges"></Slide>
+    <ClientOnly>
+      <Slide :products="$page.allProduct.edges"></Slide>
+    </ClientOnly>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
     <h1>Hello, world!</h1>

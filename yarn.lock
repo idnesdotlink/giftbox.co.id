@@ -10368,6 +10368,11 @@ tiny-emitter@^2.0.0:
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
+tiny-slider@^2.9.1:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.9.2.tgz#dcd70ac79054a4d170bc2cfde3efbdaa2cc0c75f"
+  integrity sha512-2sgEJpVbpIbbgiYM/xGa0HMvvtUZSJvXeZJmLWBux6VgFqh/MQG8LXBR59ZLYpa/1OtwM0E6/ic55oLOJN9Mnw==
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -11144,6 +11149,14 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-tiny-slider@^0.1.35:
+  version "0.1.35"
+  resolved "https://registry.yarnpkg.com/vue-tiny-slider/-/vue-tiny-slider-0.1.35.tgz#d8e406c682961eb4900329ec8331473d1307561b"
+  integrity sha512-crja26TChE2n/SBqM63a8EhvKQ6DkW9xpnr6FfVIU5WOj+cvd+nwRUOLVUs4mM+/6iFNULdUSINkfmm64bvC9w==
+  dependencies:
+    lodash "^4.17.11"
+    tiny-slider "^2.9.1"
 
 vue2-leaflet@^2.2.1:
   version "2.2.1"
