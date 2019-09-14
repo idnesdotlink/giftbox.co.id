@@ -21,7 +21,14 @@
         >Products</g-link>
       </nav>
     </header>
-    <slot />
+    <transition
+      name="fade"
+      appear
+    >
+      <div>
+        <slot />
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -34,6 +41,14 @@ query {
 </static-query>
 
 <style>
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -47,7 +62,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header {

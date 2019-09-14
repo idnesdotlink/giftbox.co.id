@@ -17,6 +17,11 @@
     >
       {{ tag.title }}
     </g-link>
+    <p
+      v-for="slider in $page.product.sliders"
+      :key="slider"
+    > {{ slider }} </p>
+    <g-image :src="$page.product.image" />
     <div class="product-content">
       <p v-html="$page.product.content" />
     </div>
@@ -35,6 +40,8 @@ query Product ($path: String!) {
       title
       path
     }
+    image
+    sliders
   }
 }
 </page-query>

@@ -8,17 +8,17 @@
 module.exports = function(api) {
   api.loadSource(({ addContentType, getContentType }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api
-    // const product = getContentType("Product");
-    // product.addSchemaField("image", ({ graphql }) => ({
-    //   type: graphql.GraphQLString,
-    //   args: {
-    //     upperCase: { type: graphql.GraphQLBoolean, defaultValue: false }
-    //   },
-    //   resolve(node, args) {
-    //     const value = node.fields.myField;
-    //     return args.upperCase ? value.toUpperCase() : value;
-    //   }
-    // }));
+    const product = getContentType("Product");
+    product.addSchemaField("sliders", ({ graphql }) => ({
+      type: graphql.GraphQLList(graphql.GraphQLString)
+      // args: {
+      //   upperCase: { type: graphql.GraphQLBoolean, defaultValue: false }
+      // },
+      // resolve(node, args) {
+      //   const value = node.fields.myField;
+      //   return args.upperCase ? value.toUpperCase() : value;
+      // }
+    }));
   });
 
   api.createPages(({ createPage }) => {

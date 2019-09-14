@@ -1,33 +1,36 @@
 <template>
-  <div>HALLO
-    <!-- <slick>
-      <div
-        v-for="product in products"
-        :key="product.node.id"
-      >{{ product.node.id }}
-        <g-image :src="product.node.image" />
-      </div>
-    </slick> -->
+  <div>
     <ClientOnly>
+      <Spinner></Spinner>
       <TinySlider
         :mouse-drag="true"
-        :loop="false"
-        items="1"
+        :loop="true"
+        items="2"
         gutter="20"
+        :rewind="true"
+        :nav="true"
       >
-        <div>Slider item #1</div>
-        <div>Slider item #2</div>
+        <div
+          v-for="product in products"
+          :key="product.node.id"
+        >{{ product.node.title }}
+          <g-image
+            height="300"
+            fit="contain"
+            :src="product.node.image"
+          />
+        </div>
       </TinySlider>
     </ClientOnly>
   </div>
 </template>
 
 <script>
-// import "slick-carousel/slick/slick-theme.css";
 import "tiny-slider/dist/tiny-slider.css";
 export default {
   components: {
-    TinySlider: () => import('vue-tiny-slider')
+    TinySlider: () => import('vue-tiny-slider'),
+    Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   props: ['products'],
   mounted () {
@@ -38,185 +41,23 @@ export default {
 
 <style>
 @charset 'UTF-8';
-/* Slider */
-.slick-loading .slick-list {
-  /* background: #fff url("") center center no-repeat; */
-}
-
-/* Icons */
-/* @font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-} */
-/* Arrows */
-.slick-prev,
-.slick-next {
-  font-size: 0;
-  line-height: 0;
-
-  position: absolute;
-  top: 50%;
-
-  display: block;
-
-  width: 20px;
-  height: 20px;
+.tns-nav > [aria-controls] {
+  width: 30px;
+  height: 30px;
   padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-
-  cursor: pointer;
-
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-  color: transparent;
-  outline: none;
-  background: transparent;
-}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-  opacity: 1;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-
-  opacity: 0.75;
-  color: white;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-[dir="rtl"] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-.slick-prev:before {
-  content: "←";
-}
-[dir="rtl"] .slick-prev:before {
-  content: "→";
-}
-
-.slick-next {
-  right: -25px;
-}
-[dir="rtl"] .slick-next {
-  right: auto;
-  left: -25px;
-}
-.slick-next:before {
-  content: "→";
-}
-[dir="rtl"] .slick-next:before {
-  content: "←";
-}
-
-/* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
-
-  display: block;
-
-  width: 100%;
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
-
-  text-align: center;
-}
-.slick-dots li {
-  position: relative;
-
-  display: inline-block;
-
-  width: 20px;
-  height: 20px;
   margin: 0 5px;
-  padding: 0;
-
-  cursor: pointer;
-}
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-
-  display: block;
-
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-
-  cursor: pointer;
-
-  color: transparent;
+  border-radius: 50%;
+  background: #ddd;
   border: 0;
-  outline: none;
-  background: transparent;
 }
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-  outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-  opacity: 1;
-}
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  content: "•";
-  text-align: center;
-
-  opacity: 0.25;
-  color: black;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: black;
+.tns-controls [aria-controls] {
+  font-size: 15px;
+  margin: 0 5px;
+  padding: 0 1em;
+  height: 2.5em;
+  color: #000;
+  background: #66ccff;
+  border-radius: 3px;
+  border: 0;
 }
 </style>

@@ -52,6 +52,7 @@ query {
     edges {
         node {
           id
+          title
           image
         }
     }
