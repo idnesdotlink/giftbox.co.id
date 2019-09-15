@@ -15,7 +15,7 @@ module.exports = {
       options: {
         path: 'content/posts/**/*.md',
         typeName: 'Post',
-        route: '/blog/:slug'
+        route: '/blog/:title'
       }
     },
     {
@@ -23,7 +23,7 @@ module.exports = {
       options: {
         path: 'content/products/**/*.md',
         typeName: 'Product',
-        route: '/product/:slug',
+        route: '/product/:title',
         refs: {
           tags: {
             typeName: 'Tag',
@@ -42,7 +42,7 @@ module.exports = {
       plugins: ['@gridsome/remark-prismjs']
     }
   },
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule.use('vue-svg-loader').loader('vue-svg-loader')

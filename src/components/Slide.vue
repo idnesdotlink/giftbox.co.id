@@ -1,7 +1,6 @@
 <template>
   <div>
     <ClientOnly>
-      <Spinner></Spinner>
       <TinySlider
         :mouse-drag="true"
         :loop="true"
@@ -29,8 +28,7 @@
 import "tiny-slider/dist/tiny-slider.css";
 export default {
   components: {
-    TinySlider: () => import('vue-tiny-slider'),
-    Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
+    TinySlider: () => import('vue-tiny-slider')
   },
   props: ['products'],
   mounted () {

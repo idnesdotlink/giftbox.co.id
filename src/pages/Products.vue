@@ -12,7 +12,7 @@
 
 <page-query>
 query Product($page: Int) {
-  metaData {
+  metadata {
     siteName
     siteDescription
   }

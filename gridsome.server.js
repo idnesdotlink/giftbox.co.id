@@ -6,10 +6,11 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function(api) {
-  api.loadSource(({ addContentType, getContentType }) => {
+  api.loadSource(({ addContentType, getCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api
-    const product = getContentType("Product");
-    product.addSchemaField("sliders", ({ graphql }) => ({
+    const product = getCollection('Product')
+    console.log(product)
+    product.addSchemaField('sliders', ({ graphql }) => ({
       type: graphql.GraphQLList(graphql.GraphQLString)
       // args: {
       //   upperCase: { type: graphql.GraphQLBoolean, defaultValue: false }
@@ -18,10 +19,10 @@ module.exports = function(api) {
       //   const value = node.fields.myField;
       //   return args.upperCase ? value.toUpperCase() : value;
       // }
-    }));
-  });
+    }))
+  })
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
-  });
-};
+  })
+}
