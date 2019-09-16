@@ -9,7 +9,7 @@ module.exports = function(api) {
   api.loadSource(({ addContentType, getCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api
     const product = getCollection('Product')
-    console.log(product)
+    // console.log(product)
     product.addSchemaField('sliders', ({ graphql }) => ({
       type: graphql.GraphQLList(graphql.GraphQLString)
       // args: {
