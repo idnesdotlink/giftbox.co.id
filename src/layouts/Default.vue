@@ -103,7 +103,7 @@
             target="_blank"
             class="nav__link"
             to="/downloads/2019.pdf"
-          >Download Catalogue</g-link>
+          >Catalogue</g-link>
         </nav>
       </header>
       <transition
