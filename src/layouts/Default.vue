@@ -97,9 +97,10 @@
           >Products</g-link>
           <g-link
             class="nav__link"
-            to="/contacts"
+            to="/contact"
           >Products</g-link>
           <g-link
+            target="_blank"
             class="nav__link"
             to="/downloads/2019.pdf"
           >Download Catalogue</g-link>
