@@ -98,7 +98,7 @@
           <g-link
             class="nav__link"
             to="/contact"
-          >Products</g-link>
+          >Contact</g-link>
           <g-link
             target="_blank"
             class="nav__link"
