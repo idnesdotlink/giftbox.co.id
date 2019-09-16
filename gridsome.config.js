@@ -4,10 +4,14 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+var siteUrl = 'https://idnesdotlink.github.io'
+var pathPrefix = 'giftbox.co.id'
+var fullSiteUrl = siteUrl + '/' + pathPrefix
+
 module.exports = {
   siteName: 'Giftbox Promosindo',
-  siteUrl: 'https://idnesdotlink.github.io',
-  pathPrefix: 'giftbox.co.id',
+  siteUrl: siteUrl,
+  pathPrefix: pathPrefix,
   siteDescription: 'Giftbox Promosindo',
   plugins: [
     {
@@ -31,6 +35,34 @@ module.exports = {
             create: true
           }
         }
+      }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'Post',
+        feedOptions: {
+          title: 'Gridsome Portfolio Starter Blog',
+          feed_url: fullSiteUrl + '/rss.xml',
+          site_url: fullSiteUrl
+        },
+        feedItemOptions: (node) => ({
+          title: node.title,
+          description: node.summary,
+          url: fullSiteUrl + node.path,
+          author: 'Giftbox Dev',
+          date: node.date
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000 // default
       }
     }
   ],
