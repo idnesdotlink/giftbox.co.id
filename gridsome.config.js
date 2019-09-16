@@ -4,9 +4,16 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-var siteUrl = 'https://idnesdotlink.github.io'
-var pathPrefix = 'giftbox.co.id'
-var fullSiteUrl = siteUrl + '/' + pathPrefix
+const tailwind = require('tailwindcss')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+const postcssPlugins = [tailwind()]
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+
+const siteUrl = 'https://idnesdotlink.github.io'
+const pathPrefix = 'giftbox.co.id'
+const fullSiteUrl = siteUrl + '/' + pathPrefix
 
 module.exports = {
   siteName: 'Giftbox Promosindo',
@@ -78,5 +85,12 @@ module.exports = {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule.use('vue-svg-loader').loader('vue-svg-loader')
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins
+      }
+    }
   }
 }

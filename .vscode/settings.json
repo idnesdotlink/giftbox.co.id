@@ -1,5 +1,9 @@
 {
-    "workbench.colorCustomizations": {
-        "tab.unfocusedActiveBorder": "#fff0"
-    }
+  "workbench.colorCustomizations": {
+    "tab.unfocusedActiveBorder": "#fff0"
+  },
+  "css.validate": false,
+  "stylelint.enable": true,
+  "scss.validate": false,
+  "vetur.validation.style": false
 }

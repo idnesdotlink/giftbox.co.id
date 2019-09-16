@@ -82,29 +82,7 @@
           src="~/giftbox-logo.png"
           width="415"
         />
-        <nav class="nav">
-          <g-link
-            class="nav__link"
-            to="/"
-          >Home</g-link>
-          <g-link
-            class="nav__link"
-            to="/about"
-          >About</g-link>
-          <g-link
-            class="nav__link"
-            to="/products"
-          >Products</g-link>
-          <g-link
-            class="nav__link"
-            to="/contact"
-          >Contact</g-link>
-          <g-link
-            target="_blank"
-            class="nav__link"
-            to="/downloads/2019.pdf"
-          >Catalogue</g-link>
-        </nav>
+        <Navbar />
       </header>
       <transition
         name="fade"
@@ -127,6 +105,12 @@ query {
 </static-query>
 
 <style>
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 .fade-enter-active {
   transition: opacity 0.5s;
 }
@@ -167,6 +151,7 @@ body {
 
 <script>
 import { timeout } from 'bluebird'
+import Navbar from '../components/Navbar'
 export default {
   data () {
     return {
@@ -179,6 +164,7 @@ export default {
     }
   },
   components: {
+    Navbar,
     Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   mounted () {

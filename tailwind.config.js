@@ -3,10 +3,10 @@ module.exports = {
     extend: {
       spacing: {
         '80': '20rem',
-        '108': '27rem',
+        '108': '27rem'
       },
       borderWidth: {
-        '14': '14px',
+        '14': '14px'
       }
     },
     container: {
@@ -18,22 +18,27 @@ module.exports = {
         secondary: 'var(--bg-background-secondary)',
         tertiary: 'var(--bg-background-tertiary)',
 
-        form: 'var(--bg-background-form)',
+        form: 'var(--bg-background-form)'
       },
 
       copy: {
         primary: 'var(--text-copy-primary)',
-        secondary: 'var(--text-copy-hover)',
+        secondary: 'var(--text-copy-hover)'
       },
 
       'border-color': {
-        primary: 'var(--border-border-color-primary)',
+        primary: 'var(--border-border-color-primary)'
       },
 
       transparent: 'transparent',
 
       black: '#000',
       white: '#fff',
+
+      blue: {
+        500: '#ffcc00',
+        700: '#ff0055'
+      },
 
       green: {
         100: '#f0fff4',
@@ -44,7 +49,7 @@ module.exports = {
         600: '#38a169',
         700: '#2f855a',
         800: '#276749',
-        900: '#22543d',
+        900: '#22543d'
       },
 
       gray: {
@@ -56,8 +61,8 @@ module.exports = {
         600: '#718096',
         700: '#4a5568',
         800: '#2d3748',
-        900: '#1a202c',
-      },
+        900: '#1a202c'
+      }
     },
     fontFamily: {
       sans: [
@@ -73,7 +78,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+        '"Noto Color Emoji"'
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
@@ -82,9 +87,9 @@ module.exports = {
         'Consolas',
         '"Liberation Mono"',
         '"Courier New"',
-        'monospace',
-      ],
-    },
+        'monospace'
+      ]
+    }
   },
   variants: {
     // Some useful comment
