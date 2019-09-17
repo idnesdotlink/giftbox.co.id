@@ -9,7 +9,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 
 const postcssPlugins = [tailwind()]
 
-// if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 const siteUrl = 'https://idnesdotlink.github.io'
 const pathPrefix = 'giftbox.co.id'

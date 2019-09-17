@@ -11,7 +11,7 @@ module.exports = {
     './src/**/*.jsx',
     './src/**/*.html',
     './src/**/*.pug',
-    './src/**/*.md',
+    './src/**/*.md'
   ],
   whitelist: [
     'body',
@@ -21,11 +21,37 @@ module.exports = {
     'g-image',
     'g-image--lazy',
     'g-image--loaded',
+    'tns-ah',
+    'tns-autowidth',
+    'tns-carousel',
+    'tns-complete',
+    'tns-controls',
+    'tns-fadeIn',
+    'tns-fadeOut',
+    'tns-gallery',
+    'tns-horizontal',
+    'tns-item',
+    'tns-lazy-img',
+    'tns-moving',
+    'tns-nav',
+    'tns-no-calc',
+    'tns-no-subpixel',
+    'tns-normal',
+    'tns-outer',
+    'tns-ovh',
+    'tns-slide-active',
+    'tns-slider',
+    'tns-subpixel',
+    'tns-t-ct',
+    'tns-t-subp2',
+    'tns-transparent',
+    'tns-visually-hidden',
+    'tns-vpfix'
   ],
   extractors: [
     {
       extractor: TailwindExtractor,
-      extensions: ['vue', 'js', 'jsx', 'md', 'html', 'pug'],
-    },
-  ],
+      extensions: ['vue', 'js', 'jsx', 'md', 'html', 'pug']
+    }
+  ]
 }
