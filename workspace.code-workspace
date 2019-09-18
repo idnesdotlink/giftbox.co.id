@@ -17,11 +17,15 @@
     },
     {
       "path": "/home/idnes/Projects/gridsome-project/gridsome-bulma"
+    },
+    {
+      "path": "/home/idnes/Projects/tailwind"
     }
   ],
   "settings": {
     "workbench.colorCustomizations": {
       "tab.unfocusedActiveBorder": "#fff0"
-    }
+    },
+    "git.ignoreLimitWarning": true
   }
 }
