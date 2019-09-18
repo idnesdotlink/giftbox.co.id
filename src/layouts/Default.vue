@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen">
+  <div class="layout">
     <div
       style="width: 100px; height: 100px;"
       :style="stl2"
@@ -78,11 +78,11 @@
     >
       <header class="header">
         <g-image
-          alt="Giftbox Promosindo"
+          alt="Example image"
           src="~/giftbox-logo.png"
           width="415"
         />
-        <LayoutNavbar />
+        <Navbar />
       </header>
       <transition
         name="fade"
@@ -93,7 +93,6 @@
         </div>
       </transition>
     </div>
-    <LayoutFooter></LayoutFooter>
   </div>
 </template>
 
@@ -120,6 +119,14 @@ query {
   opacity: 0;
 }
 
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
 .layout {
   width: 100vw;
   height: 100vh;
@@ -136,12 +143,15 @@ query {
   margin-bottom: 20px;
   height: 80px;
 }
+
+.nav__link {
+  margin-left: 20px;
+}
 </style>
 
 <script>
 import { timeout } from 'bluebird'
-import LayoutNavbar from '../components/LayoutNavbar'
-import LayoutFooter from '@/components/LayoutFooter'
+import Navbar from '../components/Navbar'
 export default {
   data () {
     return {
@@ -154,8 +164,7 @@ export default {
     }
   },
   components: {
-    LayoutNavbar,
-    LayoutFooter,
+    Navbar,
     Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   mounted () {
