@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen">
+  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen lyt">
     <div
       style="width: 100px; height: 100px;"
       :style="stl2"
@@ -120,6 +120,10 @@ query {
   opacity: 0;
 }
 
+.main-content {
+  flex: 1 0 auto;
+}
+
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -128,13 +132,15 @@ body {
   line-height: 1.5;
 }
 
-.layout {
+.lyt {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
