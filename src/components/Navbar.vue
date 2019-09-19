@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <g-link
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      class="navbar-btn"
       to="/"
     >Home</g-link>
     <g-link
@@ -17,10 +17,9 @@
       to="/contact"
     >Contact</g-link>
     <g-link
-      target="_blank"
       class="nav__link navbar-btn"
-      to="/downloads/2019.pdf"
-    >Catalogue</g-link>
+      to="/catalogs"
+    >Catalogs</g-link>
   </nav>
 </template>
 
