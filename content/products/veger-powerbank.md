@@ -2,8 +2,8 @@
 title: "Veger Powerbank"
 description: "Markdown post content stress test. See how your post content is being styled with Tailwind CSS."
 date: 2019-05-21
-tags: ["electronics"]
-image: "./images/veger.jpg"
+tags: ["power-bank"]
+image: "./images/powerbank-veger.jpg"
 sliders: ["a", "b"]
 ---
 

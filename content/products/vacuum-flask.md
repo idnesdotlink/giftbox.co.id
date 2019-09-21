@@ -1,9 +1,9 @@
 ---
-title: "Florida Bottle"
+title: "Vacuum Flask"
 description: "Markdown post content stress test. See how your post content is being styled with Tailwind CSS."
 date: 2019-05-23
 tags: ["bottles"]
-image: "./images/flask.jpg"
+image: "./images/flask.png"
 sliders: ["a", "b"]
 ---
 
