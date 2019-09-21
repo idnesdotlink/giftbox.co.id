@@ -873,10 +873,10 @@
   dependencies:
     json-parse-better-errors "^1.0.2"
 
-"@gridsome/transformer-remark@^0.3.2":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.3.3.tgz#035b2be6740823ab38aa99fdad079cedc0a93629"
-  integrity sha512-r5w3NW1xOuPTGtl/I1S/fflP+y1xTZuffvnSg59M+4BXzyH8nDIMidnpyX2kbQbNC8NexJZEmqMDi72UrU2U9Q==
+"@gridsome/transformer-remark@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.3.4.tgz#7ecf37565ffb95001ed2cf7562ff1c42ac67ecbb"
+  integrity sha512-EYDfZs1JmpIfoXYszmxmzHNcg4YxcbBSjFWPm4CHpie6CXreNOmXErO2WZ5QvLscEu/B5bsno/3mAL30roCxyw==
   dependencies:
     gray-matter "^4.0.2"
     hash-sum "^1.0.2"
@@ -2185,10 +2185,10 @@ btoa@^1.1.2:
   resolved "https://registry.yarnpkg.com/btoa/-/btoa-1.2.1.tgz#01a9909f8b2c93f6bf680ba26131eb30f7fa3d73"
   integrity sha512-SB4/MIGlsiVkMcHmT+pSmIPoNDoHg+7cMzmt3Uxt628MTz2487DKSqK/fuhFBrkuqrYv5UCEnACpF4dTFNKc/g==
 
-buefy@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.8.3.tgz#d8eefe6c3368dde5bc80abfa33cb42736de92604"
-  integrity sha512-01aHoCy4LAD08MmUahXC8mVqtGK/kzJ45ysXskwLWILAhyLMqkZ5fvdMKD9Ky6iDsMttPHdwUe2csmdnIx9caw==
+buefy@0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.8.4.tgz#0c62d559e63aee8a18876ff90056f9a8b90f686f"
+  integrity sha512-hDUUKbKxQmtYlo/IPH9H+ewEN6KulpDxfNFIPvO5z3ukYqEG29psW6oFbJGisZDEIYGxqE2jMPcBOOjm8LxJVQ==
   dependencies:
     bulma "0.7.5"
 
@@ -5252,10 +5252,10 @@ gridsome-source-firestore@^1.1.0:
     firebase-admin "^8.3.0"
     queue "^6.0.1"
 
-gridsome@0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.3.tgz#c61225b5122d325e585b4d1809c2f0585bdcb7f2"
-  integrity sha512-Hs84+1rf0dsB+dRunBYVpqg8GNR4gXfUvlMOapyj1oWtt7qOTgc/qk6rFmEvfPUgatxGSfLLE2XtkPFEiw+vMQ==
+gridsome@0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.4.tgz#23746621c16097ed47fb907136901953341e29a2"
+  integrity sha512-WxNNH777XAk9dnxjUIp3xFaWVeXVon+wIfLnEQVtJN01gtDpnOY+rQKLTxYkB2z5Z5MEcKqS1WH7qXbnLpi7oQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.0.0"
@@ -11278,10 +11278,10 @@ trough@^1.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-loader@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-6.1.0.tgz#999cb0a7644f9c7c6c0901802dce50ceb0a76e5b"
-  integrity sha512-7JedeOu2rsYHQDEr2fwmMozABwbQTZXEaEMZPSIWG7gpzRefOLJCqwdazcegHtyaxp04PeEgs/b0m08WMpnIzQ==
+ts-loader@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-6.1.1.tgz#f30c68aa1ce59fa266f0bb70a36959ca68f40ddc"
+  integrity sha512-AoOek8ZWJlWwTRH5ttNmZPBRcASUJZc8wc8E/2PGOXef96H97J8KaLXaW/zUnvyFjvCoRBhTGh9ZIMKL1arcCA==
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^4.0.0"

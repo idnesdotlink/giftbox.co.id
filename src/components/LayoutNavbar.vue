@@ -6,19 +6,15 @@
     >Home</g-link>
     <g-link
       class="nav__link navbar-btn"
-      to="/about"
-    >About</g-link>
-    <g-link
-      class="nav__link navbar-btn"
-      to="/products"
+      to="/products/"
     >Products</g-link>
     <g-link
       class="nav__link navbar-btn"
-      to="/contact"
+      to="/contact/"
     >Contact</g-link>
     <g-link
       class="nav__link navbar-btn"
-      to="/catalogs"
+      to="/catalogs/"
     >Catalogs</g-link>
   </nav>
 </template>
