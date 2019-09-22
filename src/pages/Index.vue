@@ -21,7 +21,7 @@ export default {
     About
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: ''
   }
 }
 </script>
