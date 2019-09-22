@@ -4,70 +4,74 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const tailwind = require('tailwindcss')
-const purgecss = require('@fullhuman/postcss-purgecss')
+const tailwind = require("tailwindcss");
+const purgecss = require("@fullhuman/postcss-purgecss");
+const cssnano = require("cssnano");
 
-const postcssPlugins = [tailwind()]
+const postcssPlugins = [tailwind()];
 
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+if (process.env.NODE_ENV === "production") {
+  postcssPlugins.push(purgecss());
+  postcssPlugins.push(cssnano());
+}
 
-const siteUrl = 'https://idnesdotlink.github.io'
-const pathPrefix = 'giftbox.co.id'
-const fullSiteUrl = siteUrl + '/' + pathPrefix
+const siteUrl = "https://idnesdotlink.github.io";
+const pathPrefix = "giftbox.co.id";
+const fullSiteUrl = siteUrl + "/" + pathPrefix;
 
 module.exports = {
-  siteName: 'Giftbox Promosindo',
+  siteName: "Giftbox Promosindo",
   siteUrl: siteUrl,
   pathPrefix: pathPrefix,
-  siteDescription: 'Giftbox Promosindo',
+  siteDescription: "Giftbox Promosindo",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/posts/**/*.md',
-        typeName: 'Post',
-        route: '/blog/:title'
+        path: "content/posts/**/*.md",
+        typeName: "Post",
+        route: "/blog/:title"
       }
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/products/**/*.md',
-        typeName: 'Product',
-        route: '/product/:title',
+        path: "content/products/**/*.md",
+        typeName: "Product",
+        route: "/product/:title",
         refs: {
           tags: {
-            typeName: 'Tag',
-            route: 'tag/:id',
+            typeName: "Tag",
+            route: "tag/:id",
             create: true
           }
         }
       }
     },
     {
-      use: 'gridsome-plugin-rss',
+      use: "gridsome-plugin-rss",
       options: {
-        contentTypeName: 'Post',
+        contentTypeName: "Post",
         feedOptions: {
-          title: 'Gridsome Portfolio Starter Blog',
-          feed_url: fullSiteUrl + '/rss.xml',
+          title: "Gridsome Portfolio Starter Blog",
+          feed_url: fullSiteUrl + "/rss.xml",
           site_url: fullSiteUrl
         },
-        feedItemOptions: (node) => ({
+        feedItemOptions: node => ({
           title: node.title,
           description: node.summary,
           url: fullSiteUrl + node.path,
-          author: 'Giftbox Dev',
+          author: "Giftbox Dev",
           date: node.date
         }),
         output: {
-          dir: './static',
-          name: 'rss.xml'
+          dir: "./static",
+          name: "rss.xml"
         }
       }
     },
     {
-      use: '@gridsome/plugin-sitemap',
+      use: "@gridsome/plugin-sitemap",
       options: {
         cacheTime: 600000 // default
       }
@@ -76,15 +80,15 @@ module.exports = {
   transformers: {
     // Add markdown support to all file-system sources
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      plugins: ['@gridsome/remark-prismjs']
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      plugins: ["@gridsome/remark-prismjs"]
     }
   },
-  chainWebpack: (config) => {
-    const svgRule = config.module.rule('svg')
-    svgRule.uses.clear()
-    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
+  chainWebpack: config => {
+    const svgRule = config.module.rule("svg");
+    svgRule.uses.clear();
+    svgRule.use("vue-svg-loader").loader("vue-svg-loader");
   },
   css: {
     loaderOptions: {
@@ -93,4 +97,4 @@ module.exports = {
       }
     }
   }
-}
+};
