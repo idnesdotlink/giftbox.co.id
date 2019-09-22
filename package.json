@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "dev": "gridsome develop",
+    "dev": "gridsome develop -p 8082",
     "explore": "gridsome explore",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b gh-pages -d dist",
@@ -70,7 +70,7 @@
     "svg2img": "^0.6.1",
     "svgo": "^1.3.0",
     "tailwindcss": "^1.1.2",
-    "ts-loader": "6.1.1",
+    "ts-loader": "6.1.2",
     "typescript": "^3.6.3",
     "webpack": "4.40.2"
   }
