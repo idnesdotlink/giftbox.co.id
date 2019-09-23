@@ -24,13 +24,18 @@ module.exports = {
   siteUrl: siteUrl,
   pathPrefix: pathPrefix,
   siteDescription: "Giftbox Promosindo",
+  templates: {
+    Post: "/blog/:title",
+    Product: "/product/:title",
+    Tag: "/tag/:id"
+  },
   plugins: [
     {
       use: "@gridsome/source-filesystem",
       options: {
         path: "content/posts/**/*.md",
-        typeName: "Post",
-        route: "/blog/:title"
+        typeName: "Post"
+        // route: "/blog/:title"
       }
     },
     {
@@ -38,11 +43,11 @@ module.exports = {
       options: {
         path: "content/products/**/*.md",
         typeName: "Product",
-        route: "/product/:title",
+        // route: "/product/:title",
         refs: {
           tags: {
             typeName: "Tag",
-            route: "tag/:id",
+            // route: "tag/:id",
             create: true
           }
         }
@@ -51,9 +56,9 @@ module.exports = {
     {
       use: "gridsome-plugin-rss",
       options: {
-        contentTypeName: "Post",
+        contentTypeName: "Product",
         feedOptions: {
-          title: "Gridsome Portfolio Starter Blog",
+          title: "Giftbox",
           feed_url: fullSiteUrl + "/rss.xml",
           site_url: fullSiteUrl
         },
