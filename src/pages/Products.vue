@@ -11,7 +11,7 @@
 </template>
 
 <page-query>
-query Product($page: Int) {
+query Products($page: Int) {
   metadata {
     siteName
     siteDescription

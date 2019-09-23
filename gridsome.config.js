@@ -41,7 +41,7 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "content/products/**/*.md",
+        path: "./content/products/*/index.md",
         typeName: "Product",
         // route: "/product/:title",
         refs: {

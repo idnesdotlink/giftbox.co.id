@@ -5353,10 +5353,10 @@ gridsome-plugin-gtm@^0.1.1:
   dependencies:
     vue-gtm "^2.0.0"
 
-gridsome-plugin-pwa@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-pwa/-/gridsome-plugin-pwa-0.0.7.tgz#0cd559971b0a46de82e4a6c66186ddc9b6c242db"
-  integrity sha512-+trjmCKzIwoF9JMbvr8oRpFLHxO85dNPZ5OsoaHRpxW4QHTpnJExjoi/aD1sCL/lFrp0CTJGi0gvtlAWEN8SEA==
+gridsome-plugin-pwa@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-pwa/-/gridsome-plugin-pwa-0.0.8.tgz#82254cac6f005da8a95c9863e4b4aad6e57b7b14"
+  integrity sha512-d8Rtfdkr1T9kF4kkTN5Fx5MvhTb8xFa+M8CU3Eg28pcnNEvpTrlVWlXcZgf3VM1qGrZ+mG9cwSqimqpFnYDqdg==
   dependencies:
     fs-extra "^8.1.0"
     image-size "^0.7.4"
