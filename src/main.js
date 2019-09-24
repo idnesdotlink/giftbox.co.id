@@ -10,4 +10,8 @@ export default function(Vue, { router, head, isClient }) {
   if (isClient) {
     Vue.use(VTooltip);
   }
+  head.htmlAttrs = { lang: "en" };
+  head.bodyAttrs = {
+    class: "bg-background text-gray font-sans min-h-screen flex flex-col"
+  };
 }

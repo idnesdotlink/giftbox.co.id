@@ -18,6 +18,24 @@ module.exports = function(api) {
         ...fields
       });
     });
+
+    const customersPath = path.join(
+      __dirname,
+      "content/customers/customers.yaml"
+    );
+    const customersRaw = await fs.readFile(customersPath, "utf8");
+    const customersJson = yaml.safeLoad(customersRaw);
+    const customers = addCollection("Customer");
+    customersJson.forEach(({ id, title, ...fields }) => {
+      customers.addNode({
+        id,
+        title,
+        internal: {
+          origin: customersPath
+        },
+        ...fields
+      });
+    });
   });
 
   api.createPages(({ createPage }) => {
