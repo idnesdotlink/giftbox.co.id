@@ -1,6 +1,6 @@
 ---
 title: "Veger Powerbank"
-description: "Power Bank Veger Description"
+excerpt: "Power Bank Veger Excerpt."
 date: 2019-05-21
 tags: ["power-bank"]
 image: "./powerbank-veger.jpg"

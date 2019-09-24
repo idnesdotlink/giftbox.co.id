@@ -1,6 +1,6 @@
 ---
 title: "Vacuum Flask"
-description: "Vacuum Flask Description"
+excerpt: "Vacuum Flask Excerpt."
 date: 2019-05-23
 tags: ["vacuum-flask"]
 image: "./vacuum-flask.png"

@@ -27,7 +27,7 @@ query Products($page: Int) {
           id
           title
           timeToRead
-          description
+          excerpt
           date (format: "D MMMM YYYY")
           path
           image

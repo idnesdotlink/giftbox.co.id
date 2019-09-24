@@ -1,9 +1,3 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 const tailwind = require("tailwindcss");
 const purgecss = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
@@ -35,7 +29,6 @@ module.exports = {
       options: {
         path: "content/posts/**/*.md",
         typeName: "Post"
-        // route: "/blog/:title"
       }
     },
     {
@@ -43,12 +36,9 @@ module.exports = {
       options: {
         path: "./content/products/*/index.md",
         typeName: "Product",
-        // route: "/product/:title",
         refs: {
           tags: {
-            typeName: "Tag",
-            // route: "tag/:id",
-            create: true
+            typeName: "Tag"
           }
         }
       }

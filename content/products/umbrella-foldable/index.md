@@ -1,6 +1,6 @@
 ---
 title: "Umbrella Foldable"
-description: "Umbrella Foldable Description"
+excerpt: "Umbrella Foldable Excerpt."
 date: 2019-05-21
 tags: ["umbrella"]
 image: "./umbrella-foldable.jpg"

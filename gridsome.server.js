@@ -1,28 +1,26 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const path = require("path");
+const fs = require("fs-extra");
+const yaml = require("js-yaml");
 
 module.exports = function(api) {
-  api.loadSource(({ addContentType, getCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api
-    const product = getCollection('Product')
-    // console.log(product)
-    product.addSchemaField('sliders', ({ graphql }) => ({
-      type: graphql.GraphQLList(graphql.GraphQLString)
-      // args: {
-      //   upperCase: { type: graphql.GraphQLBoolean, defaultValue: false }
-      // },
-      // resolve(node, args) {
-      //   const value = node.fields.myField;
-      //   return args.upperCase ? value.toUpperCase() : value;
-      // }
-    }))
-  })
+  api.loadSource(async ({ addCollection }) => {
+    const tagsPath = path.join(__dirname, "content/tags/tags.yaml");
+    const tagsRaw = await fs.readFile(tagsPath, "utf8");
+    const tagsJson = yaml.safeLoad(tagsRaw);
+    const tags = addCollection("Tag");
+    tagsJson.forEach(({ id, title, ...fields }) => {
+      tags.addNode({
+        id,
+        title,
+        internal: {
+          origin: tagsPath
+        },
+        ...fields
+      });
+    });
+  });
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
-  })
-}
+  });
+};
