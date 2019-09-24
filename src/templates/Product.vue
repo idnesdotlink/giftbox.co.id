@@ -7,7 +7,6 @@
     > &larr; Go Back</g-link>
     <div class="product-title">
       <h1>{{$page.product.title}}</h1>
-      <p class="product-date"> {{ $page.product.date}} | {{$page.product.timeToRead}} min read</p>
     </div>
     <g-link
       :to="tag.path"
@@ -52,7 +51,6 @@ query Product ($path: String!) {
   font-size: 30px;
   line-height: 10px;
   padding: 2em 0;
-  font-family: "Stylish";
 }
 
 .product-date {
