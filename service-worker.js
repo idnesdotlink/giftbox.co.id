@@ -63,15 +63,15 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/index.json",
-    "revision": "996bb6e5e10c7014d2d7a9a99b044e82"
+    "revision": "80458249d683e27594281cfb03a4e400"
   },
   {
     "url": "assets/data/product/baby-kids-gift/index.json",
-    "revision": "757f8b0873638f2a15066964f537f269"
+    "revision": "4c10b31d4ee0c60d7c5eb4761c7cf3a1"
   },
   {
     "url": "assets/data/product/bags-spunbond/index.json",
-    "revision": "879aa107228644ea835da9a2af4c64a9"
+    "revision": "f3b6f3475bb098f9fa3be78e00115f0d"
   },
   {
     "url": "assets/data/product/mug-standard/index.json",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/products/2/index.json",
-    "revision": "d6257e4400c80962442ade5ebd1579ed"
+    "revision": "ac048fe5ec7b25d0ba88c3d5fef19bea"
   },
   {
     "url": "assets/data/products/3/index.json",
@@ -119,11 +119,11 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/products/6/index.json",
-    "revision": "735a382838624c3acf3a4460d29aefaf"
+    "revision": "19bca678d5022d89837f0c5d03acd410"
   },
   {
     "url": "assets/data/products/7/index.json",
-    "revision": "75fe4a21c6ce6c363def7de05475f558"
+    "revision": "6b233b4a70e3b339ed5a09d7884068e9"
   },
   {
     "url": "assets/data/products/8/index.json",
@@ -135,7 +135,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/products/index.json",
-    "revision": "dac016a35cedf632614e297fa22e08d5"
+    "revision": "9a9b2b3a8b82c88ae1a44756c9fc32bc"
   },
   {
     "url": "assets/data/tag/baby-kids-gift/index.json",
@@ -371,11 +371,11 @@ self.__precacheManifest = [
   },
   {
     "url": "product/baby-kids-gift/index.html",
-    "revision": "dd7ca3dcec65272afcfd2beae0068dac"
+    "revision": "0e681c399ebd326be42aab627418d857"
   },
   {
     "url": "product/bags-spunbond/index.html",
-    "revision": "1e35ee21f3e210ca0d74ae734b244d2d"
+    "revision": "b66bac983d8af3dd22d0529f35ea356a"
   },
   {
     "url": "product/mug-standard/index.html",
@@ -407,7 +407,7 @@ self.__precacheManifest = [
   },
   {
     "url": "products/2/index.html",
-    "revision": "506877fc551614ed8690d5d7c37635f8"
+    "revision": "fd278a60253964800e1e0a97aaccd8bd"
   },
   {
     "url": "products/3/index.html",
@@ -423,11 +423,11 @@ self.__precacheManifest = [
   },
   {
     "url": "products/6/index.html",
-    "revision": "7fb2a116db45c22d4f29d4836540207a"
+    "revision": "1e38c0e335f2e426b9639ef9de3953fe"
   },
   {
     "url": "products/7/index.html",
-    "revision": "fbbe470a063701a136cae6530efe98ba"
+    "revision": "d5c7f731b7ea40ed0c6011da111277ae"
   },
   {
     "url": "products/8/index.html",
@@ -439,7 +439,7 @@ self.__precacheManifest = [
   },
   {
     "url": "products/index.html",
-    "revision": "0edf2a87c8fb07bd8d533f0ac05d8ae4"
+    "revision": "b09497d4a5e72910c6abb5e2c95608e7"
   },
   {
     "url": "tag/baby-kids-gift/index.html",
@@ -574,12 +574,12 @@ self.__precacheManifest = [
     "revision": "a8fe98b367ee05bbf25728e9769031b7"
   },
   {
-    "url": "product/umbrella-standard",
-    "revision": "452ca92675897165521efd705b72a0cf"
-  },
-  {
     "url": "product/vacuum-flask",
     "revision": "465c0f4ab89d423962e60bcaedcf5f97"
+  },
+  {
+    "url": "product/umbrella-standard",
+    "revision": "452ca92675897165521efd705b72a0cf"
   },
   {
     "url": "blog/writing-in-markdown",
