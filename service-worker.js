@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "4f53bbbb05044ba3421fdde187e58413"
+    "revision": "c32319044b9c1b7319b6a191c15b5e8e"
   },
   {
     "url": "404/index.html",
-    "revision": "4f53bbbb05044ba3421fdde187e58413"
+    "revision": "c32319044b9c1b7319b6a191c15b5e8e"
   },
   {
     "url": "assets/css/0.styles.97ba833d.css",
@@ -39,135 +39,135 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/data/404/index.json",
-    "revision": "ea6d7e0250152110bb3f8df9c95bb3b7"
+    "revision": "2db88e2688191c9b6ec7ca680acc8c39"
   },
   {
     "url": "assets/data/blog/markdown-styling/index.json",
-    "revision": "41bd72b45e26c4a08df5c5060ada5f70"
+    "revision": "b86793c88bd1d000f1fbf819169410b1"
   },
   {
     "url": "assets/data/blog/writing-in-markdown/index.json",
-    "revision": "885158a06ed2f871222fd05cf01e9bd8"
+    "revision": "2a084c953274a43c583b2934bcb2094b"
   },
   {
     "url": "assets/data/catalogs/index.json",
-    "revision": "ea6d7e0250152110bb3f8df9c95bb3b7"
+    "revision": "2db88e2688191c9b6ec7ca680acc8c39"
   },
   {
     "url": "assets/data/contact/index.json",
-    "revision": "ea6d7e0250152110bb3f8df9c95bb3b7"
+    "revision": "2db88e2688191c9b6ec7ca680acc8c39"
   },
   {
     "url": "assets/data/customer/index.json",
-    "revision": "ea6d7e0250152110bb3f8df9c95bb3b7"
+    "revision": "2db88e2688191c9b6ec7ca680acc8c39"
   },
   {
     "url": "assets/data/index.json",
-    "revision": "48b1c5e5f0049398a37e3b8415f48016"
+    "revision": "996bb6e5e10c7014d2d7a9a99b044e82"
   },
   {
     "url": "assets/data/product/baby-kids-gift/index.json",
-    "revision": "a4f0f088ec715baab0e7607ec1dfdc00"
+    "revision": "757f8b0873638f2a15066964f537f269"
   },
   {
     "url": "assets/data/product/bags-spunbond/index.json",
-    "revision": "a4bc6bfb0fb53c8abac30853cf82c180"
+    "revision": "879aa107228644ea835da9a2af4c64a9"
   },
   {
     "url": "assets/data/product/mug-standard/index.json",
-    "revision": "0233efa5ca1376ff97c326b98484cd8a"
+    "revision": "6469d35511f2cacfbc547ab75a4671f9"
   },
   {
     "url": "assets/data/product/pen/index.json",
-    "revision": "91fe63898db99b79452ac62c6991faa6"
+    "revision": "b1081376badd388c93c89db71813dd90"
   },
   {
     "url": "assets/data/product/tumbler-daytona/index.json",
-    "revision": "646a636872365dc3a39d2b86c586fa73"
+    "revision": "54101213c664cef1cb0ae1c63ad40112"
   },
   {
     "url": "assets/data/product/umbrella-foldable/index.json",
-    "revision": "9c819dcfbfce18c9d8faa95dfcad3467"
+    "revision": "ec4fd0fe5af2d12dea3dc321afa5255c"
   },
   {
     "url": "assets/data/product/umbrella-standard/index.json",
-    "revision": "aa1fc95cadea5ee1c868bccdb05a9a87"
+    "revision": "e90200dcfc2fe30ef47a86fb019838b9"
   },
   {
     "url": "assets/data/product/vacuum-flask/index.json",
-    "revision": "a74774e04bea2cfad4c4ca291f7588d4"
+    "revision": "943e7c074045698d9023b0d3200dd378"
   },
   {
     "url": "assets/data/product/veger-powerbank/index.json",
-    "revision": "6a01276867a190be0598774c83404e86"
+    "revision": "78a47931a689b54be67facc054d102f4"
   },
   {
     "url": "assets/data/products/2/index.json",
-    "revision": "9f3c473d45e1333090438a98873562d7"
+    "revision": "d6257e4400c80962442ade5ebd1579ed"
   },
   {
     "url": "assets/data/products/3/index.json",
-    "revision": "7abf4eaa771fe3d74b45e66b3fab6f1a"
+    "revision": "5b9702d33b427838802a59f1efaf5c60"
   },
   {
     "url": "assets/data/products/4/index.json",
-    "revision": "c10c0d43707225dc9e02fef4a37150e8"
+    "revision": "911863c3dcd537f5c21ddbc79d6d33c4"
   },
   {
     "url": "assets/data/products/5/index.json",
-    "revision": "b76ded9fbe99ce46ae4ae699590fe41d"
+    "revision": "3f2b1fff855fdeac28755b0fad33e4e0"
   },
   {
     "url": "assets/data/products/6/index.json",
-    "revision": "820b1872e983d969adedc650d901118e"
+    "revision": "735a382838624c3acf3a4460d29aefaf"
   },
   {
     "url": "assets/data/products/7/index.json",
-    "revision": "3de5fc174c8ddc4618928498f275f281"
+    "revision": "75fe4a21c6ce6c363def7de05475f558"
   },
   {
     "url": "assets/data/products/8/index.json",
-    "revision": "0710fd53696501efbc9cfc0c57a9ac83"
+    "revision": "e8d82b1643310d5e43ba1c0ae95be7e6"
   },
   {
     "url": "assets/data/products/9/index.json",
-    "revision": "9566ec82b9d37efd88f28257295a1daa"
+    "revision": "fe38f9ca7aecf02507c924c959777f7e"
   },
   {
     "url": "assets/data/products/index.json",
-    "revision": "0d6ccc9229c0e9dc66f72da60598f392"
+    "revision": "dac016a35cedf632614e297fa22e08d5"
   },
   {
     "url": "assets/data/tag/baby-kids-gift/index.json",
-    "revision": "f46783fd87d3358c8378bdc67edac974"
+    "revision": "46b511a4775b27f389fd2c9f9caa0e7c"
   },
   {
     "url": "assets/data/tag/bags/index.json",
-    "revision": "e816d74353125a0191c52182500206ff"
+    "revision": "6e5fd53b7467d47667fb92a0105e245d"
   },
   {
     "url": "assets/data/tag/goodie-bags/index.json",
-    "revision": "fc620eae164cb0ab5601bac388429ce6"
+    "revision": "02eeb5d464af2e43060839edb467ea79"
   },
   {
     "url": "assets/data/tag/pen/index.json",
-    "revision": "dfa660297a2c21de3d2582751bbcc695"
+    "revision": "6eee6d6bd5f113e7d4745fd4456b1f1d"
   },
   {
     "url": "assets/data/tag/power-bank/index.json",
-    "revision": "17fd85f492a0f40a266f3d94238fdb5a"
+    "revision": "111cab6c03de5cdd6c5c0a541c069151"
   },
   {
     "url": "assets/data/tag/tumbler/index.json",
-    "revision": "d90f5eeb8f18213b8d009d6503000842"
+    "revision": "5697082a3763bf76801bd9f3fa93502c"
   },
   {
     "url": "assets/data/tag/umbrella/index.json",
-    "revision": "4e132d6ff6eb43cf8d253d001d8347e4"
+    "revision": "c9df3402493effc4e6e781907ccb231c"
   },
   {
     "url": "assets/data/tag/vacuum-flask/index.json",
-    "revision": "19dcd9d3b724e3e4f0cd03e76a699b70"
+    "revision": "a7eb0fa84e8ccb77c7075d43f8cfe40e"
   },
   {
     "url": "assets/js/11.13233969.js",
@@ -178,8 +178,8 @@ self.__precacheManifest = [
     "revision": "95c966ac33c3a3a836ee3dbf4775954a"
   },
   {
-    "url": "assets/js/app.3909dc2c.js",
-    "revision": "79e3d70f59d3442dcd578d6a11a67c45"
+    "url": "assets/js/app.a6088d24.js",
+    "revision": "e213ad9f5b85121c6c9996268d4a8e9b"
   },
   {
     "url": "assets/js/page--src--pages--404-vue.1b42363e.js",
@@ -198,23 +198,23 @@ self.__precacheManifest = [
     "revision": "c66a452cab9470ee96c33990090f8c7d"
   },
   {
-    "url": "assets/js/page--src--pages--index-vue.2fe522b8.js",
+    "url": "assets/js/page--src--pages--index-vue.d672aaf9.js",
     "revision": "96011db105aa30cdacb5db8857a4da46"
   },
   {
-    "url": "assets/js/page--src--pages--products-vue.011aee35.js",
+    "url": "assets/js/page--src--pages--products-vue.2f3579d2.js",
     "revision": "f43ec15802ffc61d012577eb77cbea3e"
   },
   {
-    "url": "assets/js/page--src--templates--post-vue.f8efb63e.js",
+    "url": "assets/js/page--src--templates--post-vue.f98413a9.js",
     "revision": "e282cd2d415851156a6c6c76a25bde79"
   },
   {
-    "url": "assets/js/page--src--templates--product-vue.ed6d8d28.js",
+    "url": "assets/js/page--src--templates--product-vue.a7bb29e6.js",
     "revision": "32994a936fb8a773564b4277ef3705bb"
   },
   {
-    "url": "assets/js/page--src--templates--tag-vue.5231ce85.js",
+    "url": "assets/js/page--src--templates--tag-vue.3a1d1428.js",
     "revision": "f7776768d16b058237e94522e195d206"
   },
   {
@@ -331,23 +331,23 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/markdown-styling/index.html",
-    "revision": "7186571a4de7cdac472d21926cf50248"
+    "revision": "2744920bcd742ceb97c013010c3d9015"
   },
   {
     "url": "blog/writing-in-markdown/index.html",
-    "revision": "e1a589c6f80bb411fb950d7a638f22d8"
+    "revision": "410f799e25536aa9ee5ef3681a0daf15"
   },
   {
     "url": "catalogs/index.html",
-    "revision": "ac111db948cfa5858826c825a416d79c"
+    "revision": "55daf5069912d202c65205741e626394"
   },
   {
     "url": "contact/index.html",
-    "revision": "4c51d2ed06d003c8cff29ed7921e573d"
+    "revision": "8aa307639cfe313f229e569a083db33f"
   },
   {
     "url": "customer/index.html",
-    "revision": "53cf74f2c8da24751660d30bf1137315"
+    "revision": "14916a1cc56ffdb4b9cf16e2961f6bbb"
   },
   {
     "url": "images/giftbox-logo.png",
@@ -363,115 +363,115 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "535577f0918a07034cc5a32ea546f864"
+    "revision": "94994d89e27df0e0781633c7b9ec334c"
   },
   {
     "url": "manifest.json",
-    "revision": "5e3f64e4f343ffde313633bf81622451"
+    "revision": "82ec89ee0e8e052575466c1ec674c7d0"
   },
   {
     "url": "product/baby-kids-gift/index.html",
-    "revision": "916777c6f8ceacc59dd794494fbe76c7"
+    "revision": "dd7ca3dcec65272afcfd2beae0068dac"
   },
   {
     "url": "product/bags-spunbond/index.html",
-    "revision": "e7c7505efb5486e00302de1ff4320c4a"
+    "revision": "1e35ee21f3e210ca0d74ae734b244d2d"
   },
   {
     "url": "product/mug-standard/index.html",
-    "revision": "1528825e1485b75847a1512f74eb8ae7"
+    "revision": "1725879a8bc6b699e7e5c7ccb2f1e30d"
   },
   {
     "url": "product/pen/index.html",
-    "revision": "d6e5fa039ea7e4142d5e4d4b2d9411ed"
+    "revision": "44cd7aaf43a6bf019acf76a55979bc6f"
   },
   {
     "url": "product/tumbler-daytona/index.html",
-    "revision": "15c339c2528c42c37d7bc1f9f9cab0d6"
+    "revision": "2503145a9c7b14eecd1cfaa10d4f03b2"
   },
   {
     "url": "product/umbrella-foldable/index.html",
-    "revision": "0c88bc0f38efae7e5bfdf00bd514ba3f"
+    "revision": "da2c74699e8a82ba2295615dcaa8819d"
   },
   {
     "url": "product/umbrella-standard/index.html",
-    "revision": "d4649089e42d8555ec5d5e780b51d4c5"
+    "revision": "8aa20780cc94ee91721ceb125e77b8c1"
   },
   {
     "url": "product/vacuum-flask/index.html",
-    "revision": "821ce52859bd7c6aa0fa9e80d8a47106"
+    "revision": "41f0ac2b6e59d68f7ce5e15c17e9f322"
   },
   {
     "url": "product/veger-powerbank/index.html",
-    "revision": "b478831c313a35a02927daeadd74dcfd"
+    "revision": "fdb702b76e0e4caa8c30ee4c8732c151"
   },
   {
     "url": "products/2/index.html",
-    "revision": "73db11bcc157b08c12580297a90bd9ee"
+    "revision": "506877fc551614ed8690d5d7c37635f8"
   },
   {
     "url": "products/3/index.html",
-    "revision": "8741c3fc957a277fc027c378f9d11eef"
+    "revision": "c2232001f8e7fb4947c739e68eb49a2a"
   },
   {
     "url": "products/4/index.html",
-    "revision": "2c430c3c50a18941f6da8fe542d01356"
+    "revision": "0b7c18e3b9d37c9ba965c1b505f3f552"
   },
   {
     "url": "products/5/index.html",
-    "revision": "107ef4d6d83700c93ac197c9a701c13b"
+    "revision": "0ab3dad5acfc2207cf345faa71b67169"
   },
   {
     "url": "products/6/index.html",
-    "revision": "39a25a14109f25838bf5fdbb14fffd65"
+    "revision": "7fb2a116db45c22d4f29d4836540207a"
   },
   {
     "url": "products/7/index.html",
-    "revision": "db44978e5895b90bd1f030eb01a14c0a"
+    "revision": "fbbe470a063701a136cae6530efe98ba"
   },
   {
     "url": "products/8/index.html",
-    "revision": "01d97f3139cc72de794ab641801b3a4a"
+    "revision": "ae84c0ef89fd3af9df58ff81414d8edd"
   },
   {
     "url": "products/9/index.html",
-    "revision": "b71657fbffa91a9b698391669d0ab3a6"
+    "revision": "0ad590327dadedb2828ab1f033dbf8cb"
   },
   {
     "url": "products/index.html",
-    "revision": "44372c31ecb666c1ae149813b84389f6"
+    "revision": "0edf2a87c8fb07bd8d533f0ac05d8ae4"
   },
   {
     "url": "tag/baby-kids-gift/index.html",
-    "revision": "92b2f1cab643738150c9a4693006db30"
+    "revision": "dc5158476e582ba1d92276e76119bcf9"
   },
   {
     "url": "tag/bags/index.html",
-    "revision": "7e96b63fd4f8d51066eadb7a2b75d2d3"
+    "revision": "03a1ccc5815d5ecc2120e34c8489f364"
   },
   {
     "url": "tag/goodie-bags/index.html",
-    "revision": "4f578d327a63a7192fcf5a3d709d36b5"
+    "revision": "15e3a3854dd7d5533d113b42f6f4cdc0"
   },
   {
     "url": "tag/pen/index.html",
-    "revision": "6b22efaa06643f316c05676a74c6c5eb"
+    "revision": "6518b6c71a192090529a8eedc3e88888"
   },
   {
     "url": "tag/power-bank/index.html",
-    "revision": "5fa2ee4b1b5170cf4cb81528efae7793"
+    "revision": "5d9f980be0072f6943d097bb9d79dacb"
   },
   {
     "url": "tag/tumbler/index.html",
-    "revision": "d5a225ca2794c87b4f3fc86b80a08cf9"
+    "revision": "7e5e557507f090caa7d81729e91baf8d"
   },
   {
     "url": "tag/umbrella/index.html",
-    "revision": "ebd9274377c3a12c7eb249952f390377"
+    "revision": "3fbdd1c590a9d78aefd8f0b92cbf46dd"
   },
   {
     "url": "tag/vacuum-flask/index.html",
-    "revision": "3cb20ab556247a69cdbd02953c55abdb"
+    "revision": "7e83ed7a11ba63fc2c2be67a7276b801"
   },
   {
     "url": "404",
