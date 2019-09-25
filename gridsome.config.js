@@ -75,7 +75,7 @@ module.exports = {
     {
       use: "gridsome-plugin-pwa",
       options: {
-        title: "Gridsome",  
+        title: "Gridsome",
         startUrl: "/",
         display: "standalone",
         statusBarStyle: "default",
@@ -84,7 +84,7 @@ module.exports = {
         shortName: "Gridsome",
         themeColor: "#666600",
         backgroundColor: "#ffffff",
-        icon: "favicon.png" // must be supp lied!
+        icon: "src/favicon.png" // must be supp lied!
       }
     }
   ],
