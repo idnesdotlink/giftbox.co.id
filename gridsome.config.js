@@ -71,22 +71,22 @@ module.exports = {
       options: {
         cacheTime: 600000 // default
       }
-    },
-    {
-      use: "gridsome-plugin-pwa",
-      options: {
-        title: "Gridsome",
-        startUrl: "/",
-        display: "standalone",
-        statusBarStyle: "default",
-        manifestPath: "manifest.json",
-        serviceWorkerPath: "service-worker.js",
-        shortName: "Gridsome",
-        themeColor: "#666600",
-        backgroundColor: "#ffffff",
-        icon: "src/favicon.png" // must be supp lied!
-      }
     }
+    // {
+    //   use: "gridsome-plugin-pwa",
+    //   options: {
+    //     title: "Gridsome",
+    //     startUrl: "/giftbox.co.id/",
+    //     display: "standalone",
+    //     statusBarStyle: "default",
+    //     manifestPath: "manifest.json",
+    //     serviceWorkerPath: "service-worker.js",
+    //     shortName: "Gridsome",
+    //     themeColor: "#666600",
+    //     backgroundColor: "#ffffff",
+    //     icon: "src/favicon.png" // must be supp lied!
+    //   }
+    // }
   ],
   transformers: {
     // Add markdown support to all file-system sources
