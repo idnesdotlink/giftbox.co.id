@@ -26,10 +26,11 @@ module.exports = function(api) {
     const customersRaw = await fs.readFile(customersPath, "utf8");
     const customersJson = yaml.safeLoad(customersRaw);
     const customers = addCollection("Customer");
-    customersJson.forEach(({ id, title, ...fields }) => {
+    customersJson.forEach(({ id, title, logo, ...fields }) => {
       customers.addNode({
         id,
         title,
+        logo,
         internal: {
           origin: customersPath
         },

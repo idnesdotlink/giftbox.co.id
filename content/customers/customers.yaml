@@ -1,10 +1,30 @@
 - id: bri
   title: BRI
+  logo: ./bri.png
 - id: bca
   title: BCA
-- id: sumarecon
-  title: Sumarecon
+  logo: ./bca.png
+- id: sumarecon-bandung
+  title: Summarecon Bandung
+  logo: ./summarecon-bandung.png
 - id: pt-kai
   title: PT. KAI
-- id: pln
-  title: PlN
+  logo: ./pt-kai.png
+- id: jamkrindo
+  title: jamkrindo
+  logo: ./jamkrindo.png
+- id: inti
+  title: PT inti
+  logo: ./inti.png
+- id: itb
+  title: Institut Teknologi Bandung
+  logo: ./itb.png
+- id: ibis
+  title: Ibis Hotel
+  logo: ./ibis.png
+- id: gramedia-digital-nusantara
+  title: Gramedia Digital Nusantara
+  logo: ./gramedia-digital-nusantara.png
+- id: ITHB
+  title: Institut Teknologi Barapan Bangsa
+  logo: ./ithb.png
