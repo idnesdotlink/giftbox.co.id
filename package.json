@@ -4,6 +4,7 @@
   "scripts": {
     "build": "gridsome build",
     "dev": "gridsome develop -p 8082",
+    "dev2": "gridsome develop",
     "explore": "gridsome explore",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b gh-pages -d dist",

@@ -6,6 +6,13 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
     <About />
+    <div>
+      <g-image
+        v-for="customer in $page.allCustomer.edges"
+        :key="customer.node.id"
+        :src="customer.node.image"
+      />
+    </div>
 
   </Layout>
 </template>
@@ -22,6 +29,9 @@ export default {
   },
   metaInfo: {
     title: ''
+  },
+  mounted() {
+    // console.log(this.$page.allCustomer)
   }
 }
 </script>
@@ -55,6 +65,16 @@ query {
     }
 
   }
+allCustomer {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        image
+      }
+    }
+}
 }
 </page-query>
 
