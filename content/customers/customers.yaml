@@ -28,3 +28,12 @@
 - id: ITHB
   title: Institut Teknologi Barapan Bangsa
   image: ./ithb.png
+- id: btn
+  title: Bank Tabungan Negara
+  image: ./btn.png
+- id: pln
+  title: Perusahaan Listrik Negara
+  image: ./pln.png
+- id: hegarmanah-residence
+  title: Hegarmanah Residence
+  image: ./hegarmanah-residence.png
