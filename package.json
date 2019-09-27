@@ -57,7 +57,7 @@
     "typeface-roboto": "^0.0.75",
     "url-loader": "^2.1.0",
     "v-tooltip": "^2.0.2",
-    "vee-validate": "3.0.7",
+    "vee-validate": "3.0.8",
     "vue": "^2.6.10",
     "vue-animejs": "^2.1.1",
     "vue-burger-menu": "^2.0.2",

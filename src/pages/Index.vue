@@ -6,13 +6,9 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
     <About />
-    <div>
-      <g-image
-        v-for="customer in $page.allCustomer.edges"
-        :key="customer.node.id"
-        :src="customer.node.image"
-      />
-    </div>
+    <ClientOnly>
+      <CustomerSlide :customers="$page.allCustomer.edges"></CustomerSlide>
+    </ClientOnly>
 
   </Layout>
 </template>
@@ -20,11 +16,13 @@
 <script>
 import PostList from "@/components/PostList"
 import Slide from "@/components/Slide"
+import CustomerSlide from "@/components/CustomerSlide" 
 import About from "@/components/About"
 export default {
   components: {
     PostList,
     Slide,
+    CustomerSlide,
     About
   },
   metaInfo: {
