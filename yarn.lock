@@ -5506,23 +5506,23 @@ good-listener@^1.2.2:
     delegate "^3.1.2"
 
 google-auth-library@^5.0.0:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-5.2.2.tgz#49a9e10a32e7e33527557029675e164929006486"
-  integrity sha512-0vzniXbjD5SE9aenAMqhjVR99wvqLpyd5Fw6zC3WxJ15GIMGx96tq+Cu1WRviqsnQqhrmnad6T69kv6qkj/w2Q==
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-5.3.0.tgz#565a5e9fe6ed703203c1f978da20c88ae5f7baa2"
+  integrity sha512-DnwwP18H6RVtvtmDjmPLipKyx8NsXTQNZcNYud+ueOYaWSVxXeaSFBiBxABb93S3Ae41R60SnaSc19rljeoAxQ==
   dependencies:
     arrify "^2.0.0"
     base64-js "^1.3.0"
     fast-text-encoding "^1.0.0"
     gaxios "^2.0.0"
     gcp-metadata "^3.0.0"
-    gtoken "^4.0.0"
+    gtoken "^4.1.0"
     jws "^3.1.5"
     lru-cache "^5.0.0"
 
 google-gax@^1.1.2:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/google-gax/-/google-gax-1.6.1.tgz#9f9cc278bfa4b60005a8658ef4dbb6aa386fa4a3"
-  integrity sha512-5/6uaUA9qAqRKVe2sjvMgsnU/HbfQisQTM5EZ5DfNGOYVBoTsPBdOhR2ZqEWPyqHe7YkdzVHev3FH9W3YWcORw==
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/google-gax/-/google-gax-1.6.2.tgz#1619d68b9f5573cf3e271ae0ac59c763f2271476"
+  integrity sha512-khiWcACZ5m3b9x26gLgDZvO66OqxiRRaqHt+Zq2YMJVO5fHzkY247HAXdRTUDIqpEHfOz324FkY1ePiawyjn+g==
   dependencies:
     "@grpc/grpc-js" "^0.5.2"
     "@grpc/proto-loader" "^0.5.1"
@@ -5851,7 +5851,7 @@ gsap@^2.1.3:
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.1.3.tgz#c63ee3a50f0b7dc3b46ed0845bb0f09049feb944"
   integrity sha512-8RFASCqi2FOCBuv7X4o7M6bLdy+1hbR0azg+MG7zz+EVsI+OmJblYsTk0GEepQd2Jg/ItMPiVTibF7r3EVxjZQ==
 
-gtoken@^4.0.0:
+gtoken@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/gtoken/-/gtoken-4.1.0.tgz#0b315dd1a925e3ad3c82db1eb5b9e89bae875ba8"
   integrity sha512-wqyn2gf5buzEZN4QNmmiiW2i2JkEdZnL7Z/9p44RtZqgt4077m4khRgAYNuu8cBwHWCc6MsP6eDUn/KkF6jFIw==
@@ -5862,9 +5862,9 @@ gtoken@^4.0.0:
     mime "^2.2.0"
 
 handlebars@^4.2.0:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.3.2.tgz#c10366a4300f708f78a421472c5d7851dbe886ab"
-  integrity sha512-LuccMnDrKB72bbClEIucoBNAIMpqmWvIGSKNEngDcYFT6hlCq7ZoCWc26ZT9mr6tfWTJeTswSldoI5LOeezzDQ==
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.3.3.tgz#56dd05fe33d6bd8a7d797351c39a0cdcfd576be5"
+  integrity sha512-VupOxR91xcGojfINrzMqrvlyYbBs39sXIrWa7YdaQWeBudOlvKEGvCczMfJPgnuwHE/zyH1M6J+IUP6cgDVyxg==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -10962,9 +10962,9 @@ schema-utils@^1.0.0:
     ajv-keywords "^3.1.0"
 
 schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.4.0.tgz#44947c4da4d798a3080ec2343249f9d8e4231fd6"
-  integrity sha512-VJEKOvjynJweKWFgxaikuP22zl9JwvmylH/cW1dIKZyp3DS1adBGaYPtZ6CdBSxtfP0LwQY1gNA4rIMJsnammQ==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.4.1.tgz#e89ade5d056dc8bcaca377574bb4a9c4e1b8be56"
+  integrity sha512-RqYLpkPZX5Oc3fw/kHHHyP56fg5Y+XBpIpV8nCg0znIALfq3OH+Ea9Hfeac9BAMwG5IICltiZ0vxFvJQONfA5w==
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
@@ -12853,6 +12853,11 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
+
+"vscode-textmate@git+https://github.com/octref/vscode-textmate.git":
+  version "4.0.1"
+  uid e65aabe2227febda7beaad31dd0fca1228c5ddf3
+  resolved "git+https://github.com/octref/vscode-textmate.git#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
 
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
