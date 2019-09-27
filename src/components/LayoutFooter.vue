@@ -1,5 +1,5 @@
 <template>
-  <footer class="text-white lyt-footer bg-blue-800">
+  <footer class="bg-giftbox text-white lyt-footer">
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
       <div class="mb-8 lg:mb-0">
         <div>Copyright 2019. All rights reserved.</div>
