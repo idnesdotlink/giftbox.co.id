@@ -36,7 +36,7 @@
     "dayjs": "^1.8.16",
     "file-loader": "^4.2.0",
     "firebase": "7.0.0",
-    "gridsome": "0.7.5",
+    "gridsome": "0.7.6",
     "gridsome-plugin-modal": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.8",
     "gridsome-plugin-remark-shiki": "^0.3.0",
@@ -76,7 +76,7 @@
     "vue2-leaflet": "^2.2.1"
   },
   "devDependencies": {
-    "@gridsome/vue-remark": "0.1.4",
+    "@gridsome/vue-remark": "0.1.5",
     "cssnano": "^4.1.10",
     "fs-extra": "^8.1.0",
     "gh-pages": "^2.1.1",

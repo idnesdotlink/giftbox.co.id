@@ -1140,10 +1140,10 @@
   dependencies:
     js-yaml "^3.12.1"
 
-"@gridsome/vue-remark@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.4.tgz#f4cee9300ce51258e9b9f447159edc669e823cb7"
-  integrity sha512-3g4XxdrQQkPFW3mpnOAFKJ6csO15kK8y0rYjGecpGZwN31cLT8/nd422rCii3HEWBsOPyLCgNSMAVxF4OPgHjw==
+"@gridsome/vue-remark@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.5.tgz#d8636db5c44c1a3ec0111e577afea7ebf61aeb9d"
+  integrity sha512-vEuCp6YZdHIKmXRenfLE4KwGJ3l8U0GHYfF/1MDDHSApsmyo0xcTH6ucV/gfKxKcG6l8mdf62rRP/CU6nakQ/g==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
@@ -1156,6 +1156,7 @@
     he "^1.2.0"
     html-tags "^3.1.0"
     is-relative "^1.0.0"
+    is-url "^1.2.4"
     loader-utils "^1.2.3"
     lodash "^4.17.11"
     lru-cache "^5.1.1"
@@ -5740,10 +5741,10 @@ gridsome-source-firestore@^1.1.0:
     firebase-admin "^8.3.0"
     queue "^6.0.1"
 
-gridsome@0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.5.tgz#5e8e4b6aed78c8ab3191d1af930c6ecee68894b7"
-  integrity sha512-qouhUwV8pUjfdN2/jAHKooVwvhdSybKcV3Q4T9l8+fNUFvSKgkr9LnSxiPUI3YLVHzmahrFXoXVpLWTsgruqXQ==
+gridsome@0.7.6:
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.7.6.tgz#416ced63848d7f523e7da3ab0ba17d5f582d7fa1"
+  integrity sha512-rsxmAJa+GezFvzEMlClI7nADBq4L+vFe1+lwdmX0AadiDlCIDHbU6WRHZdUaDFYqOP5dakruB03A6tMa1Miq7A==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.0.0"

@@ -16,7 +16,7 @@ query Products($page: Int) {
     siteName
     siteDescription
   }
-  allProduct(perPage: 1, page: $page) @paginate {
+  allProduct(perPage: 3, page: $page) @paginate {
       totalCount
       pageInfo {
         totalPages

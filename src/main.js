@@ -3,12 +3,14 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VTooltip from "v-tooltip";
+import VueGallerySlideshow from "vue-gallery-slideshow";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   if (isClient) {
     Vue.use(VTooltip);
+    Vue.component("vgs", VueGallerySlideshow);
   }
   head.htmlAttrs = { lang: "en" };
   head.bodyAttrs = {
