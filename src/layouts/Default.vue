@@ -76,13 +76,14 @@
       :style="stl1"
       class="main-content"
     >
-      <header class="header">
+      <header class="header flex">
         <g-image
-          alt="Example image"
+          class=""
+          alt="Giftbox Promosindo"
           src="~/giftbox-logo.png"
           width="415"
         />
-        <LayoutNavbar />
+        <LayoutNavbar class="flex-1" />
       </header>
       <transition
         name="fade"
@@ -147,8 +148,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
 }
 
 .nav__link {

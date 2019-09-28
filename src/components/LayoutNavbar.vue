@@ -1,19 +1,19 @@
 <template>
-  <nav class="nav">
+  <nav class="nav flex items-center justify-around flex-wrap p-0">
     <g-link
       class="navbar-btn"
       to="/"
     >Home</g-link>
     <g-link
-      class="nav__link navbar-btn"
+      class="navbar-btn"
       to="/products/"
     >Products</g-link>
     <g-link
-      class="nav__link navbar-btn"
+      class="navbar-btn"
       to="/contact/"
     >Contact</g-link>
     <g-link
-      class="nav__link navbar-btn"
+      class="navbar-btn"
       to="/catalogs/"
     >Catalogs</g-link>
   </nav>
@@ -26,9 +26,9 @@
 
 @tailwind utilities;
 .navbar-btn {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  @apply font-bold text-giftbox;
 }
 .navbar-btn:hover {
-  @apply bg-blue-700;
+  @apply underline;
 }
 </style>
