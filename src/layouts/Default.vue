@@ -76,14 +76,18 @@
       :style="stl1"
       class="main-content"
     >
-      <header class="header flex">
-        <g-image
-          class=""
-          alt="Giftbox Promosindo"
-          src="~/giftbox-logo.png"
-          width="415"
-        />
-        <LayoutNavbar class="flex-1" />
+      <header>
+        <div class="header flex container">
+          <div class="flex-1">
+            <g-image
+              class=""
+              alt="Giftbox Promosindo"
+              src="~/giftbox-logo.png"
+              width="415"
+            />
+          </div>
+          <LayoutNavbar />
+        </div>
       </header>
       <transition
         name="fade"

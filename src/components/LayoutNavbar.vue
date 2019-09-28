@@ -26,7 +26,7 @@
 
 @tailwind utilities;
 .navbar-btn {
-  @apply font-bold text-giftbox;
+  @apply font-bold text-giftbox p-5 bg-alert;
 }
 .navbar-btn:hover {
   @apply underline;

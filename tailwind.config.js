@@ -35,7 +35,7 @@ module.exports = {
       black: "#000",
       white: "#fff",
       giftbox: "#003082",
-      accent: "D65108",
+      accent: "#D65108",
       danger: "#C03221",
       alert: "#FF9F1C",
 
