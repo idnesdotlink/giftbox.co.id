@@ -8,6 +8,7 @@
     "explore": "gridsome explore",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b gh-pages -d dist",
+    "gh": "gh-pages -b gh-pages -d dist",
     "logo": "node script/svg_to_png.js"
   },
   "dependencies": {
