@@ -76,7 +76,7 @@
       :style="stl1"
       class="main-content"
     >
-      <header>
+      <header data-aos="slide-up">
         <div class="header flex container">
           <div class="flex-1">
             <g-image
@@ -93,12 +93,14 @@
         name="fade"
         appear
       >
-        <div>
+        <div data-aos="flip-down">
           <slot />
         </div>
       </transition>
     </div>
-    <LayoutFooter></LayoutFooter>
+    <VueAos animation-class="swashIn magictime">
+      <LayoutFooter></LayoutFooter>
+    </VueAos>
   </div>
 </template>
 
@@ -163,6 +165,7 @@ body {
 import { timeout } from 'bluebird'
 import LayoutNavbar from '../components/LayoutNavbar'
 import LayoutFooter from '@/components/LayoutFooter'
+import VueAos from 'vue-aos'
 export default {
   data () {
     return {
@@ -177,11 +180,13 @@ export default {
   components: {
     LayoutNavbar,
     LayoutFooter,
+    VueAos,
     Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   mounted () {
+    
     this.$nextTick().then(() => {
-      console.log('next tick');
+      // this.$aos.init();
       // timeout(10).then(
         // () => {
         this.stl1.display = 'block';

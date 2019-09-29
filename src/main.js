@@ -4,6 +4,10 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import VTooltip from "v-tooltip";
 import VueGallerySlideshow from "vue-gallery-slideshow";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+import "animate.css";
+import "magic.css/dist/magic.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -11,6 +15,7 @@ export default function(Vue, { router, head, isClient }) {
   if (isClient) {
     Vue.use(VTooltip);
     Vue.component("vgs", VueGallerySlideshow);
+    // Vue.use(AOS.init());
   }
   head.htmlAttrs = { lang: "en" };
   head.bodyAttrs = {
