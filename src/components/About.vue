@@ -1,5 +1,5 @@
 <template>
-  <div class="p-10">
+  <div class="p-5">
     <h1 class="text-lg font-bold">About us</h1>
     <p>As the major player in its market, <em>Giftbox Promosindo</em> as proven since 2006, shows consistent and progressive expansion in promoting, marketing and customizing the high-quality premium souvenirs and gifts.</p>
     <p>With the reputation is our benchmark, <em>Giftbox Promosindo</em> has served corporate, business-level to individual's needs with excellent designs, great products, on-time delivery and innovation. This ensures our accountability in all aspects for customers when dealing with us.</p>

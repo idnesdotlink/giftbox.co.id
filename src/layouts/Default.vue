@@ -23,9 +23,7 @@
         </div>
       </transition>
     </div>
-    <VueAos animation-class="swashIn magictime">
-      <LayoutFooter></LayoutFooter>
-    </VueAos>
+    <LayoutFooter></LayoutFooter>
   </div>
 </template>
 
@@ -57,7 +55,6 @@ query {
 import { timeout } from 'bluebird'
 import LayoutNavbar from '@/components/LayoutNavbar'
 import LayoutFooter from '@/components/LayoutFooter'
-import VueAos from 'vue-aos'
 export default {
   data () {
     return {}
@@ -65,7 +62,6 @@ export default {
   components: {
     LayoutNavbar,
     LayoutFooter,
-    VueAos,
     Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   mounted () {

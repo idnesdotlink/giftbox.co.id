@@ -176,17 +176,10 @@ export default {
 }
 
 .product-slider .tns-nav > [aria-controls] {
-  /* @apply h-20 p-0 w-20 p-20 rounded border-none; */
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin: 0 5px;
-  border-radius: 50%;
-  background: #ddd;
-  border: 0;
+  @apply h-5 p-0 w-5 rounded-full bg-transparent border-giftbox border-2 border-solid my-0 mx-1;
 }
 .product-slider .tns-nav .tns-nav-active[aria-controls] {
-  @apply bg-giftbox;
+  @apply border-accent;
 }
 .product-slider .tns-controls [aria-controls] {
   font-size: 15px;
@@ -200,6 +193,9 @@ export default {
   position: absolute;
   z-index: 100;
   top: 50%;
+}
+.product-slider .tns-nav > [aria-controls]:focus {
+  outline: none;
 }
 .product-slider .tns-controls [data-controls="prev"] {
   left: 10px;
