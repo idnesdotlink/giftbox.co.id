@@ -19,6 +19,8 @@ export default function(Vue, { router, head, isClient }) {
   }
   head.htmlAttrs = { lang: "en" };
   head.bodyAttrs = {
-    class: "bg-background text-gray font-sans min-h-screen flex flex-col"
+    class:
+      "bg-background text-gray font-sans min-h-screen min-w-screen flex flex-col",
+    style: "width: 100vw; min-width: 100vw; overflow: hidden;"
   };
 }

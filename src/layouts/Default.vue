@@ -1,82 +1,7 @@
 <template>
-  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen lyt">
-    <div
-      style="width: 100px; height: 100px;"
-      :style="stl2"
-    >
-      <svg
-        width="100%"
-        height="100%"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="xMidYMid"
-        class="lds-ripple"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          r="38.1705"
-          fill="none"
-          stroke="#93dbe9"
-          stroke-width="2"
-        >
-          <animate
-            attributeName="r"
-            calcMode="spline"
-            values="0;40"
-            keyTimes="0;1"
-            dur="1"
-            keySplines="0 0.2 0.8 1"
-            begin="-0.5s"
-            repeatCount="indefinite"
-          ></animate>
-          <animate
-            attributeName="opacity"
-            calcMode="spline"
-            values="1;0"
-            keyTimes="0;1"
-            dur="1"
-            keySplines="0.2 0 0.8 1"
-            begin="-0.5s"
-            repeatCount="indefinite"
-          ></animate>
-        </circle>
-        <circle
-          cx="50"
-          cy="50"
-          r="21.1809"
-          fill="none"
-          stroke="#689cc5"
-          stroke-width="2"
-        >
-          <animate
-            attributeName="r"
-            calcMode="spline"
-            values="0;40"
-            keyTimes="0;1"
-            dur="1"
-            keySplines="0 0.2 0.8 1"
-            begin="0s"
-            repeatCount="indefinite"
-          ></animate>
-          <animate
-            attributeName="opacity"
-            calcMode="spline"
-            values="1;0"
-            keyTimes="0;1"
-            dur="1"
-            keySplines="0.2 0 0.8 1"
-            begin="0s"
-            repeatCount="indefinite"
-          ></animate>
-        </circle>
-      </svg>
-    </div>
-    <div
-      :style="stl1"
-      class="main-content"
-    >
-      <header data-aos="slide-up">
+  <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normalp-0 m-0 overflow-x-auto overflow-y-auto flex flex-col h-screen min-h-screen min-w-full">
+    <div class="flex flex-col flex-1">
+      <header>
         <div class="header flex container">
           <div class="flex-1">
             <g-image
@@ -93,7 +18,7 @@
         name="fade"
         appear
       >
-        <div data-aos="flip-down">
+        <div>
           <slot />
         </div>
       </transition>
@@ -126,56 +51,16 @@ query {
 .fade-enter {
   opacity: 0;
 }
-
-.main-content {
-  flex: 1 0 auto;
-}
-
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-.lyt {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
 </style>
 
 <script>
 import { timeout } from 'bluebird'
-import LayoutNavbar from '../components/LayoutNavbar'
+import LayoutNavbar from '@/components/LayoutNavbar'
 import LayoutFooter from '@/components/LayoutFooter'
 import VueAos from 'vue-aos'
 export default {
   data () {
-    return {
-      stl1: {
-        display: 'none'
-      },
-      stl2: {
-        display: "block"
-      }
-    }
+    return {}
   },
   components: {
     LayoutNavbar,
@@ -186,13 +71,6 @@ export default {
   mounted () {
     
     this.$nextTick().then(() => {
-      // this.$aos.init();
-      // timeout(10).then(
-        // () => {
-        this.stl1.display = 'block';
-        this.stl2.display = 'none';
-        // }
-      // )
 
     })
   }

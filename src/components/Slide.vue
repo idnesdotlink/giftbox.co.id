@@ -1,20 +1,21 @@
 <template>
-  <div>
+  <div class="product-slider">
     <ClientOnly>
       <TinySlider
         :mouse-drag="true"
         :loop="true"
-        items="2"
+        items="4"
         gutter="20"
         :rewind="true"
         :nav="true"
+        :controls="false"
       >
         <div
           v-for="product in products"
           :key="product.node.id"
         >{{ product.node.title }}
           <g-image
-            height="300"
+            height="200"
             fit="contain"
             :src="product.node.image"
           />
@@ -25,7 +26,6 @@
 </template>
 
 <script>
-// import "tiny-slider/dist/tiny-slider.css";
 export default {
   components: {
     TinySlider: () => import('vue-tiny-slider')
@@ -38,156 +38,157 @@ export default {
 </script>
 
 <style>
-@charset 'UTF-8';
-.tns-outer {
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.product-slider .tns-outer {
   padding: 0 !important;
+  position: relative;
 }
-.tns-outer [hidden] {
+.product-slider .tns-outer [hidden] {
   display: none !important;
 }
-.tns-outer [aria-controls],
-.tns-outer [data-action] {
+.product-slider .tns-outer [aria-controls],
+.product-slider .tns-outer [data-action] {
   cursor: pointer;
 }
-.tns-slider {
-  -webkit-transition: all 0s;
-  -moz-transition: all 0s;
+.product-slider .tns-slider {
   transition: all 0s;
 }
-.tns-slider > .tns-item {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.product-slider .tns-slider > .tns-item {
   box-sizing: border-box;
 }
-.tns-horizontal.tns-subpixel {
-  white-space: nowrap;
-}
-.tns-horizontal.tns-subpixel > .tns-item {
-  display: inline-block;
-  vertical-align: top;
-  white-space: normal;
-}
-.tns-horizontal.tns-no-subpixel:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.tns-horizontal.tns-no-subpixel > .tns-item {
-  float: left;
-}
-.tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
-  margin-right: -100%;
-}
-.tns-no-calc {
+
+.product-slider .tns-no-calc {
   position: relative;
   left: 0;
 }
-.tns-gallery {
+.product-slider .tns-gallery {
   position: relative;
   left: 0;
   min-height: 1px;
 }
-.tns-gallery > .tns-item {
+.product-slider .tns-gallery > .tns-item {
   position: absolute;
   left: -100%;
-  -webkit-transition: transform 0s, opacity 0s;
-  -moz-transition: transform 0s, opacity 0s;
   transition: transform 0s, opacity 0s;
 }
-.tns-gallery > .tns-slide-active {
+.product-slider .tns-horizontal.tns-subpixel {
+  white-space: nowrap;
+}
+.product-slider .tns-horizontal.tns-subpixel > .tns-item {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+.product-slider .tns-horizontal.tns-no-subpixel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.product-slider .tns-horizontal.tns-no-subpixel > .tns-item {
+  float: left;
+}
+.product-slider .tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
+  margin-right: -100%;
+}
+.product-slider .tns-gallery > .tns-slide-active {
   position: relative;
   left: auto !important;
 }
-.tns-gallery > .tns-moving {
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
+.product-slider .tns-gallery > .tns-moving {
   transition: all 0.25s;
 }
-.tns-autowidth {
+.product-slider .tns-autowidth {
   display: inline-block;
 }
-.tns-lazy-img {
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
+.product-slider .tns-lazy-img {
   transition: opacity 0.6s;
   opacity: 0.6;
 }
-.tns-lazy-img.tns-complete {
+.product-slider .tns-lazy-img.tns-complete {
   opacity: 1;
 }
-.tns-ah {
-  -webkit-transition: height 0s;
-  -moz-transition: height 0s;
+.product-slider .tns-ah {
   transition: height 0s;
 }
-.tns-ovh {
+.product-slider .tns-ovh {
   overflow: hidden;
 }
-.tns-visually-hidden {
+.product-slider .tns-visually-hidden {
   position: absolute;
   left: -10000em;
 }
-.tns-transparent {
+.product-slider .tns-transparent {
   opacity: 0;
   visibility: hidden;
 }
-.tns-fadeIn {
+.product-slider .tns-fadeIn {
   opacity: 1;
   filter: alpha(opacity=100);
   z-index: 0;
 }
-.tns-normal,
-.tns-fadeOut {
+.product-slider .tns-normal,
+.product-slider .tns-fadeOut {
   opacity: 0;
   filter: alpha(opacity=0);
   z-index: -1;
 }
-.tns-vpfix {
+.product-slider .tns-vpfix {
   white-space: nowrap;
 }
-.tns-vpfix > div,
-.tns-vpfix > li {
+.product-slider .tns-vpfix > div,
+.product-slider .tns-vpfix > li {
   display: inline-block;
 }
-.tns-t-subp2 {
+.product-slider .tns-t-subp2 {
   margin: 0 auto;
   width: 310px;
   position: relative;
   height: 10px;
   overflow: hidden;
 }
-.tns-t-ct {
+.product-slider .tns-t-ct {
   width: 2333.3333333%;
-  width: -webkit-calc(100% * 70 / 3);
-  width: -moz-calc(100% * 70 / 3);
   width: calc(100% * 70 / 3);
   position: absolute;
   right: 0;
 }
-.tns-t-ct:after {
-  content: '';
+.product-slider .tns-t-ct:after {
+  content: "";
   display: table;
   clear: both;
 }
-.tns-t-ct > div {
+.product-slider .tns-t-ct > div {
   width: 1.4285714%;
-  width: -webkit-calc(100% / 70);
-  width: -moz-calc(100% / 70);
   width: calc(100% / 70);
   height: 10px;
   float: left;
 }
+.product-slider .tns-nav {
+  position: absolute;
+  z-index: 100;
+  bottom: 10px;
+  left: 50%;
+}
 
-.tns-nav > [aria-controls] {
-  width: 30px;
-  height: 30px;
+.product-slider .tns-nav > [aria-controls] {
+  /* @apply h-20 p-0 w-20 p-20 rounded border-none; */
+  width: 20px;
+  height: 20px;
   padding: 0;
   margin: 0 5px;
   border-radius: 50%;
   background: #ddd;
   border: 0;
 }
-.tns-controls [aria-controls] {
+.product-slider .tns-nav .tns-nav-active[aria-controls] {
+  @apply bg-giftbox;
+}
+.product-slider .tns-controls [aria-controls] {
   font-size: 15px;
   margin: 0 5px;
   padding: 0 1em;
@@ -196,5 +197,14 @@ export default {
   background: #66ccff;
   border-radius: 3px;
   border: 0;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+}
+.product-slider .tns-controls [data-controls="prev"] {
+  left: 10px;
+}
+.product-slider .tns-controls [data-controls="next"] {
+  right: 10px;
 }
 </style>
