@@ -72,7 +72,7 @@ export default {
   mounted () {
     
     this.$nextTick().then(() => {
-      this.$modal.show('hello-world');
+      // this.$modal.show('hello-world');
     })
   }
 }
