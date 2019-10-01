@@ -24,6 +24,11 @@
       </transition>
     </div>
     <LayoutFooter></LayoutFooter>
+    <ClientOnly>
+      <modal name="hello-world">
+        Welcome To Giftbox Promosindo
+      </modal>
+    </ClientOnly>
   </div>
 </template>
 
@@ -67,7 +72,7 @@ export default {
   mounted () {
     
     this.$nextTick().then(() => {
-
+      this.$modal.show('hello-world');
     })
   }
 }

@@ -72,6 +72,9 @@ module.exports = {
       options: {
         cacheTime: 600000 // default
       }
+    },
+    {
+      use: "gridsome-plugin-modal"
     }
     // {
     //   use: "gridsome-plugin-pwa",

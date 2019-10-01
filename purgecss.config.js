@@ -35,6 +35,7 @@ module.exports = {
     "tns-lazy-img",
     "tns-moving",
     "tns-nav",
+    "tns-nav-active",
     "tns-no-calc",
     "tns-no-subpixel",
     "tns-normal",
@@ -47,7 +48,12 @@ module.exports = {
     "tns-t-subp2",
     "tns-transparent",
     "tns-visually-hidden",
-    "tns-vpfix"
+    "tns-vpfix",
+    "v--modal",
+    "v--modal-overlay",
+    "v--modal-box",
+    "v--modal-background-click",
+    "v--modal-top-right"
   ],
   extractors: [
     {

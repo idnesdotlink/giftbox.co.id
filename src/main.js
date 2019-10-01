@@ -11,7 +11,9 @@ export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   if (isClient) {
+    const VModal = require("vue-js-modal").default;
     Vue.use(VTooltip);
+    Vue.use(VModal);
     Vue.component("vgs", VueGallerySlideshow);
   }
   head.htmlAttrs = { lang: "en" };

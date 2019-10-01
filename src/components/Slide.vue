@@ -3,7 +3,7 @@
     <ClientOnly>
       <TinySlider
         :mouse-drag="true"
-        :loop="true"
+        :loop="false"
         items="4"
         gutter="20"
         :rewind="true"
@@ -178,7 +178,7 @@ export default {
 .product-slider .tns-nav > [aria-controls] {
   @apply h-5 p-0 w-5 rounded-full bg-transparent border-giftbox border-2 border-solid my-0 mx-1;
 }
-.product-slider .tns-nav .tns-nav-active[aria-controls] {
+.product-slider .tns-nav .tns-nav-active {
   @apply border-accent;
 }
 .product-slider .tns-controls [aria-controls] {
