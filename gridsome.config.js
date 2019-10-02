@@ -10,9 +10,9 @@ if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(cssnano());
 }
 
-const siteUrl = "https://idnesdotlink.github.io";
-const pathPrefix = "giftbox.co.id";
-const fullSiteUrl = siteUrl + "/" + pathPrefix;
+const siteUrl = "http://127.0.0.1:8002"; // "https://idnesdotlink.github.io";
+const pathPrefix = ""; // "giftbox.co.id";
+const fullSiteUrl = siteUrl + (pathPrefix ? "/" + pathPrefix : "");
 
 module.exports = {
   siteName: "Giftbox Promosindo",

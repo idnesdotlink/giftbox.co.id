@@ -24,9 +24,13 @@
       </transition>
     </div>
     <LayoutFooter></LayoutFooter>
+    <portal to="destination">
+      <p>This slot content will be rendered wherever the portal-target with name 'destination' is located.</p>
+    </portal>
     <ClientOnly>
       <modal name="hello-world">
         Welcome To Giftbox Promosindo
+        <portal-target name="destination" />
       </modal>
     </ClientOnly>
   </div>
@@ -67,12 +71,12 @@ export default {
   components: {
     LayoutNavbar,
     LayoutFooter,
-    Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
+    // Spinner: () => import('vue-loading-spinner').then(m => m.Jumper)
   },
   mounted () {
     
     this.$nextTick().then(() => {
-      // this.$modal.show('hello-world');
+      this.$modal.show('hello-world');
     })
   }
 }
