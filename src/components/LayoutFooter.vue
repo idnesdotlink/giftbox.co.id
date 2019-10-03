@@ -19,11 +19,11 @@
         </div>
         <div>
           <a
-            href="rss.xml"
+            href="/rss.xml"
             class="text-white hover:text-gray-400 font-normal"
           >RSS Feed</a> |
           <a
-            href="sitemap.xml"
+            href="/sitemap.xml"
             class="text-white hover:text-gray-400 font-normal"
           >Sitemap</a>
         </div>

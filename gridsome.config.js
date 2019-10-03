@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(cssnano());
 }
 
-const siteUrl = "http://127.0.0.1:8002"; // "https://idnesdotlink.github.io";
+const siteUrl = "http://giftbox.idnes.xyz"; // "https://idnesdotlink.github.io";
 const pathPrefix = ""; // "giftbox.co.id";
 const fullSiteUrl = siteUrl + (pathPrefix ? "/" + pathPrefix : "");
 
