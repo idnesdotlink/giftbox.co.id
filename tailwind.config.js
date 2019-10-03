@@ -12,6 +12,14 @@ module.exports = {
     container: {
       padding: "1rem"
     },
+    linearGradients: {
+      directions: {
+        nine: "90deg"
+      },
+      colors: {
+        one: ["#3f346f", "#1891bd"]
+      }
+    },
     colors: {
       background: {
         primary: "var(--bg-background-primary)",
@@ -38,6 +46,8 @@ module.exports = {
       accent: "#D65108",
       danger: "#C03221",
       alert: "#FF9F1C",
+      one: "#3f346f",
+      two: "#1891bd",
 
       blue: {
         500: "#ffcc00",
@@ -100,5 +110,6 @@ module.exports = {
   },
   plugins: [
     // Some useful comment
+    require("tailwindcss-gradients")()
   ]
 };

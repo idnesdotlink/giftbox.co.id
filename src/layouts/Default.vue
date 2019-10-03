@@ -53,11 +53,10 @@ query {
 @tailwind utilities;
 
 .bar {
-  @apply min-w-full;
-  min-height: 10px;
-  height: 10px;
-  content: "&nbsp;";
-  background-image: linear-gradient(90deg, #3f346f, #1891bd);
+  @apply min-w-full bg-gradient-nine-one h-2;
+}
+.bar::after {
+  content: "\200b";
 }
 
 .fade-enter-active {
