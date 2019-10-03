@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-giftbox text-white lyt-footer">
+  <footer class="bg-giftbox text-white lyt-footer psg">
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
       <div class="mb-8 lg:mb-0">
         <div>Copyright 2019. All rights reserved.</div>
@@ -19,11 +19,11 @@
         </div>
         <div>
           <a
-            href="/rss.xml"
+            href="rss.xml"
             class="text-white hover:text-gray-400 font-normal"
           >RSS Feed</a> |
           <a
-            href="/sitemap.xml"
+            href="sitemap.xml"
             class="text-white hover:text-gray-400 font-normal"
           >Sitemap</a>
         </div>
@@ -93,6 +93,9 @@
 </template>
 
 <style>
+.psg {
+  background-image: linear-gradient(90deg, #3f346f, #1891bd);
+}
 .lyt-footer {
   flex-shrink: 0;
 }

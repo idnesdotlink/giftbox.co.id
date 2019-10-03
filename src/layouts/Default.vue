@@ -1,5 +1,6 @@
 <template>
   <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normalp-0 m-0 overflow-x-auto overflow-y-auto flex flex-col h-screen min-h-screen min-w-full">
+    <div class="bar"></div>
     <div class="flex flex-col flex-1">
       <header>
         <div class="header flex container">
@@ -51,6 +52,14 @@ query {
 
 @tailwind utilities;
 
+.bar {
+  @apply min-w-full;
+  min-height: 10px;
+  height: 10px;
+  content: "&nbsp;";
+  background-image: linear-gradient(90deg, #3f346f, #1891bd);
+}
+
 .fade-enter-active {
   transition: opacity 0.5s;
 }
@@ -76,7 +85,7 @@ export default {
   mounted () {
     
     this.$nextTick().then(() => {
-      this.$modal.show('hello-world');
+      // this.$modal.show('hello-world');
     })
   }
 }
