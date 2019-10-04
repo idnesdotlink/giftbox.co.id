@@ -14,7 +14,6 @@
       <p>Jl. BKR no. 145 Bandung | West Java - Indonesia</p>
       <p>Ph. / Fax. +62 22 520 8772</p>
       <p>surapatiprinting@yahoo.com</p>
-      <p>www.surapatiprinting.com</p>
     </address>
   </Layout>
 </template>

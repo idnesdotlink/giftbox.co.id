@@ -1,6 +1,12 @@
 <template>
   <div class="product-list">
-    <g-image :src="product.image" />
+    <g-image
+      width="200"
+      height="200"
+      fit="inside"
+      :alt="product.title"
+      :src="product.image"
+    />
     <h1
       class="title"
       v-html="product.title"

@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav flex items-center justify-around flex-wrap p-0">
+  <nav class="flex items-center justify-around flex-wrap p-0">
     <g-link
       class="navbar-btn"
       to="/"

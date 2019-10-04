@@ -1,10 +1,10 @@
 <template>
   <Layout>
     <br>
-    <g-link
-      to="/"
+    <div
+      @click="goBack()"
       class="link"
-    > &larr; Go Back</g-link>
+    > &larr; Go Back</div>
     <div class="product-title">
       <h1>{{$page.product.title}}</h1>
     </div>
@@ -26,6 +26,18 @@
     </div>
   </Layout>
 </template>
+
+<script>
+export default {
+  methods: {
+    goBack () {
+      window.history.length > 1
+        ? this.$router.go(-1)
+        : this.$router.push('/')
+    }
+  }
+}
+</script>
 
 <page-query>
 query Product ($path: String!) {

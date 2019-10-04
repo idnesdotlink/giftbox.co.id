@@ -94,7 +94,7 @@
 
 <style>
 .psg {
-  background-image: linear-gradient(90deg, #3f346f, #1891bd);
+  @apply bg-gradient-nine-one;
 }
 .lyt-footer {
   flex-shrink: 0;
