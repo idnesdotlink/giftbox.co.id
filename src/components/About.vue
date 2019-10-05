@@ -1,14 +1,12 @@
 <template>
   <div class="p-5">
-    <h1 class="text-lg font-bold">About us</h1>
-    <p>As the major player in its market, <em>Giftbox Promosindo</em> as proven since 2006, shows consistent and progressive expansion in promoting, marketing and customizing the high-quality premium souvenirs and gifts.</p>
-    <p>With the reputation is our benchmark, <em>Giftbox Promosindo</em> has served corporate, business-level to individual's needs with excellent designs, great products, on-time delivery and innovation. This ensures our accountability in all aspects for customers when dealing with us.</p>
-    <p><em>Giftbox Promosindo</em> is also managed its own printing service, called <em>Surapati Printing Center</em>. With the all-in house production equipment and less outsourcing, <em>Giftbox Promosindo</em> is able to deliver the best product with competitive price in the promotional market, decrease promotion cost with the best outcome to maximize the corporate promotion effectiveness.</p>
-    <p>Customers can walk into our showroom in Jl. BKR no. 145 to view an extensive range of product samples and discuss with our in-house sales executive with regards to their requirements and specifications.</p>
-    <p>Visit Us and Get a Good Deal !</p>
+    <h1 class="text-lg font-bold">Welcome</h1>
+    <p>10 years in the market of promotional items teaching us plenty of lessons and also thousands of ups and downs.</p>
+    <p>We follow the market, we listen to the market and sometimes we create the market for some products through our innovations and inventions.</p>
+    <p>Being creative and producing promotional products that is useful in the daily life is our main goal. Understanding what clients need, matching-up their tight budget is also our preference.</p>
+    <p>We are not only trading product but also we produce those products, to make promotional items to be affordable in every segments of businesses. Find out our massive range products and making a great sale out of your products!</p>
     <p>Regards,</p>
-    <p>Rendy Renaldi</p>
-    <p>Director</p>
-    <p>CV. GIFTBOX PROMOSINDO</p>
+    <p>Rendy Renaldi B. Comm.</p>
+    <p>Giftbox Promosindo</p>
   </div>
 </template>

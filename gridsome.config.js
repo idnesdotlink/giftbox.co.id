@@ -23,7 +23,8 @@ module.exports = {
     Post: "/blog/:title",
     Product: "/product/:title",
     Tag: "/tag/:id",
-    Customer: "/customer/:id"
+    Customer: "/customer/:id",
+    Catalog: "/catalog/:id"
   },
   plugins: [
     {

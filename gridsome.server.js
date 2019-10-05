@@ -37,6 +37,22 @@ module.exports = function(api) {
         ...fields
       });
     });
+
+    const catalogsPath = path.join(__dirname, "content/catalogs/catalogs.yaml");
+    const catalogsRaw = await fs.readFile(catalogsPath, "utf8");
+    const catalogsJson = yaml.safeLoad(catalogsRaw);
+    const catalogs = addCollection("Catalog");
+    catalogsJson.forEach(({ id, title, image, ...fields }) => {
+      catalogs.addNode({
+        id,
+        title,
+        image,
+        internal: {
+          origin: catalogsPath
+        },
+        ...fields
+      });
+    });
   });
 
   api.createPages(({ createPage }) => {
