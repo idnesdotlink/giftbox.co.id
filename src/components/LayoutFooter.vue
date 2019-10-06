@@ -29,6 +29,9 @@
         </div>
       </div>
       <ul class="flex items-center">
+        <li>
+          <WhatsappChatButton />
+        </li>
         <li class="mr-8">
           <a
             href="mailto:rendy.giftbox@yahoo.com"
@@ -102,8 +105,11 @@
 </style>
 
 <script>
+import WhatsappChatButton from './WhatsappChatButton';
 export default {
-
+  components: {
+    WhatsappChatButton
+  }
 }
 </script>
 

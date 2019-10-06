@@ -17,9 +17,13 @@ export default function(Vue, { router, head, isClient }) {
     Vue.use(VModal);
   }
   head.htmlAttrs = { lang: "en" };
-  head.bodyAttrs = {
-    class:
-      "bg-background text-gray font-sans min-h-screen min-w-screen flex flex-col",
-    style: "width: 100vw; min-width: 100vw; overflow: hidden;"
-  };
+  const { meta } = head;
+  const idx = meta.findIndex(function({ key }) {
+    return key === "viewport";
+  });
+  meta.splice(idx, 1, {
+    ...meta[idx],
+    content:
+      "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+  });
 }
