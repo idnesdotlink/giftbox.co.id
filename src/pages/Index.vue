@@ -1,5 +1,22 @@
 <template>
   <Layout>
+    <div class="hero justify-center flex items-end sm:items-center pb-12 sm:pb-0">
+      <img
+        src="../../static/images/curve1.svg"
+        class="curves curves--1"
+      >
+      <img
+        src="../../static/images/curve2.svg"
+        class="curves curves--2"
+      >
+      <img
+        src="../../static/images/curve3.svg"
+        class="curves curves--3"
+      >
+      <div class="container sm:max-w-md md:max-w-4xl text-center relative z-10">
+        <h1 class="text-3xl sm:text-title text-white font-normal leading-tight">Free <strong>Google Slides</strong> and <strong>PowerPoint templates</strong> <br>to boost your presentations</h1>
+      </div>
+    </div>
     <ClientOnly>
       <Slide :products="$page.allProduct.edges"></Slide>
     </ClientOnly>
@@ -9,7 +26,10 @@
     <ClientOnly>
       <CustomerSlide :customers="$page.allCustomer.edges"></CustomerSlide>
     </ClientOnly>
-    <main class="py-4">
+    <main
+      class="py-4"
+      v-scrollspy="onScrollTo"
+    >
       <div class="px-4">
         <div class="block md:flex justify-between md:-mx-2">
           <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
@@ -109,7 +129,6 @@
         </div>
       </div>
     </main>
-    <Whatsapp />
   </Layout>
 </template>
 
@@ -119,7 +138,12 @@ import Slide from "@/components/Slide"
 import CustomerSlide from "@/components/CustomerSlide" 
 import About from "@/components/About"
 import Whatsapp from '@/components/Whatsapp'
+import scrollspy from 'v-scrollspy'
+
 export default {
+  directives: {
+    scrollspy
+  },
   components: {
     PostList,
     Slide,
@@ -132,6 +156,11 @@ export default {
   },
   mounted() {
     // console.log(this.$page.allCustomer)
+  },
+  methods: {
+    onScrollTo (el) {
+      console.log(el)
+    }
   }
 }
 </script>
@@ -179,7 +208,196 @@ allCustomer {
 </page-query>
 
 <style>
+.hero {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#4949e7),
+    to(#3636cc)
+  );
+  background-image: linear-gradient(#4949e7, #3636cc);
+  z-index: 0;
+}
 .home-links a {
   margin-right: 1rem;
+}
+</style>
+
+<style>
+.curves {
+  position: absolute;
+  pointer-events: none;
+  -webkit-filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.2));
+  will-change: transform;
+  -webkit-animation-delay: 0.5s !important;
+  animation-delay: 0.5s !important;
+  opacity: 0;
+}
+
+.curves--1 {
+  top: 25%;
+  left: 50%;
+  width: 1040px;
+  z-index: 2;
+  -webkit-transform: translate(-65%, 100px) rotate(15deg);
+  transform: translate(-65%, 100px) rotate(15deg);
+  -webkit-animation: curves1 1s forwards;
+  animation: curves1 1s forwards;
+}
+
+.curves--2 {
+  top: -120px;
+  right: -50px;
+  width: 490px;
+  z-index: 3;
+  -webkit-animation: curves2 1s forwards;
+  animation: curves2 1s forwards;
+  -webkit-transform: translate(100px) rotate(30deg);
+  transform: translate(100px) rotate(30deg);
+}
+
+.curves--3 {
+  top: -450px;
+  left: -90px;
+  width: 900px;
+  z-index: 1;
+  -webkit-animation: curves3 1s forwards;
+  animation: curves3 1s forwards;
+  -webkit-transform: translate(-100px) rotate(-30deg);
+  transform: translate(-100px) rotate(-30deg);
+}
+
+.curves--4 {
+  top: -180px;
+  left: 70%;
+  width: 700px;
+  z-index: 2;
+  -webkit-transform: translate(-65%, 100px) rotate(15deg);
+  transform: translate(-65%, 100px) rotate(15deg);
+  -webkit-animation: curves4 1s forwards;
+  animation: curves4 1s forwards;
+}
+
+.curves--5 {
+  bottom: -220px;
+  left: -90px;
+  width: 500px;
+  z-index: 1;
+  -webkit-animation: curves3 1s forwards;
+  animation: curves3 1s forwards;
+  -webkit-transform: translate(-100px) rotate(-30deg);
+  transform: translate(-100px) rotate(-30deg);
+}
+
+.curves--6 {
+  bottom: -210px;
+  right: -190px;
+  width: 490px;
+  z-index: 3;
+  -webkit-animation: curves2 1s forwards;
+  animation: curves2 1s forwards;
+  -webkit-transform: translate(100px) rotate(30deg);
+  transform: translate(100px) rotate(30deg);
+}
+
+@-webkit-keyframes curves1 {
+  0% {
+    -webkit-transform: translate(-65%, 100px) rotate(15deg);
+    transform: translate(-65%, 100px) rotate(15deg);
+  }
+  to {
+    -webkit-transform: translate(-65%) rotate(0);
+    transform: translate(-65%) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes curves1 {
+  0% {
+    -webkit-transform: translate(-65%, 100px) rotate(15deg);
+    transform: translate(-65%, 100px) rotate(15deg);
+  }
+  to {
+    -webkit-transform: translate(-65%) rotate(0);
+    transform: translate(-65%) rotate(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes curves2 {
+  0% {
+    -webkit-transform: translate(100px) rotate(30deg);
+    transform: translate(100px) rotate(30deg);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes curves2 {
+  0% {
+    -webkit-transform: translate(100px) rotate(30deg);
+    transform: translate(100px) rotate(30deg);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes curves3 {
+  0% {
+    -webkit-transform: translate(-100px) rotate(-30deg);
+    transform: translate(-100px) rotate(-30deg);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes curves3 {
+  0% {
+    -webkit-transform: translate(-100px) rotate(-30deg);
+    transform: translate(-100px) rotate(-30deg);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes curves4 {
+  0% {
+    -webkit-transform: translate(-65%, -100px) rotate(15deg);
+    transform: translate(-65%, -100px) rotate(15deg);
+  }
+  to {
+    -webkit-transform: translate(-65%) rotate(0);
+    transform: translate(-65%) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes curves4 {
+  0% {
+    -webkit-transform: translate(-65%, -100px) rotate(15deg);
+    transform: translate(-65%, -100px) rotate(15deg);
+  }
+  to {
+    -webkit-transform: translate(-65%) rotate(0);
+    transform: translate(-65%) rotate(0);
+    opacity: 1;
+  }
 }
 </style>
