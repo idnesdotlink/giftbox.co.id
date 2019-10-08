@@ -26,10 +26,7 @@
     <ClientOnly>
       <CustomerSlide :customers="$page.allCustomer.edges"></CustomerSlide>
     </ClientOnly>
-    <main
-      class="py-4"
-      v-scrollspy="onScrollTo"
-    >
+    <main class="py-4">
       <div class="px-4">
         <div class="block md:flex justify-between md:-mx-2">
           <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
@@ -138,11 +135,12 @@ import Slide from "@/components/Slide"
 import CustomerSlide from "@/components/CustomerSlide" 
 import About from "@/components/About"
 import Whatsapp from '@/components/Whatsapp'
-import scrollspy from 'v-scrollspy'
+// const inview = require('../directives/inview')
+// import scrollspy from 'v-scrollspy'
 
 export default {
   directives: {
-    scrollspy
+    // inview
   },
   components: {
     PostList,
