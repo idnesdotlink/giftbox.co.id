@@ -196,8 +196,8 @@
           href="/"
           class="h-8"
         ><img
-            src="../../static/images/slidego.svg?"
-            class="h-8"
+            src="../../static/images/giftbox-logo.svg"
+            class="h-12"
           ></a>
         <a
           @click="wow()"

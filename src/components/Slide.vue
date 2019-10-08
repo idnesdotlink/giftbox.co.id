@@ -170,7 +170,7 @@ export default {
 }
 .product-slider .tns-nav {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   bottom: 10px;
   left: 50%;
 }
@@ -182,6 +182,7 @@ export default {
   @apply border-accent;
 }
 .product-slider .tns-controls [aria-controls] {
+  /* @apply z-10 position-absolute */
   font-size: 15px;
   margin: 0 5px;
   padding: 0 1em;
@@ -191,7 +192,7 @@ export default {
   border-radius: 3px;
   border: 0;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   top: 50%;
 }
 .product-slider .tns-nav > [aria-controls]:focus {

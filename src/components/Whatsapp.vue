@@ -32,8 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-// @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 .containerz {
   // font-family: 'Roboto', Arial, Sans-serif;
   font-size: 16px;
