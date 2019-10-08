@@ -1,7 +1,7 @@
 <template>
   <a
     class="whatsapp"
-    data-href="https://wa.me/6287821513777"
+    :href="`https://wa.me/${ phone }`"
     @click="click($event)"
   >
     <svg viewBox="0 0 800 800">
@@ -12,9 +12,13 @@
 
 <script>
 export default {
+  props: [
+    'phone'
+  ],
   methods: {
     click (e) {
-      console.log(e)
+      e.preventDefault()
+      console.log(this.$el.attributes.href.value)
     }
   }
 }

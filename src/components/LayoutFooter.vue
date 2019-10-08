@@ -3,7 +3,7 @@
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-6">
       <ul class="flex items-center">
         <li class="mr-8">
-          <WhatsappIcon />
+          <WhatsappIcon phone="6287821513777" />
         </li>
         <li class="mr-8">
           <a
