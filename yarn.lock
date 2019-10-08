@@ -1095,10 +1095,10 @@
     unist-builder "^1.0.4"
     unist-util-visit "^1.4.0"
 
-"@gridsome/source-filesystem@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.0.tgz#420199ee7a34101bfd8479ca2ac66435575c3b3c"
-  integrity sha512-W6Sf9VDXotbol2ojsbHtlILYw3lIGKqy52ojHwaq0FKZlgJV8U3UahRRiL8A68xQdy1uRUTFtWTSvF3oEwUuyA==
+"@gridsome/source-filesystem@0.6.1", "@gridsome/source-filesystem@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.1.tgz#4dc5275d094f0f0ee23c9e7db2b2bfb391cd7625"
+  integrity sha512-48y2A2hfe4mdeT/dtM8AsYM3OZmNRx+JpKtZn5wyJPjThowHSjE/+7pN1fmko7I0tiFLhPXWkGLlna0SeMgGUA==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.0"
@@ -1151,16 +1151,16 @@
   dependencies:
     js-yaml "^3.12.1"
 
-"@gridsome/vue-remark@0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.5.tgz#d8636db5c44c1a3ec0111e577afea7ebf61aeb9d"
-  integrity sha512-vEuCp6YZdHIKmXRenfLE4KwGJ3l8U0GHYfF/1MDDHSApsmyo0xcTH6ucV/gfKxKcG6l8mdf62rRP/CU6nakQ/g==
+"@gridsome/vue-remark@0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.6.tgz#9f4b6ff729148ed68064e8dc26b275c250762b0c"
+  integrity sha512-HPxxXutfXXW9evi9kIfxh77/yIQ/cX0l7PdkIM2L4uo5kQfi+9kFyRydnsQKjJoBbMOvkrL3gQRGbc3kzuoCoA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
     "@babel/traverse" "^7.0.0"
-    "@gridsome/source-filesystem" "^0.6.0"
+    "@gridsome/source-filesystem" "^0.6.1"
     "@gridsome/transformer-remark" "^0.3.4"
     hash-sum "^1.0.2"
     hast-util-to-html "^5.0.0"
@@ -12902,10 +12902,10 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vee-validate@3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.0.10.tgz#0da1b6e917f35e2177dc90864c67b9aa0b8902dc"
-  integrity sha512-Rll62hEQm1a0ONaxrQg3rCiAB7SprYLZDpQVsBdCJOJbWjpBZz2fr3EAWJpLv/ib/SR2fIz5PmfOJDdMrxN+tA==
+vee-validate@3.0.11:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.0.11.tgz#5ffe3d501893801529186642d20241cf632f1341"
+  integrity sha512-2KRLdtM/y+bU2o9KC7cZBGPRUsBxQaoFb3IlBOUkj6l24Gx5XWXxNkhaAXK97BRLOdM4CH/gJYFi9DOm0N7dTQ==
 
 vendors@^1.0.0:
   version "1.0.3"

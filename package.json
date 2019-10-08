@@ -18,7 +18,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/plugin-sitemap": "^0.2.2",
     "@gridsome/remark-prismjs": "^0.2.0",
-    "@gridsome/source-filesystem": "^0.6.0",
+    "@gridsome/source-filesystem": "0.6.1",
     "@gridsome/transformer-csv": "^0.2.1",
     "@gridsome/transformer-json": "^0.2.1",
     "@gridsome/transformer-remark": "0.3.4",
@@ -56,7 +56,7 @@
     "url-loader": "2.2.0",
     "v-scrollspy": "^0.1.1",
     "v-tooltip": "^2.0.2",
-    "vee-validate": "3.0.10",
+    "vee-validate": "3.0.11",
     "vue": "^2.6.10",
     "vue-animejs": "^2.1.1",
     "vue-fuse": "^2.1.0",
@@ -70,7 +70,7 @@
     "vue2-leaflet": "^2.2.1"
   },
   "devDependencies": {
-    "@gridsome/vue-remark": "0.1.5",
+    "@gridsome/vue-remark": "0.1.6",
     "autoprefixer": "9.6.4",
     "cssnano": "^4.1.10",
     "file-loader": "^4.2.0",
