@@ -26,7 +26,6 @@
 </template>
 
 <script>
-// import "tiny-slider/dist/tiny-slider.css";
 export default {
   components: {
     TinySlider: () => import('vue-tiny-slider')
@@ -173,15 +172,14 @@ export default {
     background: #ddd;
     border: 0;
   }
+  .tns-controls {
+    @apply mx-2;
+  }
   .tns-controls [aria-controls] {
-    font-size: 15px;
-    margin: 0 5px;
-    padding: 0 1em;
-    height: 2.5em;
-    color: #000;
-    background: #66ccff;
-    border-radius: 3px;
-    border: 0;
+    @apply h-6 py-0 px-2 text-white bg-giftbox mx-2 my-0 text-sm rounded border-0;
+  }
+  .tns-controls [aria-controls]:focus {
+    @apply outline-none;
   }
 }
 </style>

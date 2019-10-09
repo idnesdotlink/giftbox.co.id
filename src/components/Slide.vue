@@ -170,10 +170,11 @@ export default {
     float: left;
   }
   .tns-nav {
-    position: absolute;
-    z-index: 10;
-    bottom: 10px;
+    @apply absolute z-10 bottom-0;
     left: 50%;
+    // z-index: 10;
+    // bottom: 10px;
+    // left: 50%;
   }
 
   .tns-nav > [aria-controls] {
@@ -183,17 +184,17 @@ export default {
     @apply border-accent;
   }
   .tns-controls [aria-controls] {
-    /* @apply z-10 position-absolute */
-    font-size: 15px;
-    margin: 0 5px;
-    padding: 0 1em;
-    height: 2.5em;
-    color: #000;
-    background: #66ccff;
-    border-radius: 3px;
-    border: 0;
-    position: absolute;
-    z-index: 10;
+    @apply z-10 absolute mx-0 my-2 px-0 py-1 h-1 border-0 rounded;
+    // font-size: 15px;
+    // margin: 0 5px;
+    // padding: 0 1em;
+    // height: 2.5em;
+    // color: #000;
+    // background: #66ccff;
+    // border-radius: 3px;
+    // border: 0;
+    // position: absolute;
+    // z-index: 10;
     top: 50%;
   }
   .tns-nav > [aria-controls]:focus {
