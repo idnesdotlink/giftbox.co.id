@@ -1,6 +1,9 @@
 <template>
   <Layout>
-    <div class="hero justify-center flex items-end sm:items-center pb-12 sm:pb-0">
+    <div
+      v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+      class="hero justify-center flex items-end sm:items-center pb-12 sm:pb-0"
+    >
       <img
         src="../../static/images/curve1.svg"
         class="curves curves--1"
@@ -139,6 +142,13 @@ import Whatsapp from '@/components/Whatsapp'
 // import scrollspy from 'v-scrollspy'
 
 export default {
+  data: () => ({
+    intersectionOptions: {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
+    } // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+  }),
   directives: {
     // inview
   },
@@ -158,6 +168,17 @@ export default {
   methods: {
     onScrollTo (el) {
       console.log(el)
+    },
+onWaypoint ({ going, direction }) {
+      // going: in, out
+      // direction: top, right, bottom, left
+      if (going === this.$waypointMap.GOING_IN) {
+        console.log('waypoint going in!')
+      }
+
+      if (direction === this.$waypointMap.DIRECTION_TOP) {
+        console.log('waypoint going top!')
+      }
     }
   }
 }

@@ -13011,11 +13011,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-"vscode-textmate@git+https://github.com/octref/vscode-textmate.git":
-  version "4.0.1"
-  uid e65aabe2227febda7beaad31dd0fca1228c5ddf3
-  resolved "git+https://github.com/octref/vscode-textmate.git#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
-
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
   resolved "https://github.com/octref/vscode-textmate#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
@@ -13154,12 +13149,19 @@ vue-wait@^1.4.6:
   resolved "https://registry.yarnpkg.com/vue-wait/-/vue-wait-1.4.8.tgz#495b2ef996544c91f8ea14b1fe8d5abe94872655"
   integrity sha512-R76ZfqyUqUu/xWFnY6fUV1nDYEublac+cTIeHdZ/+F+XhpxK/kDqIyZPZkNcahXPWs0ZUfLAPWyc/IbxPod6Vg==
 
+vue-waypoint@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/vue-waypoint/-/vue-waypoint-3.2.2.tgz#9c35ca9c75ca8a7a03550eb1640ae1a0e5b8df10"
+  integrity sha512-T11nSEsmR19fc7zdRKc9YG55m4FGbQWeQY15qOdJGi80x9yAeritoTWo1sCJPoJ/S9ekkNC713z/n1r5zflOLA==
+  dependencies:
+    vue "^2.5.2"
+
 vue2-leaflet@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/vue2-leaflet/-/vue2-leaflet-2.2.1.tgz#cd67274951751a33df147481fce2b956ba174c7e"
   integrity sha512-yBB3Ilv9LTszNn/uxUATq8+Ahw/1FqIasdQehb9m1tJ5T9qeEk8Fr9a6uLzvR+zuz88rnEQVo7/iGUd96E7iLg==
 
-vue@^2.2.4, vue@^2.6.10:
+vue@^2.2.4, vue@^2.5.2, vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==

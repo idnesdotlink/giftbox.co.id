@@ -69,6 +69,7 @@
     "vue-social-sharing": "^2.4.6",
     "vue-tiny-slider": "^0.1.35",
     "vue-wait": "^1.4.6",
+    "vue-waypoint": "^3.2.2",
     "vue2-leaflet": "^2.2.1"
   },
   "devDependencies": {

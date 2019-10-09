@@ -5,6 +5,7 @@ import "intersection-observer";
 import DefaultLayout from "~/layouts/Default.vue";
 import VTooltip from "v-tooltip";
 import PortalVue from "portal-vue";
+import VueWayPoint from "vue-waypoint";
 import "animate.css";
 import "magic.css/dist/magic.css";
 
@@ -16,6 +17,7 @@ export default function(Vue, { router, head, isClient }) {
     const VModal = require("vue-js-modal").default;
     Vue.use(VTooltip);
     Vue.use(VModal);
+    Vue.use(VueWayPoint);
   }
   head.htmlAttrs = { lang: "en" };
   const { meta } = head;
