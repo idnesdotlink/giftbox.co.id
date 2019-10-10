@@ -3,6 +3,34 @@ const fs = require("fs-extra");
 const yaml = require("js-yaml");
 
 module.exports = function(api) {
+  // api.configureWebpack(config => {
+  //   return merge(
+  //     {
+  //       module: {
+  //         rules: [
+  //           {
+  //             test: /\.s[ac]ss$/i,
+  //             use: [
+  //               "style-loader",
+  //               "css-loader",
+  //               {
+  //                 loader: "sass-loader",
+  //                 options: {
+  //                   implementation: require("sass"),
+  //                   sassOptions: {
+  //                     fiber: require("fibers")
+  //                   }
+  //                 }
+  //               }
+  //             ]
+  //           }
+  //         ]
+  //       }
+  //     },
+  //     config
+  //   );
+  // });
+
   api.loadSource(async ({ addCollection }) => {
     const tagsPath = path.join(__dirname, "content/tags/tags.yaml");
     const tagsRaw = await fs.readFile(tagsPath, "utf8");

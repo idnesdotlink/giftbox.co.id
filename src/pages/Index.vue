@@ -36,7 +36,7 @@
             <div class="bg-white rounded-lg overflow-hidden shadow relative">
               <img
                 class="h-56 w-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1457282367193-e3b79e38f207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1654&q=80"
+                src="../../static/images/giftbox-box.png"
                 alt=""
               >
               <div class="p-4 h-auto md:h-40 lg:h-48">
@@ -66,7 +66,7 @@
             <div class="bg-white rounded-lg overflow-hidden shadow relative">
               <img
                 class="h-56 w-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                src="../../static/images/giftbox-box.png"
                 alt=""
               >
               <div class="p-4 h-auto md:h-40 lg:h-48">
@@ -100,7 +100,7 @@
             <div class="bg-white rounded-lg overflow-hidden shadow relative">
               <img
                 class="h-56 w-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1467238307002-480ffdd260f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                src="../../static/images/giftbox-box.png"
                 alt=""
               >
               <div class="p-4 h-auto md:h-40 lg:h-48">
@@ -169,7 +169,7 @@ export default {
     onScrollTo (el) {
       console.log(el)
     },
-onWaypoint ({ going, direction }) {
+    onWaypoint ({ going, direction }) {
       // going: in, out
       // direction: top, right, bottom, left
       if (going === this.$waypointMap.GOING_IN) {

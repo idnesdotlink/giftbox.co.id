@@ -53,7 +53,10 @@ module.exports = {
     "v--modal-overlay",
     "v--modal-box",
     "v--modal-background-click",
-    "v--modal-top-right"
+    "v--modal-top-right",
+    "tooltip",
+    "tooltip-inner",
+    "tooltip-arrow"
   ],
   extractors: [
     {
