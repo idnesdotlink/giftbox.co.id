@@ -3,6 +3,10 @@ const fs = require("fs-extra");
 const yaml = require("js-yaml");
 
 module.exports = function(api) {
+  api.chainWebpack(config => {
+    config.mode("development");
+  });
+
   // api.configureWebpack(config => {
   //   return merge(
   //     {
