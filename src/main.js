@@ -7,16 +7,19 @@ import VTooltip from "v-tooltip";
 import PortalVue from "portal-vue";
 import "animate.css";
 import "magic.css/dist/magic.css";
+import VueAgile from "vue-agile";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.use(PortalVue);
+  Vue.use(VueAgile);
   if (isClient) {
     const VModal = require("vue-js-modal").default;
+    const VueWaypoint = require("vue-waypoint").default;
     Vue.use(VTooltip);
     Vue.use(VModal);
-    Vue.use(require("vue-waypoint").default);
+    Vue.use(VueWaypoint);
   }
   head.htmlAttrs = { lang: "en" };
   const { meta } = head;

@@ -12,6 +12,6 @@
       ]
     }],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s", "vh", "vw", "px", "%", "deg", "vmax"]
+    "unit-whitelist": ["em", "rem", "s", "vh", "vw", "px", "%", "deg", "vmax", "ms"]
   }
 }

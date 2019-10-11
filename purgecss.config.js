@@ -56,7 +56,21 @@ module.exports = {
     "v--modal-top-right",
     "tooltip",
     "tooltip-inner",
-    "tooltip-arrow"
+    "tooltip-arrow",
+    "agile",
+    "agile__slides",
+    "agile__slide",
+    "agile__slides--cloned",
+    "agile__slides--regular",
+    "agile__list",
+    "agile__track",
+    "agile__actions",
+    "agile__dots",
+    "agile__dot",
+    "agile__dot--current",
+    "agile__nav-button",
+    "agile__nav-button--next",
+    "agile__nav-button--prev"
   ],
   extractors: [
     {
