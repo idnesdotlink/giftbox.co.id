@@ -29,7 +29,7 @@
     <ClientOnly>
       <CustomerSlide :customers="$page.allCustomer.edges"></CustomerSlide>
     </ClientOnly>
-    <Coba />
+    <Coba :products="$page.allProduct.edges" />
     <Article />
   </Layout>
 </template>

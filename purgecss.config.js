@@ -58,6 +58,7 @@ module.exports = {
     "tooltip-inner",
     "tooltip-arrow",
     "agile",
+    "slide",
     "agile__slides",
     "agile__slide",
     "agile__slides--cloned",
