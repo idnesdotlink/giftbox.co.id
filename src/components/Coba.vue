@@ -1,20 +1,23 @@
 <template>
+
   <agile>
     <div
       v-for="product in products"
       :key="product.node.id"
     >{{ product.node.title }}
-      <g-image
-        height="200"
-        fit="contain"
-        :src="product.node.image"
-      />
+      <img :src="product.node.image.src" />
     </div>
   </agile>
+
 </template>
 
 <script>
 export default {
-  props: ['products']
+  props: ['products'],
+  mounted () {
+    this.products.forEach(node => {
+      console.log(node)
+    }); 
+  }
 }
 </script>
