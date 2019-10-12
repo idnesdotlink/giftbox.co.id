@@ -9,7 +9,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -b gh-pages -d dist",
     "gh": "gh-pages -b gh-pages -d dist",
-    "loc": "lite-server -c ./lite-server.config.json"
+    "loc": "php -S 127.0.0.1:8082 -t ./dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.11.2",

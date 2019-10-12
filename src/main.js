@@ -8,12 +8,14 @@ import PortalVue from "portal-vue";
 import "animate.css";
 import "magic.css/dist/magic.css";
 import VueAgile from "vue-agile";
+import VueLazyload from "vue-lazyload";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.use(PortalVue);
   Vue.use(VueAgile);
+  Vue.use(VueLazyload);
   if (isClient) {
     const VModal = require("vue-js-modal").default;
     const VueWaypoint = require("vue-waypoint").default;

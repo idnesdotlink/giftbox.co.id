@@ -1,45 +1,55 @@
 <template>
-  <agile
-    class="test"
-    :slides-to-show="3"
-  >
-    <div
-      v-for="product in products"
-      :key="product.node.id"
-    >{{ product.node.title }}
-      <img
-        :src="product.node.image.src"
+  <div>
+    <div>test</div>
+    <agile
+      v-cloak
+      ref="slide"
+      :slides-to-show="3"
+    >
+      <div
+        v-for="product in products"
+        :key="product.node.id"
+      >title: {{ product.node.title }}
+        <!-- <img
+        v-lazy="product.node.image.src"
         class="h-auto w-25"
-      />
-    </div>
-  </agile>
-
+      /> -->
+        <g-image
+          :src="product.node.image.src"
+          class="h-auto w-25"
+        />
+      </div>
+    </agile>
+  </div>
 </template>
 
 <script>
 export default {
   props: ['products'],
   mounted () {
-    this.products.forEach(node => {
-      console.log(node)
-    }); 
+    this.$nextTick().then(
+      () => {
+        console.log('next tick')
+      }
+    )
+    console.log(this.$refs.slide)
   }
 }
 </script>
 
 <style lang="scss">
-.test.agile {
+.agile {
   .agile__actions {
     .agile__dots {
       .agile__dot {
         @apply mx-1;
         button {
-          @apply border-giftbox border-2 border-solid w-4 h-4 rounded-full;
+          @apply border-giftbox border-2 border-solid w-5 h-5 rounded-full;
         }
       }
       .agile__dot--current {
         button {
-          @apply border-giftbox border-2 border-accent rounded-full;
+          @apply border-accent;
         }
       }
     }
