@@ -68,6 +68,7 @@
     "vue-lazy-hydration": "1.0.0-beta.9",
     "vue-lazyload": "^1.3.3",
     "vue-scrollto": "2.17.1",
+    "vue-select": "^3.2.0",
     "vue-social-sharing": "^2.4.6",
     "vue-tiny-slider": "0.1.38",
     "vue-wait": "^1.4.6",
