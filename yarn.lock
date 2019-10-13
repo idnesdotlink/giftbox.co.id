@@ -13040,7 +13040,7 @@ vue-animejs@^2.1.1:
   dependencies:
     animejs "~3"
 
-vue-fuse@^2.1.0:
+vue-fuse@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-2.1.0.tgz#a8e785cbb80d216d99cf652f32d3cdad243a15df"
   integrity sha512-hx4QZkeIATmFlKyq6QSWcFFHPJC0vmsusnZP1GkBSEXh1eH7WV8Pde9O0XFvXWIzCH4Dr+Dox25EKu+iAy4bSg==
