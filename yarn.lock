@@ -1095,10 +1095,10 @@
     unist-builder "^1.0.4"
     unist-util-visit "^1.4.0"
 
-"@gridsome/source-filesystem@0.6.1", "@gridsome/source-filesystem@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.1.tgz#4dc5275d094f0f0ee23c9e7db2b2bfb391cd7625"
-  integrity sha512-48y2A2hfe4mdeT/dtM8AsYM3OZmNRx+JpKtZn5wyJPjThowHSjE/+7pN1fmko7I0tiFLhPXWkGLlna0SeMgGUA==
+"@gridsome/source-filesystem@0.6.2", "@gridsome/source-filesystem@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.2.tgz#95f65e9fcf03624ba23f8f0bee0779fe8e8b9021"
+  integrity sha512-K1pyXwFYIlABaHq3wqOPyYt4ARzLZuUQ+UZKjDSBT9I0T0qpCbwir5kJMQkR7qY4ONflUrv8fgG6DNSrc1uzbA==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.0"
@@ -1151,16 +1151,16 @@
   dependencies:
     js-yaml "^3.12.1"
 
-"@gridsome/vue-remark@0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.6.tgz#9f4b6ff729148ed68064e8dc26b275c250762b0c"
-  integrity sha512-HPxxXutfXXW9evi9kIfxh77/yIQ/cX0l7PdkIM2L4uo5kQfi+9kFyRydnsQKjJoBbMOvkrL3gQRGbc3kzuoCoA==
+"@gridsome/vue-remark@0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.1.7.tgz#24ae900e54f2f2e3c472446ac29eb88816fcd196"
+  integrity sha512-QFXcgsC1bHz/fq8CUspHztdoedeDZ2nERr//L4AI2O663/QynIk6senFct6VQghCfnd+w1GK4Jv8sHKLy1DQ1g==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
     "@babel/traverse" "^7.0.0"
-    "@gridsome/source-filesystem" "^0.6.1"
+    "@gridsome/source-filesystem" "^0.6.2"
     "@gridsome/transformer-remark" "^0.3.4"
     hash-sum "^1.0.2"
     hast-util-to-html "^5.0.0"
@@ -2125,7 +2125,20 @@ auto-bind@^2.0.0:
   dependencies:
     "@types/react" "^16.8.12"
 
-autoprefixer@9.6.4, autoprefixer@^9.4.5, autoprefixer@^9.4.7, autoprefixer@^9.5.1:
+autoprefixer@9.6.5:
+  version "9.6.5"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.6.5.tgz#98f4afe7e93cccf323287515d426019619775e5e"
+  integrity sha512-rGd50YV8LgwFQ2WQp4XzOTG69u1qQsXn0amww7tjqV5jJuNazgFKYEVItEBngyyvVITKOg20zr2V+9VsrXJQ2g==
+  dependencies:
+    browserslist "^4.7.0"
+    caniuse-lite "^1.0.30000999"
+    chalk "^2.4.2"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^7.0.18"
+    postcss-value-parser "^4.0.2"
+
+autoprefixer@^9.4.5, autoprefixer@^9.4.7, autoprefixer@^9.5.1:
   version "9.6.4"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.6.4.tgz#e6453be47af316b2923eaeaed87860f52ad4b7eb"
   integrity sha512-Koz2cJU9dKOxG8P1f8uVaBntOv9lP4yz9ffWvWaicv9gHBPhpQB22nGijwd8gqW9CNT+UdkbQOQNLVI8jN1ZfQ==
@@ -2864,7 +2877,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30000998:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30000998, caniuse-lite@^1.0.30000999:
   version "1.0.30000999"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000999.tgz#427253a69ad7bea4aa8d8345687b8eec51ca0e43"
   integrity sha512-1CUyKyecPeksKwXZvYw0tEoaMCo/RwBlXmEtN5vVnabvO0KPd9RQLcaAuR9/1F+KDMv6esmOFWlsXuzDk+8rxg==
@@ -5434,7 +5447,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-fuse.js@^3.2.0:
+fuse.js@^3.4.5:
   version "3.4.5"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.5.tgz#8954fb43f9729bd5dbcb8c08f251db552595a7a6"
   integrity sha512-s9PGTaQIkT69HaeoTVjwGsLfb8V8ScJLx5XGFcKHg0MqLUH/UZ4EKOtqtXX9k7AFqCGxD1aJmYb8Q5VYDibVRQ==
@@ -13040,12 +13053,12 @@ vue-animejs@^2.1.1:
   dependencies:
     animejs "~3"
 
-vue-fuse@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-2.1.0.tgz#a8e785cbb80d216d99cf652f32d3cdad243a15df"
-  integrity sha512-hx4QZkeIATmFlKyq6QSWcFFHPJC0vmsusnZP1GkBSEXh1eH7WV8Pde9O0XFvXWIzCH4Dr+Dox25EKu+iAy4bSg==
+vue-fuse@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-2.1.2.tgz#9c369b9349f72adbd2aab2c36e3ee4dc55af522f"
+  integrity sha512-mTGawEw4QK+kVwaLUR4cV0CYEyrHzIKa8RrLtxCovoRWknllhu/eo1yWAJ5Ix0xQJxk/glMKnE/Z73gyTU1CiA==
   dependencies:
-    fuse.js "^3.2.0"
+    fuse.js "^3.4.5"
 
 vue-gtm@^2.0.0:
   version "2.2.0"

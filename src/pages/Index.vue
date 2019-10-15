@@ -31,10 +31,12 @@
     </ClientOnly>
     <Coba :products="$page.allProduct.edges" />
     <Article />
+    <Soc />
   </Layout>
 </template>
 
 <script>
+import Soc from '@/components/Soc'
 import PostList from "@/components/PostList"
 import Slide from "@/components/Slide"
 import CustomerSlide from "@/components/CustomerSlide" 
@@ -63,7 +65,8 @@ export default {
     About,
     Whatsapp,
     Coba,
-    Article
+    Article,
+    Soc
   },
   metaInfo: {
     title: ''

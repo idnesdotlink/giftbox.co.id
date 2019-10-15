@@ -17,13 +17,18 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueAgile);
   Vue.use(VueLazyload);
   if (isClient) {
+    const SocialSharing = require("vue-social-sharing");
+    Vue.use(SocialSharing);
     const VModal = require("vue-js-modal").default;
     const VueWaypoint = require("vue-waypoint").default;
     Vue.use(VTooltip);
     Vue.use(VModal);
     Vue.use(VueWaypoint);
   }
-  head.htmlAttrs = { lang: "en" };
+  head.htmlAttrs = {
+    lang: "en",
+    class: "w-screen h-screen m-0 p-0"
+  };
   const { meta } = head;
   const idx = meta.findIndex(function({ key }) {
     return key === "viewport";
@@ -33,4 +38,9 @@ export default function(Vue, { router, head, isClient }) {
     content:
       "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
   });
+
+  head.bodyAttrs = {
+    class:
+      "custom-body-class w-screen h-screen m-0 p-0 overflow-y-auto overflow-x-hidden"
+  };
 }

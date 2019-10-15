@@ -27,3 +27,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+html,
+body {
+  user-select: none;
+}
+</style>
