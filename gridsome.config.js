@@ -109,12 +109,12 @@ module.exports = {
   },
   css: {
     loaderOptions: {
-      // scss: {
-      //   implementation: require("sass"),
-      //   sassOptions: {
-      //     fiber: require("fibers")
-      //   }
-      // },
+      scss: {
+        implementation: require("sass"),
+        sassOptions: {
+          fiber: require("fibers")
+        }
+      },
       postcss: {
         plugins: postcssPlugins
       }

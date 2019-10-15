@@ -90,4 +90,18 @@ module.exports = function(api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
   });
+
+  // api.beforeBuild(api => {
+  //   api.configureWebpack(conf => {
+  //     const rules = conf.module.rules;
+  //     const scss = rules.find((v, i) => {
+  //       const test = `${v.test}`;
+  //       return test === "/\\.scss$/";
+  //     });
+  //     const scssloader = scss.oneOf[1].use.find((v, i) => {
+  //       return v.loader === "sass-loader";
+  //     });
+  //     console.log(scssloader);
+  //   });
+  // });
 };
