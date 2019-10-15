@@ -49,6 +49,7 @@ import Article from '@/components/Article'
 
 export default {
   data: () => ({
+    t: 'wow',
     intersectionOptions: {
       root: null,
       rootMargin: '0px 0px 0px 0px',
@@ -68,11 +69,27 @@ export default {
     Article,
     Soc
   },
-  metaInfo: {
-    title: ''
+  metaInfo() {
+    console.log({when: this.$root.$options.metaInfo.htmlAttrs.class})
+    return {
+      title: 'test',
+      htmlAttrs: {
+        class: `page-index ${this.$root.$options.metaInfo.htmlAttrs.class}`
+      },
+      bodyAttrs: {
+        class: `page-index ${this.$root.$options.metaInfo.bodyAttrs.class}`
+      }
+    }
+  },
+  created() {
+    console.log({created: this})
   },
   mounted() {
-    // console.log(this.$page.allCustomer)
+    this.$nextTick().then(
+      () => {
+        console.log({mounted: this})
+      }
+    )
   },
   methods: {
     onScrollTo (el) {
@@ -159,10 +176,8 @@ allCustomer {
 .curves {
   position: absolute;
   pointer-events: none;
-  -webkit-filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.2));
   will-change: transform;
-  -webkit-animation-delay: 0.5s !important;
   animation-delay: 0.5s !important;
   opacity: 0;
 }
@@ -172,9 +187,7 @@ allCustomer {
   left: 50%;
   width: 1040px;
   z-index: 2;
-  -webkit-transform: translate(-65%, 100px) rotate(15deg);
   transform: translate(-65%, 100px) rotate(15deg);
-  -webkit-animation: curves1 1s forwards;
   animation: curves1 1s forwards;
 }
 
@@ -183,9 +196,7 @@ allCustomer {
   right: -50px;
   width: 490px;
   z-index: 3;
-  -webkit-animation: curves2 1s forwards;
   animation: curves2 1s forwards;
-  -webkit-transform: translate(100px) rotate(30deg);
   transform: translate(100px) rotate(30deg);
 }
 
@@ -194,9 +205,7 @@ allCustomer {
   left: -90px;
   width: 900px;
   z-index: 1;
-  -webkit-animation: curves3 1s forwards;
   animation: curves3 1s forwards;
-  -webkit-transform: translate(-100px) rotate(-30deg);
   transform: translate(-100px) rotate(-30deg);
 }
 
@@ -205,9 +214,7 @@ allCustomer {
   left: 70%;
   width: 700px;
   z-index: 2;
-  -webkit-transform: translate(-65%, 100px) rotate(15deg);
   transform: translate(-65%, 100px) rotate(15deg);
-  -webkit-animation: curves4 1s forwards;
   animation: curves4 1s forwards;
 }
 
@@ -216,9 +223,7 @@ allCustomer {
   left: -90px;
   width: 500px;
   z-index: 1;
-  -webkit-animation: curves3 1s forwards;
   animation: curves3 1s forwards;
-  -webkit-transform: translate(-100px) rotate(-30deg);
   transform: translate(-100px) rotate(-30deg);
 }
 
@@ -227,67 +232,25 @@ allCustomer {
   right: -190px;
   width: 490px;
   z-index: 3;
-  -webkit-animation: curves2 1s forwards;
   animation: curves2 1s forwards;
-  -webkit-transform: translate(100px) rotate(30deg);
   transform: translate(100px) rotate(30deg);
-}
-
-@-webkit-keyframes curves1 {
-  0% {
-    -webkit-transform: translate(-65%, 100px) rotate(15deg);
-    transform: translate(-65%, 100px) rotate(15deg);
-  }
-  to {
-    -webkit-transform: translate(-65%) rotate(0);
-    transform: translate(-65%) rotate(0);
-    opacity: 1;
-  }
 }
 
 @keyframes curves1 {
   0% {
-    -webkit-transform: translate(-65%, 100px) rotate(15deg);
     transform: translate(-65%, 100px) rotate(15deg);
   }
   to {
-    -webkit-transform: translate(-65%) rotate(0);
     transform: translate(-65%) rotate(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes curves2 {
-  0% {
-    -webkit-transform: translate(100px) rotate(30deg);
-    transform: translate(100px) rotate(30deg);
-  }
-  to {
-    -webkit-transform: translate(0) rotate(0deg);
-    transform: translate(0) rotate(0deg);
     opacity: 1;
   }
 }
 
 @keyframes curves2 {
   0% {
-    -webkit-transform: translate(100px) rotate(30deg);
     transform: translate(100px) rotate(30deg);
   }
   to {
-    -webkit-transform: translate(0) rotate(0deg);
-    transform: translate(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes curves3 {
-  0% {
-    -webkit-transform: translate(-100px) rotate(-30deg);
-    transform: translate(-100px) rotate(-30deg);
-  }
-  to {
-    -webkit-transform: translate(0) rotate(0deg);
     transform: translate(0) rotate(0deg);
     opacity: 1;
   }
@@ -295,35 +258,19 @@ allCustomer {
 
 @keyframes curves3 {
   0% {
-    -webkit-transform: translate(-100px) rotate(-30deg);
     transform: translate(-100px) rotate(-30deg);
   }
   to {
-    -webkit-transform: translate(0) rotate(0deg);
     transform: translate(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes curves4 {
-  0% {
-    -webkit-transform: translate(-65%, -100px) rotate(15deg);
-    transform: translate(-65%, -100px) rotate(15deg);
-  }
-  to {
-    -webkit-transform: translate(-65%) rotate(0);
-    transform: translate(-65%) rotate(0);
     opacity: 1;
   }
 }
 
 @keyframes curves4 {
   0% {
-    -webkit-transform: translate(-65%, -100px) rotate(15deg);
     transform: translate(-65%, -100px) rotate(15deg);
   }
   to {
-    -webkit-transform: translate(-65%) rotate(0);
     transform: translate(-65%) rotate(0);
     opacity: 1;
   }

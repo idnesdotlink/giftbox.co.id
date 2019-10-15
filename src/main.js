@@ -1,12 +1,9 @@
-// This is the main.js file. Import global CSS and scripts here.
-// The Client API can be used here. Learn more: gridsome.org/docs/client-api
-
 import "intersection-observer";
 import DefaultLayout from "~/layouts/Default.vue";
 import VTooltip from "v-tooltip";
 import PortalVue from "portal-vue";
-import "animate.css";
-import "magic.css/dist/magic.css";
+// import "animate.css";
+// import "magic.css/dist/magic.css";
 import VueAgile from "vue-agile";
 import VueLazyload from "vue-lazyload";
 
@@ -27,7 +24,7 @@ export default function(Vue, { router, head, isClient }) {
   }
   head.htmlAttrs = {
     lang: "en",
-    class: "w-screen h-screen m-0 p-0"
+    class: "w-screen h-screen m-0 p-0 absolute"
   };
   const { meta } = head;
   const idx = meta.findIndex(function({ key }) {
@@ -41,6 +38,6 @@ export default function(Vue, { router, head, isClient }) {
 
   head.bodyAttrs = {
     class:
-      "custom-body-class w-screen h-screen m-0 p-0 overflow-y-auto overflow-x-hidden"
+      "custom-body-class w-screen h-screen m-0 p-0 overflow-y-hidden overflow-x-hidden absolute"
   };
 }

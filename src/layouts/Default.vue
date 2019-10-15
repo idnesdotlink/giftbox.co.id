@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal p-0 m-0 flex flex-col h-screen min-h-screen min-w-full relative"
+    class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal p-0 m-0 flex flex-col h-screen min-h-screen min-w-screen w-screen relative overflow-y-auto"
     :class="menuClasses"
   >
     <LayoutHeader @clicknav="wow()" />
@@ -174,6 +174,8 @@ export default {
       menuClasses: ''
     }
   },
+  metaInfo: {
+  },
   components: {
     LayoutNavMob,
     LayoutNavbar,
@@ -184,6 +186,7 @@ export default {
   mounted () {
     
     this.$nextTick().then(() => {
+      console.log(this.metaInfo)
       // this.$modal.show('hello-world');
     })
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="nav-mob sm:hidden">
     <a
-      @click="wow()"
+      @click="close()"
       class="btn-menu nav-toggle"
     >
       <img
@@ -12,38 +12,22 @@
     <nav class="relative z-30">
       <form
         action="/"
-        class="searchbox relative w-56 mt-3 ml-6 sm:hidden"
+        class="relative w-56 mt-3 ml-6 sm:hidden"
       >
-        <span
-          class="algolia-autocomplete"
-          style="position: relative; display: inline-block; direction: ltr;"
-        ><input
+        <span class="relative inline-block">
+          <input
             id="search-input-res"
             autocomplete="off"
             required="required"
             type="search"
-            name="q"
             placeholder="Search For Produtcs"
-            class="searchbox__input w-full h-10 leading-form px-5 pr-10 rounded-full text-sm focus:outline-none text-white aa-input"
+            class="w-full h-10 leading-form px-5 pr-10 rounded-full text-sm focus:outline-none text-white"
             style="background: rgba(255, 255, 255, 0.1); position: relative; vertical-align: top;"
             spellcheck="false"
             role="combobox"
             aria-autocomplete="both"
             aria-expanded="false"
-            aria-owns="algolia-autocomplete-listbox-2"
-            dir="auto"
-          >
-          <pre
-            aria-hidden="true"
-            style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"
-          ></pre><span
-            class="aa-dropdown-menu"
-            role="listbox"
-            id="algolia-autocomplete-listbox-2"
-            style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"
-          >
-            <div class="aa-dataset-3"></div>
-          </span></span>
+          ></span>
         <button
           type="submit"
           class="absolute top-0 right-0 py-3 px-5 flex items-center focus:outline-none"
@@ -97,7 +81,7 @@ export default {
     }
   },
   methods: {
-    wow () {
+    close () {
       this.$emit('closenavmob')
     }
   }
@@ -290,19 +274,6 @@ export default {
   }
   .active-menu .button-back {
     opacity: 1;
-  }
-  .aa-dropdown-menu > div {
-    padding-top: 0;
-    margin-top: -10px;
-  }
-  .aa-suggestions {
-    background: #2b3c49;
-  }
-  .aa-suggestions .aa-suggestion span {
-    color: hsla(0, 0%, 100%, 0.6);
-  }
-  .aa-suggestions .aa-suggestion span em {
-    color: #fff;
   }
 }
 

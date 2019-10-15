@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-giftbox px-6 h-16 flex items-center justify-between fixed top-0 left-0 right-0 z-50 header-home active">
+  <header class="bg-giftbox px-6 h-16 flex items-center justify-between fixed top-0 z-50 header-home active w-screen">
     <a
       href="/"
       class="h-8"
@@ -28,3 +28,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.header-home {
+  will-change: transform;
+}
+</style>
