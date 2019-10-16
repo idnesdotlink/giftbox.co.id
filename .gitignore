@@ -1,4 +1,5 @@
 *.log
+switcher_backup.env
 .cache
 .DS_Store
 src/.temp
