@@ -47,13 +47,12 @@ export default {
 </script>
 <style lang="scss">
 .try-hero {
-  padding-top: 64px;
-  height: 250px;
+  @apply pt-16 h-56;
   transition: all 0.3s;
   background-color: blue;
 }
 .active .try-hero {
-  padding-top: 40px;
+  @apply pt-10;
 }
 .try-hero > div {
   height: 100%;

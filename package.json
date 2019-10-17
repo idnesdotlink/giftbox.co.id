@@ -9,7 +9,8 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -b gh-pages -d dist",
     "gh": "gh-pages -b gh-pages -d dist",
-    "loc": "php -S 127.0.0.1:8082 -t ./dist"
+    "loc": "php -S 127.0.0.1:8082 -t ./dist",
+    "bad": "node script/badges.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.11.2",
@@ -84,10 +85,13 @@
     "fibers": "^4.0.1",
     "file-loader": "^4.2.0",
     "fs-extra": "^8.1.0",
+    "gh-badges": "^2.2.1",
     "gh-pages": "^2.1.1",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-typescript": "^0.4.0",
     "js-yaml": "^3.13.1",
+    "lighthouse": "^5.5.0",
+    "lighthouse-badges": "^1.0.22",
     "lite-server": "^2.5.4",
     "prettier": "^1.18.2",
     "raw-loader": "^3.1.0",
