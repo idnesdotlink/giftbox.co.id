@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 .header-try {
-  @apply fixed top-0 left-0 right-0 h-16;
+  @apply absolute top-0 left-0 right-0 h-16 z-10;
   // position: fixed;
   // top: 0;
   // left: 0;
@@ -29,9 +29,9 @@ export default {
   will-change: transform;
 }
 .active .header-try {
-  @apply h-10;
+  @apply fixed h-10;
   // height: 40px;
-  background-color: rgba(37, 114, 255, 1);
+  background-color: rgba(37, 114, 255, 0.5);
   // animation: header-fixed 0.3s forwards;
 }
 .home-link,

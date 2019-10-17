@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div>test</div>
     <agile
       v-cloak
       ref="slide"
