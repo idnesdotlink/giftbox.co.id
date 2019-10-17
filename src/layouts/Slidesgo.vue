@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-y-auto overflow-x-hidden">
     <LayoutHeader2 />
     <LayoutNavMob2 />
     <div :style="slotStyles">

@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html ${htmlAttrs}>
   <head>
+    <style>
+      * {
+  box-sizing: border-box;
+}
+    </style>
     ${head}
+    <!-- <noscript>
+      <style>
+        .simplebar-content-wrapper {
+          overflow: auto;
+        }
+      </style>
+    </noscript> -->
   </head>
   <body ${bodyAttrs}>
     ${app} ${scripts}

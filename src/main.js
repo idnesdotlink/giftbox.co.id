@@ -24,7 +24,7 @@ export default function(Vue, { router, head, isClient }) {
   }
   head.htmlAttrs = {
     lang: "en",
-    class: "w-screen h-screen m-0 p-0 absolute"
+    class: ""
   };
   const { meta } = head;
   const idx = meta.findIndex(function({ key }) {
@@ -37,7 +37,6 @@ export default function(Vue, { router, head, isClient }) {
   });
 
   head.bodyAttrs = {
-    class:
-      "custom-body-class w-screen h-screen m-0 p-0 overflow-y-hidden overflow-x-hidden absolute"
+    class: ""
   };
 }
