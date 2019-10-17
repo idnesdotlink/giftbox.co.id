@@ -19,11 +19,6 @@ export default {
 <style lang="scss">
 .header-try {
   @apply absolute top-0 left-0 right-0 h-16 z-10;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // height: 64px;
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s;
   will-change: transform;

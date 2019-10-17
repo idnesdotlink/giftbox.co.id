@@ -93,8 +93,7 @@ export default {
 </script>
 <style lang="scss">
 .try-hero3 {
-  @apply pt-16 h-56;
-  transition: all 0.3s;
+  @apply h-56;
   background-color: blue;
 }
 .active .try-hero3 {

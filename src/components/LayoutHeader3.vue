@@ -10,13 +10,17 @@
       >
     </div>
     <div
-      class="nav3 px-6 h-8 flex items-center justify-between top-0 left-0 right-0 bg-white"
+      class="nav3 px-6 h-12 flex top-0 left-0 right-0 bg-white flex"
       :class="classList"
     >
-      <a
-        href="/"
-        class="home-link"
-      >home</a>
+      <div class="flex-1 flex items-center h-12">
+        <a
+          href="/try3"
+          class="home-link"
+        >home</a>
+        <a href="/products">Products</a>
+      </div>
+      <div class="sm:hidden">menu</div>
     </div>
   </header>
 </template>
@@ -41,10 +45,12 @@ export default {
 }
 .header-try3 .active {
   position: fixed;
+  transition: all 0.3s;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  will-change: transform;
 }
 </style>
 
@@ -65,12 +71,10 @@ export default {
       // going: in, out
       // direction: top, right, bottom, left
       if (going === this.$waypointMap.GOING_IN) {
-        console.log('lh3 waypoint going in!')
         this.classList = []
       }
 
       if (direction === this.$waypointMap.DIRECTION_TOP) {
-        console.log('lh3 waypoint going top!')
         this.classList = ['active']
       }
     }
