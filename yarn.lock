@@ -1369,10 +1369,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/leaflet@^1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.5.3.tgz#86bc35528a66c0ac8777d84a02bddd903ce96dfe"
-  integrity sha512-RTBb2+XFKxVx18pB343sE5GthJiJwSio/59/r0rsisBZIbpPD2dPeUBfdbUWWgzafeyGWCjYNzP4mgnoakMxrA==
+"@types/leaflet@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.5.4.tgz#851783ba730ab5430ea3e51a2ab7f35e43968f99"
+  integrity sha512-hAiiY7S25N8Ax+vA7FX29j1Hzn7bTziRnkKSj5jfOpud2JUcp/qZHGKCgxWW2TH581a00fDVBhto4xRox8GHXw==
   dependencies:
     "@types/geojson" "*"
 
@@ -7617,7 +7617,7 @@ js-levenshtein@^1.1.3:
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
   integrity sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==
 
-js-library-detector@^5.4.0:
+js-library-detector@^5.4.0, js-library-detector@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/js-library-detector/-/js-library-detector-5.5.0.tgz#3cf17128f6eaaf594d3d6b4c631d18eca059bfdc"
   integrity sha512-rLRizuKBAYFmCQM7Efjdbf8u8EoJnfuTlKYUBLQ/2bj9Raw2tr09guQoto/4NIOGmpAYLrzJQ0fmPUqxABCM5w==
@@ -7960,6 +7960,44 @@ lighthouse@^5.5.0:
     semver "^5.3.0"
     speedline-core "1.4.2"
     third-party-web "^0.8.2"
+    update-notifier "^2.5.0"
+    ws "3.3.2"
+    yargs "3.32.0"
+    yargs-parser "7.0.0"
+
+lighthouse@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-5.6.0.tgz#2182e0d9bc79783bc9d801dd5099a33526dabdd0"
+  integrity sha512-PQYeK6/P0p/JxP/zq8yfcPmuep/aeib5ykROTgzDHejMiuzYdD6k6MaSCv0ncwK+lj+Ld67Az+66rHqiPKHc6g==
+  dependencies:
+    axe-core "3.3.0"
+    chrome-launcher "^0.11.2"
+    configstore "^3.1.1"
+    cssstyle "1.2.1"
+    details-element-polyfill "^2.4.0"
+    http-link-header "^0.8.0"
+    inquirer "^3.3.0"
+    intl "^1.2.5"
+    intl-messageformat "^4.4.0"
+    intl-pluralrules "^1.0.3"
+    jpeg-js "0.1.2"
+    js-library-detector "^5.5.0"
+    jsonld "^1.5.0"
+    jsonlint-mod "^1.7.5"
+    lighthouse-logger "^1.2.0"
+    lodash.isequal "^4.5.0"
+    lodash.set "^4.3.2"
+    lookup-closest-locale "6.0.4"
+    metaviewport-parser "0.2.0"
+    mkdirp "0.5.1"
+    open "^6.4.0"
+    parse-cache-control "1.0.1"
+    raven "^2.2.1"
+    rimraf "^2.6.1"
+    robots-parser "^2.0.1"
+    semver "^5.3.0"
+    speedline-core "1.4.2"
+    third-party-web "^0.11.0"
     update-notifier "^2.5.0"
     ws "3.3.2"
     yargs "3.32.0"
@@ -11853,18 +11891,18 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-simplebar-vue@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/simplebar-vue/-/simplebar-vue-1.3.0.tgz#d2735e6b3223653af62dad6659048bdeda3760ab"
-  integrity sha512-FTzzqVa7sSlNkhMF5pQp3vqSnEeaGhYnzZRl2DdH+N1xVw2PZq5+0fs5Ew1lPvXiJUu09BjcNKBsLARzaiU3Kw==
+simplebar-vue@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/simplebar-vue/-/simplebar-vue-1.3.1.tgz#8eebf7ca2bb1d158babebec35bcf8fb7641940f2"
+  integrity sha512-pmVVYtljKOVVHlB/TBJRazwGkahS/MQKaw0y1c2zXvG4U5lQAbdbaZFLVcJ+ff6Z/sMW5cbfxfTnrctjA8Ke8A==
   dependencies:
     core-js "^3.0.1"
-    simplebar "^5.0.0"
+    simplebar "^5.0.1"
 
-simplebar@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-5.0.0.tgz#6cb94db4c09dc8a582d4033d863c199c201e7e7f"
-  integrity sha512-RxMURTsFh3zKcrvOmPz2tdr9gDS75YkjaDfXeqEsIY08J8geKzr6CYDlLaBSxKdOvIx4FoWepJqvTVFb42opvw==
+simplebar@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/simplebar/-/simplebar-5.0.1.tgz#c9fc8b835801b152e924c5fb74a81633420c5d89"
+  integrity sha512-+5H8MQDoVnjRSiaMy5ifHZbNesnmJpRc8Qk5yQY6UsbUHRb0OOVBDAgcl/XHurXRCarOml4KDHSTicoR3HbH+g==
   dependencies:
     can-use-dom "^0.1.0"
     core-js "^3.0.1"
@@ -12851,6 +12889,11 @@ then-fs@^2.0.0:
   dependencies:
     promise ">=3.2 <8"
 
+third-party-web@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/third-party-web/-/third-party-web-0.11.0.tgz#4e80dac50c26557add464742306bc392ab845352"
+  integrity sha512-R9/WoBZc0Db7qLNQ9QzMSP0YMEU/LF5X8LJqOYvDd/cDFwSc/D1YszYbyFFRzt6McDP6PO425ZBmHQZWYFDZDg==
+
 third-party-web@^0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/third-party-web/-/third-party-web-0.8.2.tgz#9a13841174a2b2333a15233cb6dbf6553c03a7be"
@@ -13700,13 +13743,8 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-"vscode-textmate@git+https://github.com/octref/vscode-textmate.git":
-  version "4.0.1"
-  resolved "git+https://github.com/octref/vscode-textmate.git#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
-
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
-  uid e65aabe2227febda7beaad31dd0fca1228c5ddf3
   resolved "https://github.com/octref/vscode-textmate#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
 
 vue-agile@^1.0.11:

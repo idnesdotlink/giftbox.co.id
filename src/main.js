@@ -14,6 +14,8 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueAgile);
   Vue.use(VueLazyload);
   if (isClient) {
+    const Vue2Storage = require("vue2-storage").default;
+    Vue.use(Vue2Storage);
     const SocialSharing = require("vue-social-sharing");
     Vue.use(SocialSharing);
     const VModal = require("vue-js-modal").default;

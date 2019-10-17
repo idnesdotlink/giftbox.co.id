@@ -20,7 +20,9 @@
         >home</a>
         <a href="/products">Products</a>
       </div>
-      <div class="sm:hidden">menu</div>
+      <div class="sm:hidden">
+        <div @click="psg">Menu</div>
+      </div>
     </div>
   </header>
 </template>
@@ -77,6 +79,11 @@ export default {
       if (direction === this.$waypointMap.DIRECTION_TOP) {
         this.classList = ['active']
       }
+    },
+    psg() {
+    this.$storage.set('test', { key: 'value' }, { ttl: 60 * 1000 })
+    const data = this.$storage.get('test')
+    console.log(data) // { key: 'value' }
     }
   }
 }
