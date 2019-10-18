@@ -13,14 +13,23 @@
       class="nav3 px-6 h-12 flex top-0 left-0 right-0 bg-white flex"
       :class="classList"
     >
-      <div class="flex-1 flex items-center h-12">
-        <a
-          href="/try3"
-          class="home-link"
-        >home</a>
-        <a href="/products">Products</a>
-      </div>
-      <div class="sm:hidden">
+      <nav class="flex-1 flex items-center h-12">
+        <ul class="w-full flex">
+          <li>
+            <a
+              href="/try3"
+              class="hover:bg-giftbox p-2"
+            >Home</a></li>
+          <li>
+            <a
+              href="/products"
+              class="hover:bg-giftbox p-2"
+            >Products</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="
+              sm:hidden">
         <div @click="psg">Menu</div>
       </div>
     </div>
