@@ -13829,6 +13829,13 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-svg-transition@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vue-svg-transition/-/vue-svg-transition-0.2.1.tgz#fc02c04ee13210b780d83a991539c8e4a3652cf7"
+  integrity sha512-iCWRJrqZKHgkiOa7moVTyDYzLkdVnzErpK9ok+T/Np3/zy8JLFmwpDCCyEgDH7t/q1AspSyBfX4qVZhAT84fXQ==
+  dependencies:
+    vue "^2.5.17"
+
 vue-template-compiler@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.10.tgz#323b4f3495f04faa3503337a82f5d6507799c9cc"
@@ -13874,7 +13881,7 @@ vue2-storage@^4.0.5:
   dependencies:
     object-assign "^4.1.1"
 
-vue@^2.2.4, vue@^2.5.2, vue@^2.6.10:
+vue@^2.2.4, vue@^2.5.17, vue@^2.5.2, vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==

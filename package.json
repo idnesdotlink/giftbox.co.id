@@ -72,6 +72,7 @@
     "vue-scrollto": "2.17.1",
     "vue-select": "^3.2.0",
     "vue-social-sharing": "^2.4.6",
+    "vue-svg-transition": "^0.2.1",
     "vue-tiny-slider": "0.1.38",
     "vue-wait": "^1.4.6",
     "vue-waypoint": "^3.2.2",
