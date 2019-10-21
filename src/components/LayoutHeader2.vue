@@ -7,6 +7,16 @@
         src="../../static/images/giftbox-logo.svg"
         class=""
       ></a>
+    <nav>
+      <ul class="flex www">
+        <li>
+          <a class="p-2 hover:bg-accent">Home</a>
+        </li>
+        <li>
+          <a class="p-2 hover:bg-accent">Products</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -35,5 +45,15 @@ export default {
   max-height: 100%;
   width: auto;
   transition: all 0.3s;
+}
+.www li a::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 </style>

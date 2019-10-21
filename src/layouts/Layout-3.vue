@@ -12,6 +12,7 @@
 import LayoutHeader3 from '@/components/LayoutHeader3'
 import LayoutNavMob3 from '@/components/LayoutNavMob3'
 export default {
+  name: 'Layout-3',
   components: {
     LayoutHeader3,
     LayoutNavMob3

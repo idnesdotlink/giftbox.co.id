@@ -1,14 +1,14 @@
 <template>
-  <Slidesgo
-    class="try3 w-full h-full relative"
+  <Layout
+    class="try w-full h-full relative"
     :class="classList"
   >
-    <div class="try-hero3">
+    <div class="try-hero">
       <div v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
         <Coba :products="$page.allProduct.edges" />
       </div>
     </div>
-  </Slidesgo>
+  </Layout>
 </template>
 
 <page-query>
@@ -54,12 +54,12 @@ allCustomer {
 </page-query>
 
 <script>
-import Slidesgo from '@/layouts/Slidesgo3'
-import Coba from '@/components/Coba'
+import Layout from '@/layouts/Layout-2'
+import Slider1 from '@/components/Slider-1'
 export default {
   components: {
-    Slidesgo,
-    Coba,
+    Layout,
+    Slider1,
   },
   data () {
     return {
@@ -75,34 +75,35 @@ export default {
     }
   },
   methods: {
-    onWaypoint ({ going, direction }) {
-      // going: in, out
-      // direction: top, right, bottom, left
-      if (going === this.$waypointMap.GOING_IN && this.classList.length > 0) {
-        console.log('waypoint going in!')
-        // this.classList = []
-      }
+      onWaypoint ({ going, direction }) {
+        // going: in, out
+        // direction: top, right, bottom, left
+        if (going === this.$waypointMap.GOING_IN && this.classList.length > 0) {
+          console.log('waypoint going in!')
+          this.classList = []
+        }
 
-      if (direction === this.$waypointMap.DIRECTION_TOP) {
-        console.log('waypoint going top!')
-        // this.classList = ['active']
+        if (direction === this.$waypointMap.DIRECTION_TOP) {
+          console.log('waypoint going top!')
+          this.classList = ['active']
+        }
       }
     }
-  }
 }
 </script>
 <style lang="scss">
-.try-hero3 {
-  @apply h-56;
+.try-hero {
+  @apply pt-16 h-56;
+  transition: all 0.3s;
   background-color: blue;
 }
-.active .try-hero3 {
+.active .try-hero {
   @apply pt-10;
 }
-.try-hero3 > div {
+.try-hero > div {
   height: 100%;
 }
-.try3 {
+.try {
   z-index: 0;
 }
 </style>

@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .header-try3 {
-  @apply h-24 z-10;
+  @apply h-24 z-10 bg-accent;
 }
 .header-try3 img {
   height: 100%;
