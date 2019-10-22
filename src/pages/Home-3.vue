@@ -5,7 +5,7 @@
   >
     <div class="try-hero3">
       <div v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-        <Coba :products="$page.allProduct.edges" />
+        <Slider1 :products="$page.allProduct.edges" />
       </div>
     </div>
   </Layout>
@@ -93,8 +93,6 @@ export default {
 </script>
 <style lang="scss">
 .try-hero3 {
-  @apply h-56;
-  background-color: blue;
 }
 .active .try-hero3 {
   @apply pt-10;

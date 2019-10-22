@@ -1,26 +1,27 @@
 <template>
-  <div class="overflow-y-auto overflow-x-hidden">
+  <div class="overflow-y-auto overflow-x-hidden flex flex-col min-h-screen">
     <LayoutHeader3 />
-    <LayoutNavMob3 />
-    <div :style="slotStyles">
+    <div class="flex-1">
       <slot />
     </div>
+    <LayoutFooter />
   </div>
 </template>
 
 <script>
+import LayoutFooter from '@/components/LayoutFooter'
 import LayoutHeader3 from '@/components/LayoutHeader3'
 import LayoutNavMob3 from '@/components/LayoutNavMob3'
 export default {
   name: 'Layout-3',
   components: {
+    LayoutFooter,
     LayoutHeader3,
     LayoutNavMob3
   },
   data () {
     return {
       slotStyles: {
-        height: '2000px'
       },
       intersectionOptions: {
         root: null,

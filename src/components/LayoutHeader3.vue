@@ -1,13 +1,17 @@
 <template>
-  <header class="header-try3">
+  <header class="header-try3 border-b-2 border-gray">
     <div
-      class="h-16"
+      class="h-16 flex"
       v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
     >
+
       <img
         src="../../static/images/giftbox-logo.svg"
         class="img"
       >
+      <div class="flex-1 flex items-center">
+        {{ phone }}
+      </div>
     </div>
     <div
       class="nav3 px-6 h-12 flex top-0 left-0 right-0 bg-white flex"
@@ -28,8 +32,7 @@
           </li>
         </ul>
       </nav>
-      <div class="
-              sm:hidden">
+      <div class="sm:hidden flex items-center h-12">
         <div @click="psg">Menu</div>
       </div>
     </div>
@@ -44,7 +47,7 @@ export default {
 
 <style lang="scss">
 .header-try3 {
-  @apply h-24 z-10 bg-accent;
+  @apply z-10;
 }
 .header-try3 img {
   height: 100%;
@@ -66,9 +69,11 @@ export default {
 </style>
 
 <script>
+import company from '@/company.json'
 export default {
   data () {
     return {
+      phone: company.phone,
       classList: [],
       intersectionOptions: {
         root: null,
