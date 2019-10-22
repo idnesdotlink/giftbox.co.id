@@ -39,12 +39,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  
-}
-</script>
-
 <style lang="scss">
 .header-try3 {
   @apply z-10;
@@ -69,6 +63,7 @@ export default {
 </style>
 
 <script>
+import bb from 'bluebird'
 import company from '@/company.json'
 export default {
   data () {
@@ -91,7 +86,11 @@ export default {
       }
 
       if (direction === this.$waypointMap.DIRECTION_TOP) {
-        this.classList = ['active']
+        
+        bb.delay(600).then(() => {
+          // console.log('x')
+          this.classList = ['active'];
+        })
       }
     },
     psg() {

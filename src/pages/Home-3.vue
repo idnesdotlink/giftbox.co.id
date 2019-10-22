@@ -1,6 +1,6 @@
 <template>
   <Layout
-    class="try3 w-full h-full relative"
+    class="try3 w-full h-screen relative"
     :class="classList"
   >
     <div class="try-hero3">
