@@ -1,34 +1,12 @@
 <template>
   <div class="customer-slider">
-    <ClientOnly>
-      <TinySlider
-        :mouse-drag="true"
-        :loop="true"
-        items="6"
-        gutter="20"
-        :rewind="true"
-        :nav="false"
-      >
-        <div
-          v-for="customer in customers"
-          :key="customer.node.id"
-        >
-          <g-image
-            v-tooltip.top-center="customer.node.title"
-            height="300"
-            fit="contain"
-            :src="customer.node.image"
-          />
-        </div>
-      </TinySlider>
-    </ClientOnly>
+    [Customer Slider]
   </div>
 </template>
 
 <script>
 export default {
   components: {
-    TinySlider: () => import('vue-tiny-slider')
   },
   props: ['customers'],
   mounted () {

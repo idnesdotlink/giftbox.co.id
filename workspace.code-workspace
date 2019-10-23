@@ -5,6 +5,12 @@
     },
     {
       "path": "/home/idnes/Projects/html5up"
+    },
+    {
+      "path": "/home/idnes/Projects/gridsome-project/vue-fixed-header"
+    },
+    {
+      "path": "/home/idnes/Projects/gridsome-project/vue-sticky-directive"
     }
   ],
   "settings": {

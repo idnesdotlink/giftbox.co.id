@@ -1,34 +1,12 @@
 <template>
   <div class="product-slider">
-    <ClientOnly>
-      <TinySlider
-        :mouse-drag="true"
-        :loop="false"
-        items="4"
-        gutter="20"
-        :rewind="true"
-        :nav="true"
-        :controls="false"
-      >
-        <div
-          v-for="product in products"
-          :key="product.node.id"
-        >{{ product.node.title }}
-          <g-image
-            height="200"
-            fit="contain"
-            :src="product.node.image"
-          />
-        </div>
-      </TinySlider>
-    </ClientOnly>
+    [Product Slider]
   </div>
 </template>
 
 <script>
 export default {
   components: {
-    TinySlider: () => import('vue-tiny-slider')
   },
   props: ['products'],
   mounted () {
