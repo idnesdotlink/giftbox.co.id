@@ -10455,6 +10455,13 @@ rdf-canonize@^1.0.2:
     node-forge "^0.8.1"
     semver "^5.6.0"
 
+react-flip-toolkit@^6.5.8:
+  version "6.6.9"
+  resolved "https://registry.yarnpkg.com/react-flip-toolkit/-/react-flip-toolkit-6.6.9.tgz#43aebc081f4469456c51a66cbf14a75247408a83"
+  integrity sha512-0q0/zn0r2an0GfW4TOs4oDHO8ZtWXi1Z0+104m5Z/haJskkLvCqITFfoEmFN5c+NH7qa01c6UyBd2IhupMhxQw==
+  dependencies:
+    rematrix "0.2.2"
+
 read-all-stream@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/read-all-stream/-/read-all-stream-3.1.0.tgz#35c3e177f2078ef789ee4bfafa4373074eaef4fa"
@@ -10789,6 +10796,11 @@ remark@^10.0.1:
     remark-parse "^6.0.0"
     remark-stringify "^6.0.0"
     unified "^7.0.0"
+
+rematrix@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/rematrix/-/rematrix-0.2.2.tgz#c96a050260782db9908904885991256e23beda5d"
+  integrity sha512-agFFS3RzrLXJl5LY5xg/xYyXvUuVAnkhgKO7RaO9J1Ssth6yvbO+PIiV67V59MB5NCdAK2flvGvNT4mdKVniFA==
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -13074,6 +13086,13 @@ vue-eslint-parser@^5.0.0:
     espree "^4.1.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
+
+vue-flip-toolkit@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vue-flip-toolkit/-/vue-flip-toolkit-1.5.0.tgz#aaba66101ad84a9044d8cf8bb511c0d7c6a107d8"
+  integrity sha512-+tozMdQv3QL0E2XekyxcwuiUlbt6joWeN8i29PPK5ikhYR+YZz2JS4V98+zMxU5cRMzEX7p2X5sZmqELN6n99w==
+  dependencies:
+    react-flip-toolkit "^6.5.8"
 
 vue-fuse@2.1.2:
   version "2.1.2"
