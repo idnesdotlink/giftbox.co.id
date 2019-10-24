@@ -71,7 +71,12 @@ module.exports = {
     "agile__dot--current",
     "agile__nav-button",
     "agile__nav-button--next",
-    "agile__nav-button--prev"
+    "agile__nav-button--prev",
+    "vue-fixed-header",
+    "vue-fixed-header--isFixed",
+    "fixed-footer",
+    "isFixed",
+    "headerIsFixed"
   ],
   extractors: [
     {

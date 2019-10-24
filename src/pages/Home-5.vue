@@ -30,12 +30,12 @@
 
 <script>
 import Vue from "vue";
-import vObserve from "../directives/v-observe";
+// import vObserve from "../directives/v-observe";
 
 export default Vue.extend({
   name: "App",
   directives: {
-    observe: vObserve
+    observe: require("../directives/v-observe").default // vObserve
   },
   data() {
     return {
