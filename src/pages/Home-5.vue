@@ -34,6 +34,13 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "App",
+  metaInfo: {
+    bodyAttrs: {
+      class: [
+        'home-5'
+      ]
+    }
+  },
   directives: {
     observe: require("../directives/v-observe").default // vObserve
   },
@@ -112,67 +119,59 @@ export default Vue.extend({
 });
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  margin: 0;
-}
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-  max-width: 768px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.list {
-  width: 100%;
-  list-style: none;
-}
-.item {
-  padding: 4rem 1rem;
-  width: 100%;
-  background-color: whitesmoke;
-  border-radius: 6px;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-}
-.ticker {
-  position: fixed;
-  /* top: 10vh;
+<style lang="scss">
+.home-5 {
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .list {
+    width: 100%;
+    list-style: none;
+  }
+  .item {
+    padding: 4rem 1rem;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .ticker {
+    position: fixed;
+    /* top: 10vh;
   left: 10vw; */
-  top: 3rem;
-  left: 3rem;
-  background-color: aliceblue;
-  padding: 1rem;
-  border-radius: 6px;
-}
-.ticker ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.ticker li {
-  padding: 0.5em;
-}
-.in-view-item {
-  transition: all 0.3s;
-  display: block;
-}
-.in-view-enter, .in-view-leave-to
+    top: 3rem;
+    left: 3rem;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  .ticker ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ticker li {
+    padding: 0.5em;
+  }
+  .in-view-item {
+    transition: all 0.3s;
+    display: block;
+  }
+  .in-view-enter, .in-view-leave-to
 /* .in-view-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-.in-view-leave-active {
-  position: absolute;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  .in-view-leave-active {
+    position: absolute;
+  }
 }
 </style>
