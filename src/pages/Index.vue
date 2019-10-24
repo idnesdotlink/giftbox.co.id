@@ -25,7 +25,12 @@ export default {
         '/home-1',
         '/home-2',
         '/home-3',
+        '/home-4',
+        '/home-5',
+        '/home-6',
         '/products',
+        '/catalogs',
+        '/contact',
         '/404'
       ]
     }
