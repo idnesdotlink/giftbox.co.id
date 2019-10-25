@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import sticky from '@/directives/sticky'
+import sticky from '@/directives/sticky/sticky'
 export default {
   metaInfo: {
     bodyAttrs: {
