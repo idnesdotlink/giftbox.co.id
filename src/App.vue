@@ -33,4 +33,9 @@ html,
 body {
   user-select: none;
 }
+html,
+body,
+#app {
+  @apply overflow-hidden min-h-screen z-0;
+}
 </style>
