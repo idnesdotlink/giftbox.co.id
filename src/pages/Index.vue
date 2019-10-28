@@ -9,11 +9,17 @@
       size="normal"
       fabAnimateBezier=".24,.97,.81,1.2"
       :mainBtnColor="'#3599DB'"
-      style="right: 40%;transition: all .5s cubic-bezier(.18,.89,.58,1.26)"
+      class="index-fab"
     >
       <fab-item
         @clickItem="clickItem"
         :idx="0"
+        title="add"
+        icon="add"
+      />
+      <fab-item
+        @clickItem="clickItem"
+        :idx="2"
         title="add"
         icon="add"
       />
@@ -49,3 +55,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.index-fab {
+  right: 10%;
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.58, 1.26);
+}
+</style>

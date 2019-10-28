@@ -57,7 +57,6 @@ export default {
       return {
         bind: (el, binding, vnode) => {
       el.__clickOutside__ = listenClick
-      // 处理safari浏览器body对象无法响应click事件
       handleSafariBodyClickNotWorkEvent(listenClick, testSafariBrower(), {
         el, binding
       })
@@ -87,7 +86,7 @@ export default {
       type: Boolean,
       default: true
     },
-    autoHideThreshold: { // 滚动触发自动隐藏阈值
+    autoHideThreshold: {
       type: Number,
       default: 50
     },
@@ -99,7 +98,7 @@ export default {
       type: String,
       default: 'default'
     },
-    size: { // 尺寸 big/normal/small
+    size: {
       type: String,
       default: 'normal'
     },
@@ -167,7 +166,6 @@ export default {
       }
     },
     overflowThreshold: function () {
-      // 滑动不超过阈值
       return (Math.abs(this.touchEventInfo.offsetY) > this.autoHideThreshold)
     },
     fabClass: function () {
@@ -178,7 +176,6 @@ export default {
         boxShadow: this.shadow ? '0px 2px 8px #666' : ''
       }
     },
-    // 是否无需改变隐藏状态
     notChangeHideStatus: function () {
       if (this.autoHideDirection === 'up') {
         return (this.scrollDirectionUpAndHidden || this.scrollDirectionDownAndShow)
@@ -203,10 +200,6 @@ export default {
     clickoutside: function (e) {
       this.active = false
     },
-    /**
-     * @method testPCMobile 判断用户设备信息 PC/Mobile
-     * @return { Boolean } true(Mobile)/false(PC)
-     */
     testPCMobile: function () {
       if (navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/webOS/i) ||
@@ -221,16 +214,9 @@ export default {
         return false
       }
     },
-    /**
-     * @method onOffFab 显示隐藏Fab
-     * @param { Boolean } onOff 是否显示Fab
-     */
     onOffFab: function (onOff) {
       this.hidden = onOff
     },
-    /**
-     * @method openMenu 打开或关闭菜单
-     */
     openMenu: function () {
       this.$children.length > 1 ? this.active = !this.active : this.$emit('clickMainBtn')
     },
@@ -242,17 +228,12 @@ export default {
         this.scrollDirection = direction
       }
     },
-    /**
-     * @method scrollerEventListener 监听滚动事件
-     */
     scrollerEventListener: function () {
       let _scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       this.recordScrollTopByChangeDirection(_scrollTop)
-      // 偏移量等于当前距离顶部距离与改变方向时记录距离顶部距离值的差
       let offset = Math.abs(_scrollTop - this.changeDirectionScrollTop)
       if (this.computedOffsetOver(offset)) return false
       if (this.notChangeHideStatus) return false
-      // 偏移量
       this.hidden = this.computedShowHideByOffset()
       return true
     },
@@ -262,10 +243,6 @@ export default {
     computedShowHideByOffset () {
       return this.scrollDirection === this.autoHideDirection
     },
-    /**
-     * @method checkDirection 检测滚动方向
-     * @return { String } up/down
-     */
     checkDirection: function (_scrollTop) {
       return _scrollTop > this.scrollTop ? 'up' : 'down'
     },
@@ -293,7 +270,6 @@ export default {
       }
       this.touchEventInfo.offsetY = 0
     },
-    // 根据PC还是移动端以及是否启用自动 隐藏来卸载不同的事件监听函数
     unloadEvent: function () {
       if (this.scrollAutoHide) {
         if (this.testPCMobile()) {
@@ -304,7 +280,6 @@ export default {
       }
     },
     initTouchEvent: function () {
-      // 区分PC和移动端 使用不同的动画交互方式
       if (this.scrollAutoHide) {
         if (this.testPCMobile()) {
           this.listenTouchEvent()
@@ -352,7 +327,7 @@ export default {
   color: white;
   cursor: pointer;
   padding: 8px;
-  // .transition();
+  .transition();
   i {
     font-size: 1.5em;
   }
