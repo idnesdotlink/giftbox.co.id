@@ -48,11 +48,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-// @import "./styles/index.less";
+<style lang="less" scoped>
+@import "./less/index.less";
 
 .fabMask {
-  // .absolute();
+  .absolute();
   height: 100%;
   width: 100%;
   border-radius: 50%;

@@ -45,12 +45,26 @@
 
 <script>
 import FABContainer from './fab-container'
-import { handleClass } from '@/utils/fab'
+import { handleClass, listenClick } from '@/utils/fab'
 
 export default {
   name: 'vue-fab',
   components: {
     'fab-container': FABContainer
+  },
+  directives: {
+    'click-outside': () => {
+      return {
+        bind: (el, binding, vnode) => {
+      el.__clickOutside__ = listenClick
+      // 处理safari浏览器body对象无法响应click事件
+      handleSafariBodyClickNotWorkEvent(listenClick, testSafariBrower(), {
+        el, binding
+      })
+    }
+      }
+
+    }
   },
   props: {
     icon: {
@@ -315,8 +329,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-// @import "./styles/index.less";
+<style lang="less" scoped>
+@import "./less/index.less";
 
 * {
   user-select: none;
@@ -332,8 +346,8 @@ export default {
 
 .fab {
   box-sizing: border-box;
-  // .flex-center();
-  // .absolute();
+  .flex-center();
+  .absolute();
   border-radius: 50%;
   color: white;
   cursor: pointer;
@@ -350,6 +364,6 @@ export default {
 
 .fab-item-container {
   box-sizing: border-box;
-  // .absolute();
+  .absolute();
 }
 </style>

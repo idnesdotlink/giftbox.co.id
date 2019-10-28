@@ -126,12 +126,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-// @import "./styles/index.less";
+<style lang="less" scoped>
+@import "./less/index.less";
 
 .fab-item {
-  // .flex-center();
-  // .transition();
+  .flex-center();
+  .transition();
   position: absolute;
   cursor: pointer;
   top: -50px;
