@@ -1,6 +1,6 @@
 {
   "name": "giftbox.co.id",
-  "version": "0.1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "gridsome build",
