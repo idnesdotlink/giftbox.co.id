@@ -6,6 +6,7 @@ import PortalVue from "portal-vue";
 // import "magic.css/dist/magic.css";
 import VueAgile from "vue-agile";
 import VueLazyload from "vue-lazyload";
+import "material-design-icons/iconfont/material-icons.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component

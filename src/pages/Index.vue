@@ -14,14 +14,14 @@
       <fab-item
         @clickItem="clickItem"
         :idx="0"
-        title="add"
-        icon="add"
+        title="https"
+        icon="https"
       />
       <fab-item
         @clickItem="clickItem"
         :idx="2"
-        title="add"
-        icon="add"
+        title="https"
+        icon="https"
       />
     </fab>
   </div>

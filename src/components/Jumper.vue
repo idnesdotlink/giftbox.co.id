@@ -46,22 +46,25 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 .jumper {
   @apply absolute right-0 bottom-0 w-10 h-10;
-  ul {
+  & ul {
     @apply flex flex-row absolute hidden w-0 h-0 left-0;
     transition: left;
-    li {
+    & li {
       @apply min-h-full min-w-full;
+      & a {
+        text-decoration-line: underline;
+      }
     }
-    li:hover {
+    & li:hover {
       @apply text-giftbox;
     }
   }
 }
 .jumper.expanded {
-  ul {
+  & ul {
     @apply flex flex-row w-full h-full;
     left: -150px;
   }
