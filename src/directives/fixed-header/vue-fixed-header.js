@@ -29,6 +29,7 @@ export default Vue.extend({
   },
 
   mounted() {
+    console.log("mounted");
     this.main();
     this.registerEvent();
   },
@@ -43,7 +44,9 @@ export default Vue.extend({
     },
     main() {
       this.lastScrollTop = this.getScrollTop();
+      console.log(this.lastScrollTop);
       this.check = () => {
+        console.log("scroll check");
         const { threshold, hideScrollUp } = this;
         let currentScrollPos = this.getScrollTop();
         this.isFixed =
@@ -56,6 +59,7 @@ export default Vue.extend({
       };
     },
     registerEvent() {
+      console.log("register event");
       window.addEventListener("scroll", this.check);
     },
     removeEvent() {

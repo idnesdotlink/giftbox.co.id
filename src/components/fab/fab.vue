@@ -312,9 +312,9 @@ export default {
 }
 .fab-main-container {
   position: fixed;
-  right: 20%;
+  right: 15%;
   z-index: 9999;
-  bottom: 10%;
+  bottom: 15%;
   overflow: initial;
   box-sizing: border-box;
 }

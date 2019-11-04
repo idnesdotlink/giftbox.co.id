@@ -28,14 +28,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 html,
 body {
+  @apply min-h-screen z-0 h-screen;
   user-select: none;
 }
-html,
-body,
 #app {
-  @apply overflow-hidden min-h-screen z-0;
 }
 </style>

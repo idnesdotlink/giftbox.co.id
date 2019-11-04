@@ -15,15 +15,20 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueAgile);
   Vue.use(VueLazyload);
   if (isClient) {
+    import("vue2-storage").then(m => {});
+    import("@/directives/wp").then(m => Vue.use(m.default));
+    // import("@/directives/observe-visibility").then(m =>
+    //   Vue.use(m.ObserveVisibility)
+    // );
     const Vue2Storage = require("vue2-storage").default;
     Vue.use(Vue2Storage);
     const SocialSharing = require("vue-social-sharing");
     Vue.use(SocialSharing);
     const VModal = require("vue-js-modal").default;
-    const VueWaypoint = require("vue-waypoint").default;
+    // const VueWaypoint = require("vue-waypoint").default;
     Vue.use(VTooltip);
     Vue.use(VModal);
-    Vue.use(VueWaypoint);
+    // Vue.use(VueWaypoint);
   }
   head.htmlAttrs = {
     lang: "en",

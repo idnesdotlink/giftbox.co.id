@@ -1,45 +1,50 @@
 <template>
-  <div id="app">
-    <ul class="list">
-      <li
-        v-observe="observer"
-        ref="items"
-        v-for="i in range"
-        :key="i"
-        class="item"
-        :data-id="i"
-      >Item Number #{{i}}</li>
-    </ul>
-
-    <aside class="ticker">
-      <transition-group
-        v-if="inView"
-        name="in-view"
-        tag="ul"
-      >
+  <Layout>
+    <div>
+      <ul class="list">
         <li
-          v-for="i in inView"
+          v-observe="observer"
+          ref="items"
+          v-for="i in range"
           :key="i"
-          class="in-view-item"
-        >{{i}}</li>
-      </transition-group>
-      <span v-else>No items in view</span>
-    </aside>
-  </div>
+          class="item"
+          :data-id="i"
+        >Item Number #{{i}}</li>
+      </ul>
+
+      <aside class="ticker">
+        <transition-group
+          v-if="inView"
+          name="in-view"
+          tag="ul"
+        >
+          <li
+            v-for="i in inView"
+            :key="i"
+            class="in-view-item"
+          >{{i}}</li>
+        </transition-group>
+        <span v-else>No items in view</span>
+      </aside>
+    </div>
+  </Layout>
 </template>
 
 <script>
 import Vue from "vue";
 import vObserve from "../directives/v-observe";
+import Layout from '@/layouts/Layout5'
 
 export default Vue.extend({
-  name: "App",
   metaInfo: {
-    bodyAttrs: {
+    htmlAttrs: {
       class: [
         'home-5'
       ]
     }
+  },
+  components: {
+    Layout
   },
   directives: {
     observe: vObserve // vObserve
@@ -119,9 +124,9 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
-.home-5 {
-  #app {
+<style lang="postcss">
+.home-5 #app > div {
+  & > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,11 +135,11 @@ export default Vue.extend({
     margin-left: auto;
     margin-right: auto;
   }
-  .list {
+  & .list {
     width: 100%;
     list-style: none;
   }
-  .item {
+  & * .item {
     padding: 4rem 1rem;
     width: 100%;
     background-color: whitesmoke;
@@ -143,7 +148,7 @@ export default Vue.extend({
     display: flex;
     justify-content: center;
   }
-  .ticker {
+  & .ticker {
     position: fixed;
     /* top: 10vh;
   left: 10vw; */
@@ -153,24 +158,25 @@ export default Vue.extend({
     padding: 1rem;
     border-radius: 6px;
   }
-  .ticker ul {
+  & .ticker ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .ticker li {
+  & .ticker li {
     padding: 0.5em;
   }
-  .in-view-item {
+  & .in-view-item {
     transition: all 0.3s;
     display: block;
   }
-  .in-view-enter, .in-view-leave-to
-/* .in-view-leave-active below version 2.1.8 */ {
+  /* .in-view-leave-active below version 2.1.8 */
+  & .in-view-enter,
+  & .in-view-leave-to {
     opacity: 0;
     transform: translateX(-30px);
   }
-  .in-view-leave-active {
+  & .in-view-leave-active {
     position: absolute;
   }
 }
