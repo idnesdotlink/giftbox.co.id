@@ -30,9 +30,8 @@
   color: blue;
 }
 .psg-bgt .lo {
-  /* transform: translate(0, 50px);
-  transition: transform; */
-  margin-top: 50px;
+  transform: translate(0, 50px);
+  transition: transform;
 }
 </style>
 
