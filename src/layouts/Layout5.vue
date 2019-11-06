@@ -4,6 +4,7 @@
       class="scroll"
       ref="scroll"
     >
+      <slot name="pusing" />
       <slot />
     </div>
   </div>

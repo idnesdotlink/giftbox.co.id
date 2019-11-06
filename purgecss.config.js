@@ -76,7 +76,20 @@ module.exports = {
     "vue-fixed-header--isFixed",
     "fixed-footer",
     "isFixed",
-    "headerIsFixed"
+    "headerIsFixed",
+    "material-icons",
+    "vue-fab-material-icons",
+    "fab-item",
+    "fab-item-title",
+    "fab-shadow",
+    "iconfont",
+    "vue-fab-iconfont-icons",
+    "icons",
+    "fab-container",
+    "fab-item-container",
+    "fab-size-big",
+    "fab-size-normal",
+    "fab-size-small"
   ],
   extractors: [
     {
