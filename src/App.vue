@@ -33,6 +33,9 @@ html,
 body {
   @apply min-h-screen z-0 h-screen;
   user-select: none;
+  margin: 0;
+  padding: 0;
+  background-color: red;
 }
 #app {
 }
