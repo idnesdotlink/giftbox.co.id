@@ -26,30 +26,6 @@ query {
         }
     }
   }
-  allPost {
-    totalCount
-    edges {
-      node {
-        id
-        title
-        timeToRead
-        description
-        date (format: "D MMMM YYYY")
-        path
-      }
-    }
-
-  }
-allCustomer {
-    totalCount
-    edges {
-      node {
-        id
-        title
-        image
-      }
-    }
-}
 }
 </page-query>
 

@@ -31,11 +31,8 @@ export default {
 <style lang="postcss">
 html,
 body {
-  @apply min-h-screen z-0 h-screen;
+  @apply min-h-screen z-0 h-screen m-0 p-0;
   user-select: none;
-  margin: 0;
-  padding: 0;
-  background-color: red;
 }
 #app {
 }

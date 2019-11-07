@@ -1,19 +1,12 @@
 <template>
-  <Layout
-    ref="test"
-    :class="'brow'"
-  >
-    <div
-      ref="wow"
-      data-wow="hallo"
-      style="height: 1000px; width: 100%;"
-    >
+  <Layout>
+    <template #header="{hallo}">
       <div
         v-ov="psg"
         ref="head"
         class="top-header"
-      >no telepon</div>
-      <div class="bg-giftbox page-header w-full">
+      >no telepon: {{ hallo }}</div>
+      <div class="page-header">
         <a
           href="/"
           class="home-link"
@@ -32,14 +25,16 @@
           </ul>
         </nav>
       </div>
+    </template>
+    <template #default>
       <div class="lo">
-        <div style="height: 200px;">[hero]</div>
-        <div>[content]</div>
+        <Slider1 :products="$page.allProduct.edges" />
+        <div style="height: 500px;">[content]</div>
       </div>
-    </div>
-    <!--  <template #pusing>
-      test
-   </template> -->
+    </template>
+    <template #footer>
+      <LayoutFooter />
+    </template>
   </Layout>
 </template>
 
@@ -51,23 +46,23 @@
   line-height: 30px;
 }
 .page-header {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between bg-white w-full;
+  border-bottom: 1px solid #ccc;
   height: 60px;
   transition: all 0.3s;
 }
 .fixed-header .page-header {
   position: fixed;
   top: 0;
-  background-color: rgb(17, 166, 211, 0.5);
-  color: blue;
   height: 40px;
+  z-index: 1;
 }
 .home-link,
 .home-link img {
   height: 100%;
   max-height: 100%;
   width: auto;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 .lo {
   margin-top: 0;
@@ -91,10 +86,14 @@
 
 <script>
 import Layout from '../layouts/Layout5'
+import Slider1 from '@/components/Slider-1'
+import LayoutFooter from '@/components/LayoutFooter'
 import {ObserveVisibility} from '@/directives/observe-visibility'
 export default {
   components: {
-    Layout
+    Layout,
+    Slider1,
+    LayoutFooter
   },
   directives: {
     ov: ObserveVisibility
@@ -122,9 +121,52 @@ export default {
   },
   methods: {
     visibilityChanged (isVisible, entry) {
+      console.log()
       if (!isVisible) this.$root.$el.parentNode.classList.add('fixed-header')
       else this.$root.$el.parentNode.classList.remove('fixed-header')
     }
   }
 }
 </script>
+
+<page-query>
+query {
+  metadata {
+    siteName
+    siteDescription
+  }
+  allProduct {
+    edges {
+        node {
+          id
+          title
+          image
+        }
+    }
+  }
+  allPost {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        timeToRead
+        description
+        date (format: "D MMMM YYYY")
+        path
+      }
+    }
+
+  }
+allCustomer {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        image
+      }
+    }
+}
+}
+</page-query>
