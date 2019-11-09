@@ -1,0 +1,8 @@
+{
+  schema: {
+    files: "schemas/**/*.gql"
+  },
+  query: {
+    files: []
+  }
+}
