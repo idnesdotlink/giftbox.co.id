@@ -132,6 +132,7 @@ module.exports = {
         }
       },
       postcss: {
+        exclude: /node_modules/,
         plugins: postcssPlugins
       }
     }
