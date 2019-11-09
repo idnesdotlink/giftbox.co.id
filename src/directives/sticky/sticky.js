@@ -277,6 +277,7 @@ export default {
       el[namespace].doBind();
     }
   },
+  // eslint-disable-next-line no-unused-vars
   unbind(el, bind, vnode) {
     if (el[namespace]) {
       el[namespace].doUnbind();

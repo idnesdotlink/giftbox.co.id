@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import Vue, { CreateElement, VNode } from "vue";
 
 export default Vue.extend({
@@ -29,6 +30,7 @@ export default Vue.extend({
   },
 
   mounted() {
+    // eslint-disable-next-line no-console
     console.log("mounted");
     this.main();
     this.registerEvent();
@@ -44,8 +46,10 @@ export default Vue.extend({
     },
     main() {
       this.lastScrollTop = this.getScrollTop();
+      // eslint-disable-next-line no-console
       console.log(this.lastScrollTop);
       this.check = () => {
+        // eslint-disable-next-line no-console
         console.log("scroll check");
         const { threshold, hideScrollUp } = this;
         let currentScrollPos = this.getScrollTop();
@@ -59,6 +63,7 @@ export default Vue.extend({
       };
     },
     registerEvent() {
+      // eslint-disable-next-line no-console
       console.log("register event");
       window.addEventListener("scroll", this.check);
     },

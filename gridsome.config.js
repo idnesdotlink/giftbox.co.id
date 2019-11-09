@@ -114,6 +114,14 @@ module.exports = {
     // const svgRule = config.module.rule("svg");
     // svgRule.uses.clear();
     // svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+    const Lint = config.module.rule("lint");
+    // eslint-disable-next-line no-console
+    Lint.test(/\.js$/)
+      .pre()
+      .include.add(require("path").resolve("./src"))
+      .end()
+      .use("eslint")
+      .loader("eslint-loader");
   },
   css: {
     loaderOptions: {

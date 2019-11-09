@@ -9,6 +9,7 @@ import VueAgile from "vue-agile";
 import VueLazyload from "vue-lazyload";
 import "material-design-icons/iconfont/material-icons.css";
 
+// eslint-disable-next-line no-unused-vars
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
@@ -16,6 +17,7 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueAgile);
   Vue.use(VueLazyload);
   if (isClient) {
+    // eslint-disable-next-line no-unused-vars
     import("vue2-storage").then(m => {});
     import("@/directives/wp").then(m => Vue.use(m.default));
     // import("@/directives/observe-visibility").then(m =>

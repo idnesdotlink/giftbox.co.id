@@ -91,6 +91,7 @@ class VisibilityState {
 function bind(el, { value }, vnode) {
   if (!value) return;
   if (typeof IntersectionObserver === "undefined") {
+    // eslint-disable-next-line no-console
     console.warn(
       "[vue-observe-visibility] IntersectionObserver API is not available in your browser. Please install this polyfill: https://github.com/w3c/IntersectionObserver/tree/master/polyfill"
     );
