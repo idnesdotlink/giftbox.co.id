@@ -2,6 +2,7 @@
   <div>
     <agile
       v-cloak
+      :autoplay="true"
       ref="slide"
       :slides-to-show="1"
     >

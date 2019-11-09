@@ -8,24 +8,31 @@
       >
         <p>no telepon: {{ hallo }}</p>
       </div>
+      <nav class="container mx-auto">
+        <div>
+          <p><i class="fa fa-phone"></i> {{ hallo }}</p>
+        </div>
+      </nav>
       <div class="page-header">
-        <a
-          href="/"
-          class="home-link"
-        ><img
-            src="../../static/images/giftbox-logo.svg"
-            class=""
-          ></a>
-        <nav>
-          <ul class="flex www">
-            <li>
-              <a class="p-2 hover:bg-accent">Home</a>
-            </li>
-            <li>
-              <a class="p-2 hover:bg-accent">Products</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="container mx-auto flex flex-col ct">
+          <a
+            href="/"
+            class="home-link"
+          ><img
+              src="../../static/images/giftbox-logo.svg"
+              class=""
+            ></a>
+          <nav>
+            <ul class="flex www">
+              <li>
+                <a class="p-2 hover:bg-accent">Home</a>
+              </li>
+              <li>
+                <a class="p-2 hover:bg-accent">Products</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </template>
     <template #default>
@@ -47,7 +54,7 @@
   background-color: blue;
   line-height: 30px;
 }
-.page-header {
+.ct {
   @apply flex items-center justify-between bg-white w-full;
   border-bottom: 1px solid #ccc;
   height: 60px;

@@ -2,6 +2,7 @@ import "intersection-observer";
 import DefaultLayout from "~/layouts/Default.vue";
 import VTooltip from "v-tooltip";
 import PortalVue from "portal-vue";
+import "@fortawesome/fontawesome-free/css/all.css";
 // import "animate.css";
 // import "magic.css/dist/magic.css";
 import VueAgile from "vue-agile";
