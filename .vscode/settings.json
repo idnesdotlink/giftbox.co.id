@@ -5,5 +5,11 @@
   "css.validate": false,
   "stylelint.enable": true,
   "scss.validate": false,
-  "vetur.validation.style": false
+  "vetur.validation.style": false,
+  "vetur.grammar.customBlocks": {
+    "docs": "md",
+    "i18n": "json",
+    "page-query": "graphql",
+    "static-query": "graphql"
+  }
 }
