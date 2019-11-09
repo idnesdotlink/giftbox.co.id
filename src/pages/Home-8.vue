@@ -8,13 +8,14 @@
       >
         <p>no telepon: {{ hallo }}</p>
       </div>
-      <nav class="container mx-auto">
-        <div>
-          <p><i class="fa fa-phone"></i> {{ hallo }}</p>
+      <nav class="clnk">
+        <div class="container mx-auto flex flex-row justify-start">
+          <p class="px-6 py-1 lnk1"><i class="fa fa-phone"></i> {{ hallo }}</p>
+          <p class="px-6 py-1 lnk1"><i class="fa fa-phone"></i> +62 878 123 456</p>
         </div>
       </nav>
       <div class="page-header">
-        <div class="container mx-auto flex flex-col ct">
+        <div class="container mx-auto flex flex-row ct">
           <a
             href="/"
             class="home-link"
@@ -48,6 +49,23 @@
 </template>
 
 <style lang="postcss">
+.clnk {
+  @apply bg-giftbox;
+  border-bottom: 1px solid #ccc;
+}
+.lnk1 {
+  @apply text-white;
+}
+.lnk1:hover {
+  @apply text-accent;
+}
+.clnk .lnk1 {
+  border-right: 1px solid #ccc;
+}
+.clnk .lnk1:first-child {
+  border-left: 1px solid #ccc;
+}
+
 .top-header {
   @apply mx-auto text-center;
   height: 30px;
@@ -56,29 +74,30 @@
 }
 .ct {
   @apply flex items-center justify-between bg-white w-full;
-  border-bottom: 1px solid #ccc;
   height: 60px;
-  transition: all 0.3s;
+}
+.page-header {
+  @apply w-full bg-white;
+  border-bottom: 1px solid #ccc;
 }
 .fixed-header .page-header {
   position: fixed;
   top: 0;
-  height: 40px;
   z-index: 1;
+}
+.fixed-header .ct {
+  height: 40px;
 }
 .home-link,
 .home-link img {
   height: 100%;
   max-height: 100%;
   width: auto;
-  transition: all 0.1s;
 }
 .lo {
   margin-top: 0;
 }
 .fixed-header .lo {
-  /* transform: translate(0, 50px);
-  transition: transform; */
   margin-top: 50px;
 }
 .www li a::after {

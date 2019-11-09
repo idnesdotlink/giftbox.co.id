@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="postcss">
-.jumper {
+/* .jumper {
   @apply absolute right-0 bottom-0 w-10 h-10;
   & ul {
     @apply flex flex-row absolute hidden w-0 h-0 left-0;
@@ -68,5 +68,5 @@ export default {
     @apply flex flex-row w-full h-full;
     left: -150px;
   }
-}
+} */
 </style>
