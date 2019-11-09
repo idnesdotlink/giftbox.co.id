@@ -4,8 +4,14 @@ const cssnano = require("cssnano");
 // const autoprefixer = require("autoprefixer");
 const csspresetenv = require("postcss-preset-env");
 const stylelint = require("stylelint");
+const postcssreporter = require("postcss-reporter");
 
-const postcssPlugins = [csspresetenv({ stage: 1 }), tailwind(), stylelint()];
+const postcssPlugins = [
+  csspresetenv({ stage: 1 }),
+  tailwind(),
+  stylelint(),
+  postcssreporter({ clearReportedMessages: true })
+];
 
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(purgecss());
