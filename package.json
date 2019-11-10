@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
+    "bp": "cross-env NODE_ENV=production gridsome build",
     "dev": "gridsome develop -p 8082",
     "dev2": "gridsome develop",
     "explore": "gridsome explore",

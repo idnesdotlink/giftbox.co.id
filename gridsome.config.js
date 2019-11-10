@@ -12,13 +12,12 @@ const postcssPlugins = [
   csspresetenv({ stage: 1 }),
   tailwind(),
   stylelint(),
-  cssnano(),
   postcssreporter({ clearReportedMessages: true })
 ];
 
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(purgecss());
-  //  postcssPlugins.push(cssnano());
+  postcssPlugins.push(cssnano());
 }
 
 const dev = false;
