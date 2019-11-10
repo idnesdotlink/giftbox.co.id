@@ -1,20 +1,16 @@
 <template>
   <Layout>
     <template #header="{hallo}">
-      <div
-        v-ov="psg"
-        ref="head"
-        class="top-header"
-      >
-        <p>no telepon: {{ hallo }}</p>
-      </div>
       <nav class="clnk">
         <div class="container mx-auto flex flex-row justify-start">
           <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fa fa-phone"></i> {{ hallo }}</p>
           <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fab fa-whatsapp font-medium"></i> +62 878 123 456</p>
         </div>
       </nav>
-      <div class="page-header">
+      <div
+        class="page-header"
+        v-ov="psg"
+      >
         <div class="container mx-auto flex flex-row ct">
           <a
             href="/"
@@ -35,6 +31,7 @@
           </nav>
         </div>
       </div>
+      <div class="page-nav">[nav]</div>
     </template>
     <template #default>
       <div class="lo">
@@ -76,17 +73,18 @@
   @apply flex items-center justify-between bg-white w-full;
   height: 60px;
 }
+.page-nav {
+  @apply w-full bg-white;
+  border-bottom: 1px solid #ccc;
+}
 .page-header {
   @apply w-full bg-white;
   border-bottom: 1px solid #ccc;
 }
-.fixed-header .page-header {
+.fixed-header .page-nav {
   position: fixed;
   top: 0;
   z-index: 1;
-}
-.fixed-header .ct {
-  height: 40px;
 }
 .home-link,
 .home-link img {
