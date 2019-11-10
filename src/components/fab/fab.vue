@@ -306,10 +306,6 @@ export default {
 
 <style lang="less" scoped>
 @import "./less/index.less";
-
-* {
-  user-select: none;
-}
 .fab-main-container {
   position: fixed;
   right: 15%;

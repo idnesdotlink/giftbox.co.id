@@ -1,6 +1,10 @@
 @import './vars.less';
 @import './mixins.less';
 
+* {
+  user-select: none;
+}
+
 .fab-size-normal {
   .fab-size(@normal);
 }
@@ -23,9 +27,9 @@
 }
 
 .vue-fab-icons {
-  .vue-fab-material-icons();
-
   * {
     color: white;
   }
+  .vue-fab-material-icons();
+
 }

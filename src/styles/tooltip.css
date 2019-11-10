@@ -1,20 +1,20 @@
 .tooltip {
   @apply block z-50;
 
-  .tooltip-inner {
+  & .tooltip-inner {
     @apply bg-black text-white;
     border-radius: 16px;
     padding: 5px 10px 4px;
   }
 
-  .tooltip-arrow {
+  & .tooltip-arrow {
     @apply w-0 h-0 m-1 absolute border-solid border-black;
   }
 
   &[x-placement^="top"] {
     @apply mb-2;
 
-    .tooltip-arrow {
+    & .tooltip-arrow {
       @apply my-0;
       border-width: 5px 5px 0 5px;
       border-left-color: transparent !important;
@@ -28,7 +28,7 @@
   &[x-placement^="bottom"] {
     margin-top: 5px;
 
-    .tooltip-arrow {
+    & .tooltip-arrow {
       border-width: 0 5px 5px 5px;
       border-left-color: transparent !important;
       border-right-color: transparent !important;
@@ -43,7 +43,7 @@
   &[x-placement^="right"] {
     margin-left: 5px;
 
-    .tooltip-arrow {
+    & .tooltip-arrow {
       border-width: 5px 5px 5px 0;
       border-left-color: transparent !important;
       border-top-color: transparent !important;
@@ -58,7 +58,7 @@
   &[x-placement^="left"] {
     margin-right: 5px;
 
-    .tooltip-arrow {
+    & .tooltip-arrow {
       border-width: 5px 0 5px 5px;
       border-top-color: transparent !important;
       border-right-color: transparent !important;
@@ -72,11 +72,11 @@
 
   &[aria-hidden="true"] {
     @apply invisible opacity-0;
-    transition: opacity .15s, visibility .15s;
+    transition: opacity 0.15s, visibility 0.15s;
   }
 
   &[aria-hidden="false"] {
     @apply visible opacity-100;
-    transition: opacity .15s;
+    transition: opacity 0.15s;
   }
 }

@@ -1,0 +1,588 @@
+directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
+directive @infer on OBJECT
+directive @reference(by: String = "id") on FIELD_DEFINITION
+directive @proxy(from: String) on FIELD_DEFINITION
+directive @paginate on FIELD
+input BelongsToFilterInput {
+  id: IDQueryOperatorInput
+  path: StringQueryOperatorInput
+  typeName: TypeNameQueryOperatorInput
+}
+
+type Catalog implements Node {
+  id: ID!
+  title: Int
+  image(
+    width: Int
+    height: Int
+    fit: ImageFit = cover
+    quality: Int
+    blur: Int
+    background: String
+  ): Image
+  path(to: String = "default"): String
+  belongsTo(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument!
+  ]
+    filter: BelongsToFilterInput
+  ): NodeBelongsTo
+}
+
+type CatalogConnection implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [CatalogEdge
+  ]
+}
+
+type CatalogEdge implements NodeConnectionEdge {
+  node: Catalog
+  next: Catalog
+  previous: Catalog
+}
+
+input CatalogFilterInput {
+  id: IDQueryOperatorInput
+  title: IntQueryOperatorInput
+  image: ImageQueryOperatorInput
+  path: StringQueryOperatorInput
+}
+
+type Customer implements Node {
+  id: ID!
+  title: String
+  image(
+    width: Int
+    height: Int
+    fit: ImageFit = cover
+    quality: Int
+    blur: Int
+    background: String
+  ): Image
+  path(to: String = "default"): String
+  belongsTo(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument!
+  ]
+    filter: BelongsToFilterInput
+  ): NodeBelongsTo
+}
+
+type CustomerConnection implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [CustomerEdge
+  ]
+}
+
+type CustomerEdge implements NodeConnectionEdge {
+  node: Customer
+  next: Customer
+  previous: Customer
+}
+
+input CustomerFilterInput {
+  id: IDQueryOperatorInput
+  title: StringQueryOperatorInput
+  image: ImageQueryOperatorInput
+  path: StringQueryOperatorInput
+}
+
+scalar Date
+
+input DateQueryOperatorInput {
+  eq: Date
+  ne: Date
+  gt: Date
+  gte: Date
+  lt: Date
+  lte: Date
+  in: [Date
+  ]
+  nin: [Date
+  ]
+  dteq: Date
+  between: [Date
+  ]
+}
+
+scalar File
+
+input FileQueryOperatorInput {
+  eq: File
+  ne: File
+  in: [File
+  ]
+  nin: [File
+  ]
+  regex: String
+}
+
+input IDQueryOperatorInput {
+  eq: ID
+  ne: ID
+  in: [ID
+  ]
+  nin: [ID
+  ]
+}
+
+scalar Image
+
+enum ImageFit {
+  cover
+  contain
+  fill
+  inside
+  outside
+}
+
+input ImageQueryOperatorInput {
+  eq: Image
+  ne: Image
+  in: [Image
+  ]
+  nin: [Image
+  ]
+  regex: String
+}
+
+input IntQueryOperatorInput {
+  eq: Int
+  ne: Int
+  gt: Int
+  gte: Int
+  lt: Int
+  lte: Int
+  in: [Int
+  ]
+  nin: [Int
+  ]
+  between: [Int
+  ]
+}
+
+scalar JSON
+
+input JSONQueryOperatorInput {
+  eq: JSON
+  ne: JSON
+  in: [JSON
+  ]
+  nin: [JSON
+  ]
+  regex: String
+}
+
+type Metadata {
+  siteName: String
+  siteDescription: String
+  siteUrl: String
+  pathPrefix: String
+}
+
+interface Node {
+  id: ID!
+}
+
+type NodeBelongsTo implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [NodeBelongsToEdge
+  ]
+}
+
+type NodeBelongsToEdge implements NodeConnectionEdge {
+  node: Node
+  next: Node
+  previous: Node
+}
+
+interface NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [NodeConnectionEdge
+  ]
+}
+
+interface NodeConnectionEdge {
+  node: Node
+  next: Node
+  previous: Node
+}
+
+type Page {
+  path: String!
+  context: JSON!
+}
+
+input PageFilterInput {
+  path: StringQueryOperatorInput
+  context: JSONQueryOperatorInput
+}
+
+type PageInfo {
+  perPage: Int!
+  currentPage: Int!
+  totalPages: Int!
+  totalItems: Int!
+  hasPreviousPage: Boolean!
+  hasNextPage: Boolean!
+  isFirst: Boolean!
+  isLast: Boolean!
+}
+
+type Post implements Node {
+  id: ID!
+  path(to: String = "default"): String
+  fileInfo: Post_FileInfo
+  content: String
+  excerpt: String
+  title: String
+  description: String
+  date(
+    format: String
+    locale: String
+  ): Date
+  headings(
+    depth: RemarkHeadingLevels
+    stripTags: Boolean = true
+  ): [RemarkHeading
+  ]
+  timeToRead(speed: Int = 230): Int
+  belongsTo(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument!
+  ]
+    filter: BelongsToFilterInput
+  ): NodeBelongsTo
+}
+
+type Post_FileInfo {
+  extension: String
+  directory: String
+  path: String
+  name: String
+}
+
+input Post_FileInfoFilterInput {
+  extension: StringQueryOperatorInput
+  directory: StringQueryOperatorInput
+  path: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+}
+
+type PostConnection implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [PostEdge
+  ]
+}
+
+type PostEdge implements NodeConnectionEdge {
+  node: Post
+  next: Post
+  previous: Post
+}
+
+input PostFilterInput {
+  id: IDQueryOperatorInput
+  path: StringQueryOperatorInput
+  fileInfo: Post_FileInfoFilterInput
+  content: StringQueryOperatorInput
+  excerpt: StringQueryOperatorInput
+  title: StringQueryOperatorInput
+  description: StringQueryOperatorInput
+  date: DateQueryOperatorInput
+}
+
+type Product implements Node {
+  id: ID!
+  path(to: String = "default"): String
+  fileInfo: Product_FileInfo
+  content: String
+  excerpt: String
+  title: String
+  date(
+    format: String
+    locale: String
+  ): Date
+  tags(
+    sortBy: String
+    order: SortOrder = DESC
+    skip: Int = 0
+    sort: [SortArgument
+  ]
+    limit: Int
+  ): [Tag
+  ]
+  image(
+    width: Int
+    height: Int
+    fit: ImageFit = cover
+    quality: Int
+    blur: Int
+    background: String
+  ): Image
+  sliders: [String
+  ]
+  headings(
+    depth: RemarkHeadingLevels
+    stripTags: Boolean = true
+  ): [RemarkHeading
+  ]
+  timeToRead(speed: Int = 230): Int
+  belongsTo(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument!
+  ]
+    filter: BelongsToFilterInput
+  ): NodeBelongsTo
+}
+
+type Product_FileInfo {
+  extension: String
+  directory: String
+  path: File
+  name: String
+}
+
+input Product_FileInfoFilterInput {
+  extension: StringQueryOperatorInput
+  directory: StringQueryOperatorInput
+  path: FileQueryOperatorInput
+  name: StringQueryOperatorInput
+}
+
+type ProductConnection implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [ProductEdge
+  ]
+}
+
+type ProductEdge implements NodeConnectionEdge {
+  node: Product
+  next: Product
+  previous: Product
+}
+
+input ProductFilterInput {
+  id: IDQueryOperatorInput
+  path: StringQueryOperatorInput
+  fileInfo: Product_FileInfoFilterInput
+  content: StringQueryOperatorInput
+  excerpt: StringQueryOperatorInput
+  title: StringQueryOperatorInput
+  date: DateQueryOperatorInput
+  tags: StringListQueryOperatorInput
+  image: ImageQueryOperatorInput
+  sliders: StringListQueryOperatorInput
+}
+
+type Query {
+  post(
+    id: ID
+    path: String
+    nullable: Boolean = false
+  ): Post
+  allPost(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument
+  ]
+    filter: PostFilterInput
+  ): PostConnection
+  product(
+    id: ID
+    path: String
+    nullable: Boolean = false
+  ): Product
+  allProduct(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument
+  ]
+    filter: ProductFilterInput
+  ): ProductConnection
+  tag(
+    id: ID
+    path: String
+    nullable: Boolean = false
+  ): Tag
+  allTag(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument
+  ]
+    filter: TagFilterInput
+  ): TagConnection
+  customer(
+    id: ID
+    path: String
+    nullable: Boolean = false
+  ): Customer
+  allCustomer(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument
+  ]
+    filter: CustomerFilterInput
+  ): CustomerConnection
+  catalog(
+    id: ID
+    path: String
+    nullable: Boolean = false
+  ): Catalog
+  allCatalog(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument
+  ]
+    filter: CatalogFilterInput
+  ): CatalogConnection
+  metadata: Metadata
+  metaData: Metadata @deprecated(reason: "Use Query.metadata instead.")
+  page(path: String!): Page
+  allPage(filter: PageFilterInput): [Page
+  ]
+}
+
+type RemarkHeading {
+  depth: Int
+  value: String
+  anchor: String
+}
+
+enum RemarkHeadingLevels {
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+}
+
+input SortArgument {
+  by: String! = "date"
+  order: SortOrder = DESC
+}
+
+enum SortOrder {
+  ASC
+  DESC
+}
+
+input StringListQueryOperatorInput {
+  size: Int
+  contains: [String
+  ]
+  containsAny: [String
+  ]
+  containsNone: [String
+  ]
+}
+
+input StringQueryOperatorInput {
+  eq: String
+  ne: String
+  in: [String
+  ]
+  nin: [String
+  ]
+  regex: String
+}
+
+type Tag implements Node {
+  id: ID!
+  title: String
+  path(to: String = "default"): String
+  belongsTo(
+    sortBy: String = "date"
+    order: SortOrder = DESC
+    perPage: Int
+    skip: Int = 0
+    limit: Int
+    page: Int
+    sort: [SortArgument!
+  ]
+    filter: BelongsToFilterInput
+  ): NodeBelongsTo
+}
+
+type TagConnection implements NodeConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [TagEdge
+  ]
+}
+
+type TagEdge implements NodeConnectionEdge {
+  node: Tag
+  next: Tag
+  previous: Tag
+}
+
+input TagFilterInput {
+  id: IDQueryOperatorInput
+  title: StringQueryOperatorInput
+  path: StringQueryOperatorInput
+}
+
+enum TypeName {
+  Post
+  Product
+  Tag
+  Customer
+  Catalog
+}
+
+input TypeNameQueryOperatorInput {
+  eq: TypeName
+  ne: TypeName
+  in: [TypeName
+  ]
+  nin: [TypeName
+  ]
+}

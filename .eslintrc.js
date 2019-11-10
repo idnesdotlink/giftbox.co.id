@@ -14,9 +14,22 @@ module.exports = {
     // add more generic rulesets here, such as:
     "plugin:vue/recommended",
     "eslint:recommended",
-    "prettier/vue",
-    "plugin:prettier/recommended"
+    "plugin:prettier-vue/recommended",
+    "prettier/vue"
+    // "plugin:prettier/recommended"
   ],
+
+  settings: {
+    "prettier-vue": {
+      SFCBlocks: {
+        customBlocks: {
+          "page-query": { lang: "graphql" },
+          "statics-query": { lang: "graphql" }
+        }
+      }
+    }
+  },
+
   rules: {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'

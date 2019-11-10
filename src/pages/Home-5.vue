@@ -125,59 +125,57 @@ export default Vue.extend({
 </script>
 
 <style lang="postcss">
-.home-5 #app > div {
-  & > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  & .list {
-    width: 100%;
-    list-style: none;
-  }
-  & * .item {
-    padding: 4rem 1rem;
-    width: 100%;
-    background-color: whitesmoke;
-    border-radius: 6px;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-  }
-  & .ticker {
-    position: fixed;
-    /* top: 10vh;
+.home-5 #app > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+& .list {
+  width: 100%;
+  list-style: none;
+}
+& * .item {
+  padding: 4rem 1rem;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+& .ticker {
+  position: fixed;
+  /* top: 10vh;
   left: 10vw; */
-    top: 3rem;
-    left: 3rem;
-    background-color: aliceblue;
-    padding: 1rem;
-    border-radius: 6px;
-  }
-  & .ticker ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  & .ticker li {
-    padding: 0.5em;
-  }
-  & .in-view-item {
-    transition: all 0.3s;
-    display: block;
-  }
-  /* .in-view-leave-active below version 2.1.8 */
-  & .in-view-enter,
-  & .in-view-leave-to {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  & .in-view-leave-active {
-    position: absolute;
-  }
+  top: 3rem;
+  left: 3rem;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 6px;
+}
+& .ticker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+& .ticker li {
+  padding: 0.5em;
+}
+& .in-view-item {
+  transition: all 0.3s;
+  display: block;
+}
+/* .in-view-leave-active below version 2.1.8 */
+& .in-view-enter,
+& .in-view-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+& .in-view-leave-active {
+  position: absolute;
 }
 </style>

@@ -152,7 +152,7 @@ allCustomer {
 }
 </page-query>
 
-<style>
+<style lang="postcss">
 .hero {
   height: 300px;
   position: relative;
@@ -172,7 +172,7 @@ allCustomer {
 }
 </style>
 
-<style>
+<style lang="postcss">
 .curves {
   position: absolute;
   pointer-events: none;

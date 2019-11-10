@@ -19,12 +19,7 @@
   </nav>
 </template>
 
-<style>
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
+<style lang="postcss">
 .navbar-btn {
   @apply px-5 py-2 bg-alert text-white;
 }

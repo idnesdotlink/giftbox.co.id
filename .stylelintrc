@@ -11,6 +11,11 @@
         "screen"
       ]
     }],
+    "property-no-unknown": [
+      true,{
+        ignoreProperties: ["font-path"]
+      },
+    ],
     "block-no-empty": null,
     "unit-whitelist": ["em", "rem", "s", "vh", "vw", "px", "%", "deg", "vmax", "ms"]
   }

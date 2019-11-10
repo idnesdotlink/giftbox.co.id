@@ -137,13 +137,7 @@ query {
 }
 </static-query>
 
-<style>
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
+<style lang="postcss">
 .bar {
   @apply min-w-full bg-gradient-nine-one h-2;
 }
@@ -159,8 +153,6 @@ query {
   opacity: 0;
 }
 </style>
-
-
 
 <script>
 import { timeout } from 'bluebird'

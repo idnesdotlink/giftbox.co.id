@@ -5,6 +5,8 @@
   "css.validate": false,
   "stylelint.enable": true,
   "scss.validate": false,
+  "less.validate": false,
+  "postcss.validate": false,
   "vetur.validation.style": false,
   "vetur.grammar.customBlocks": {
     "docs": "md",

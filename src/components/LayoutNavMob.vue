@@ -88,13 +88,7 @@ export default {
 }
 </script>
 
-<style>
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
+<style lang="postcss">
 .active-menu .nav-mob {
   opacity: 1;
   pointer-events: all;

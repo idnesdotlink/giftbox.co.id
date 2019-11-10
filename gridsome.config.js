@@ -5,17 +5,20 @@ const cssnano = require("cssnano");
 const csspresetenv = require("postcss-preset-env");
 const stylelint = require("stylelint");
 const postcssreporter = require("postcss-reporter");
+const postcssimport = require("postcss-import");
 
 const postcssPlugins = [
+  postcssimport(),
   csspresetenv({ stage: 1 }),
   tailwind(),
   stylelint(),
+  cssnano(),
   postcssreporter({ clearReportedMessages: true })
 ];
 
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(purgecss());
-  postcssPlugins.push(cssnano());
+  //  postcssPlugins.push(cssnano());
 }
 
 const dev = false;
@@ -122,6 +125,13 @@ module.exports = {
       .end()
       .use("eslint")
       .loader("eslint-loader");
+
+    // const Pcss = config.module.rule("pcss");
+    // Pcss.test(/\.pcss$/)
+    //   .include.add(require("path").resolve("./src"))
+    //   .end()
+    //   .use("postcss")
+    //   .loader("postcss-loader");
   },
   css: {
     loaderOptions: {

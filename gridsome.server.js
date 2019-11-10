@@ -91,17 +91,29 @@ module.exports = function(api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
   });
 
-  // api.beforeBuild(api => {
-  //   api.configureWebpack(conf => {
-  //     const rules = conf.module.rules;
-  //     const scss = rules.find((v, i) => {
-  //       const test = `${v.test}`;
-  //       return test === "/\\.scss$/";
-  //     });
-  //     const scssloader = scss.oneOf[1].use.find((v, i) => {
-  //       return v.loader === "sass-loader";
-  //     });
-  //     console.log(scssloader);
-  //   });
-  // });
+  api.configureWebpack(conf => {
+    const { rules } = conf.module;
+    const pcss = rules.find((v, i) => {
+      const test = `${v.test}`;
+      return test === "/\\.p(ost)?css$/";
+    });
+    console.log(pcss.oneOf[1].use);
+    return conf;
+  });
+
+  api.beforeBuild(api => {
+    console.log("before build");
+    api.configureWebpack(conf => {
+      const { rules } = conf.module;
+      console.log(rules);
+      // const scss = rules.find((v, i) => {
+      //   const test = `${v.test}`;
+      //   return test === "/\\.scss$/";
+      // });
+      // const scssloader = scss.oneOf[1].use.find((v, i) => {
+      //   return v.loader === "sass-loader";
+      // });
+      // console.log(scssloader);
+    });
+  });
 };
