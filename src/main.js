@@ -8,6 +8,8 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import VueAgile from "vue-agile";
 import VueLazyload from "vue-lazyload";
 import "material-design-icons/iconfont/material-icons.css";
+import "typeface-open-sans";
+import "typeface-montserrat";
 import "./main.postcss";
 
 // eslint-disable-next-line no-unused-vars

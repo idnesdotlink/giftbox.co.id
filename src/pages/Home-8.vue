@@ -10,8 +10,8 @@
       </div>
       <nav class="clnk">
         <div class="container mx-auto flex flex-row justify-start">
-          <p class="px-6 py-1 lnk1"><i class="fa fa-phone"></i> {{ hallo }}</p>
-          <p class="px-6 py-1 lnk1"><i class="fa fa-phone"></i> +62 878 123 456</p>
+          <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fa fa-phone"></i> {{ hallo }}</p>
+          <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fab fa-whatsapp font-medium"></i> +62 878 123 456</p>
         </div>
       </nav>
       <div class="page-header">
