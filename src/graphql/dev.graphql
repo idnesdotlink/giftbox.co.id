@@ -1,8 +1,24 @@
+# source: http://localhost:8082/___graphql
+# timestamp: Mon Nov 11 2019 06:06:58 GMT+0700 (Western Indonesia Time)
+
+"""Provides default value for input field."""
 directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
+
+"""Add fields from field values."""
 directive @infer on OBJECT
-directive @reference(by: String = "id") on FIELD_DEFINITION
+
+"""Add reference resolver."""
+directive @reference(
+  """Reference node by a custom field value."""
+  by: String = "id"
+) on FIELD_DEFINITION
+
+"""Return value from another field."""
 directive @proxy(from: String) on FIELD_DEFINITION
+
+"""Paginate a connection in a query. Only supported in page-query."""
 directive @paginate on FIELD
+
 input BelongsToFilterInput {
   id: IDQueryOperatorInput
   path: StringQueryOperatorInput
@@ -13,23 +29,35 @@ type Catalog implements Node {
   id: ID!
   title: Int
   image(
+    """Width"""
     width: Int
+
+    """Height"""
     height: Int
+
+    """Fit"""
     fit: ImageFit = cover
+
+    """Quality (default: 75)"""
     quality: Int
+
+    """Blur level for base64 string"""
     blur: Int
+
+    """Background color for 'contain'"""
     background: String
   ): Image
   path(to: String = "default"): String
   belongsTo(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument!
-  ]
+    sort: [SortArgument!]
     filter: BelongsToFilterInput
   ): NodeBelongsTo
 }
@@ -37,8 +65,7 @@ type Catalog implements Node {
 type CatalogConnection implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [CatalogEdge
-  ]
+  edges: [CatalogEdge]
 }
 
 type CatalogEdge implements NodeConnectionEdge {
@@ -58,23 +85,35 @@ type Customer implements Node {
   id: ID!
   title: String
   image(
+    """Width"""
     width: Int
+
+    """Height"""
     height: Int
+
+    """Fit"""
     fit: ImageFit = cover
+
+    """Quality (default: 75)"""
     quality: Int
+
+    """Blur level for base64 string"""
     blur: Int
+
+    """Background color for 'contain'"""
     background: String
   ): Image
   path(to: String = "default"): String
   belongsTo(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument!
-  ]
+    sort: [SortArgument!]
     filter: BelongsToFilterInput
   ): NodeBelongsTo
 }
@@ -82,8 +121,7 @@ type Customer implements Node {
 type CustomerConnection implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [CustomerEdge
-  ]
+  edges: [CustomerEdge]
 }
 
 type CustomerEdge implements NodeConnectionEdge {
@@ -102,86 +140,163 @@ input CustomerFilterInput {
 scalar Date
 
 input DateQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: Date
+
+  """Filter by property not equal to provided value."""
   ne: Date
+
+  """Filter by property greater than provided value."""
   gt: Date
+
+  """Filter by property greater or equal to provided value."""
   gte: Date
+
+  """Filter by property less than provided value."""
   lt: Date
+
+  """Filter by property less than or equal to provided value."""
   lte: Date
-  in: [Date
-  ]
-  nin: [Date
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [Date]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [Date]
+
+  """Filter by date property equal to provided date value."""
   dteq: Date
-  between: [Date
-  ]
+
+  """Filter by property between provided values."""
+  between: [Date]
 }
 
 scalar File
 
 input FileQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: File
+
+  """Filter by property not equal to provided value."""
   ne: File
-  in: [File
-  ]
-  nin: [File
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [File]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [File]
+
+  """Filter by property matching provided regular expression."""
   regex: String
 }
 
 input IDQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: ID
+
+  """Filter by property not equal to provided value."""
   ne: ID
-  in: [ID
-  ]
-  nin: [ID
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [ID]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [ID]
 }
 
 scalar Image
 
 enum ImageFit {
+  """Crop to cover both provided dimensions."""
   cover
+
+  """Embed within both provided dimensions."""
   contain
+
+  """
+  Ignore the aspect ratio of the input and stretch to both provided dimensions.
+  """
   fill
+
+  """
+  Preserving aspect ratio, resize the image to be as large as possible while
+  ensuring its dimensions are less than or equal to both those specified.
+  """
   inside
+
+  """
+  Preserving aspect ratio, resize the image to be as small as possible while
+  ensuring its dimensions are greater than or equal to both those specified.
+  Some of these values are based on the object-fit CSS property.
+  """
   outside
 }
 
 input ImageQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: Image
+
+  """Filter by property not equal to provided value."""
   ne: Image
-  in: [Image
-  ]
-  nin: [Image
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [Image]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [Image]
+
+  """Filter by property matching provided regular expression."""
   regex: String
 }
 
 input IntQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: Int
+
+  """Filter by property not equal to provided value."""
   ne: Int
+
+  """Filter by property greater than provided value."""
   gt: Int
+
+  """Filter by property greater or equal to provided value."""
   gte: Int
+
+  """Filter by property less than provided value."""
   lt: Int
+
+  """Filter by property less than or equal to provided value."""
   lte: Int
-  in: [Int
-  ]
-  nin: [Int
-  ]
-  between: [Int
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [Int]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [Int]
+
+  """Filter by property between provided values."""
+  between: [Int]
 }
 
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
 scalar JSON
 
 input JSONQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: JSON
+
+  """Filter by property not equal to provided value."""
   ne: JSON
-  in: [JSON
-  ]
-  nin: [JSON
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [JSON]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [JSON]
+
+  """Filter by property matching provided regular expression."""
   regex: String
 }
 
@@ -199,8 +314,7 @@ interface Node {
 type NodeBelongsTo implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [NodeBelongsToEdge
-  ]
+  edges: [NodeBelongsToEdge]
 }
 
 type NodeBelongsToEdge implements NodeConnectionEdge {
@@ -212,8 +326,7 @@ type NodeBelongsToEdge implements NodeConnectionEdge {
 interface NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [NodeConnectionEdge
-  ]
+  edges: [NodeConnectionEdge]
 }
 
 interface NodeConnectionEdge {
@@ -252,24 +365,27 @@ type Post implements Node {
   title: String
   description: String
   date(
+    """Date format"""
     format: String
+
+    """Locale"""
     locale: String
   ): Date
-  headings(
-    depth: RemarkHeadingLevels
-    stripTags: Boolean = true
-  ): [RemarkHeading
-  ]
-  timeToRead(speed: Int = 230): Int
+  headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
+  timeToRead(
+    """Words per minute"""
+    speed: Int = 230
+  ): Int
   belongsTo(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument!
-  ]
+    sort: [SortArgument!]
     filter: BelongsToFilterInput
   ): NodeBelongsTo
 }
@@ -291,8 +407,7 @@ input Post_FileInfoFilterInput {
 type PostConnection implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [PostEdge
-  ]
+  edges: [PostEdge]
 }
 
 type PostEdge implements NodeConnectionEdge {
@@ -320,43 +435,48 @@ type Product implements Node {
   excerpt: String
   title: String
   date(
+    """Date format"""
     format: String
+
+    """Locale"""
     locale: String
   ): Date
-  tags(
-    sortBy: String
-    order: SortOrder = DESC
-    skip: Int = 0
-    sort: [SortArgument
-  ]
-    limit: Int
-  ): [Tag
-  ]
+  tags(sortBy: String, order: SortOrder = DESC, skip: Int = 0, sort: [SortArgument], limit: Int): [Tag]
   image(
+    """Width"""
     width: Int
+
+    """Height"""
     height: Int
+
+    """Fit"""
     fit: ImageFit = cover
+
+    """Quality (default: 75)"""
     quality: Int
+
+    """Blur level for base64 string"""
     blur: Int
+
+    """Background color for 'contain'"""
     background: String
   ): Image
-  sliders: [String
-  ]
-  headings(
-    depth: RemarkHeadingLevels
-    stripTags: Boolean = true
-  ): [RemarkHeading
-  ]
-  timeToRead(speed: Int = 230): Int
+  sliders: [String]
+  headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
+  timeToRead(
+    """Words per minute"""
+    speed: Int = 230
+  ): Int
   belongsTo(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument!
-  ]
+    sort: [SortArgument!]
     filter: BelongsToFilterInput
   ): NodeBelongsTo
 }
@@ -378,8 +498,7 @@ input Product_FileInfoFilterInput {
 type ProductConnection implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [ProductEdge
-  ]
+  edges: [ProductEdge]
 }
 
 type ProductEdge implements NodeConnectionEdge {
@@ -405,88 +524,115 @@ type Query {
   post(
     id: ID
     path: String
+
+    """Will return an error if not nullable."""
     nullable: Boolean = false
   ): Post
   allPost(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument
-  ]
+    sort: [SortArgument]
+
+    """Filter for Post nodes."""
     filter: PostFilterInput
   ): PostConnection
   product(
     id: ID
     path: String
+
+    """Will return an error if not nullable."""
     nullable: Boolean = false
   ): Product
   allProduct(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument
-  ]
+    sort: [SortArgument]
+
+    """Filter for Product nodes."""
     filter: ProductFilterInput
   ): ProductConnection
   tag(
     id: ID
     path: String
+
+    """Will return an error if not nullable."""
     nullable: Boolean = false
   ): Tag
   allTag(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument
-  ]
+    sort: [SortArgument]
+
+    """Filter for Tag nodes."""
     filter: TagFilterInput
   ): TagConnection
   customer(
     id: ID
     path: String
+
+    """Will return an error if not nullable."""
     nullable: Boolean = false
   ): Customer
   allCustomer(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument
-  ]
+    sort: [SortArgument]
+
+    """Filter for Customer nodes."""
     filter: CustomerFilterInput
   ): CustomerConnection
   catalog(
     id: ID
     path: String
+
+    """Will return an error if not nullable."""
     nullable: Boolean = false
   ): Catalog
   allCatalog(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument
-  ]
+    sort: [SortArgument]
+
+    """Filter for Catalog nodes."""
     filter: CatalogFilterInput
   ): CatalogConnection
   metadata: Metadata
   metaData: Metadata @deprecated(reason: "Use Query.metadata instead.")
   page(path: String!): Page
-  allPage(filter: PageFilterInput): [Page
-  ]
+  allPage(
+    """Filter pages."""
+    filter: PageFilterInput
+  ): [Page]
 }
 
 type RemarkHeading {
@@ -510,27 +656,41 @@ input SortArgument {
 }
 
 enum SortOrder {
+  """Sort ascending"""
   ASC
+
+  """Sort descending"""
   DESC
 }
 
 input StringListQueryOperatorInput {
+  """Filter which have an array property of specified size."""
   size: Int
-  contains: [String
-  ]
-  containsAny: [String
-  ]
-  containsNone: [String
-  ]
+
+  """Filter by property containing the provided value."""
+  contains: [String]
+
+  """Filter by property containing any of the provided values."""
+  containsAny: [String]
+
+  """Filter by property containing none of the provided values."""
+  containsNone: [String]
 }
 
 input StringQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: String
+
+  """Filter by property not equal to provided value."""
   ne: String
-  in: [String
-  ]
-  nin: [String
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [String]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [String]
+
+  """Filter by property matching provided regular expression."""
   regex: String
 }
 
@@ -541,12 +701,13 @@ type Tag implements Node {
   belongsTo(
     sortBy: String = "date"
     order: SortOrder = DESC
+
+    """Defaults to 25 when page is provided."""
     perPage: Int
     skip: Int = 0
     limit: Int
     page: Int
-    sort: [SortArgument!
-  ]
+    sort: [SortArgument!]
     filter: BelongsToFilterInput
   ): NodeBelongsTo
 }
@@ -554,8 +715,7 @@ type Tag implements Node {
 type TagConnection implements NodeConnection {
   totalCount: Int!
   pageInfo: PageInfo!
-  edges: [TagEdge
-  ]
+  edges: [TagEdge]
 }
 
 type TagEdge implements NodeConnectionEdge {
@@ -579,10 +739,15 @@ enum TypeName {
 }
 
 input TypeNameQueryOperatorInput {
+  """Filter by property of (strict) equality."""
   eq: TypeName
+
+  """Filter by property not equal to provided value."""
   ne: TypeName
-  in: [TypeName
-  ]
-  nin: [TypeName
-  ]
+
+  """Filter by property matching any of the provided values."""
+  in: [TypeName]
+
+  """Filter by property not matching any of the provided values."""
+  nin: [TypeName]
 }

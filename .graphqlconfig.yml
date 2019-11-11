@@ -1,7 +1,0 @@
-# .graphqlconfig.yml
-projects:
-  prod:
-    schemaPath: schema/schema.graphql
-    extensions:
-      endpoints:
-        default: http://127.0.0.1:8082/___explore

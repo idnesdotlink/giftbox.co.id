@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "dev": {
+      "schemaPath": "./src/schema/dev.graphql",
+      "includes": [
+        "./src/**/*.vue"
+      ],
+      "extensions": {
+        "endpoints": {
+          "default": "http://localhost:8082/___graphql"
+        }
+      }
+    }
+  }
+}
