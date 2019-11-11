@@ -1,12 +1,6 @@
 <template>
   <Layout>
     <template #header="{hallo}">
-      <nav class="clnk">
-        <div class="container mx-auto flex flex-row justify-start">
-          <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fa fa-phone"></i> {{ hallo }}</p>
-          <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fab fa-whatsapp font-medium"></i> +62 878 123 456</p>
-        </div>
-      </nav>
       <div
         class="page-header"
         v-ov="psg"
@@ -19,6 +13,16 @@
               src="../../static/images/giftbox-logo.svg"
               class=""
             ></a>
+          <nav class="clnk">
+            <div class="container mx-auto flex flex-row justify-start">
+              <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fa fa-phone"></i> {{ hallo }}</p>
+              <p class="px-6 py-1 lnk1 text-sm font-sans"><i class="fab fa-whatsapp font-medium"></i> +62 878 123 456</p>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="page-nav">
+        <div class="container">
           <nav>
             <ul class="flex www">
               <li>
@@ -31,7 +35,6 @@
           </nav>
         </div>
       </div>
-      <div class="page-nav">[nav]</div>
     </template>
     <template #default>
       <div class="lo">
@@ -45,13 +48,11 @@
   </Layout>
 </template>
 
-<style lang="postcss">
+<style>
 .clnk {
-  @apply bg-giftbox;
-  border-bottom: 1px solid #ccc;
 }
 .lnk1 {
-  @apply text-white;
+  @apply text-giftbox;
 }
 .lnk1:hover {
   @apply text-accent;
@@ -59,10 +60,6 @@
 .clnk .lnk1 {
   border-right: 1px solid #ccc;
 }
-.clnk .lnk1:first-child {
-  border-left: 1px solid #ccc;
-}
-
 .top-header {
   @apply mx-auto text-center;
   height: 30px;
@@ -80,6 +77,15 @@
 .page-header {
   @apply w-full bg-white;
   border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+}
+.page-header::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10px;
+  content: " ";
+  background: blue;
 }
 .fixed-header .page-nav {
   position: fixed;
