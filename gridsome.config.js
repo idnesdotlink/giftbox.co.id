@@ -2,22 +2,23 @@ const tailwind = require("tailwindcss");
 const purgecss = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
 // const autoprefixer = require("autoprefixer");
-const csspresetenv = require("postcss-preset-env");
+const postcsspresetenv = require("postcss-preset-env");
 const stylelint = require("stylelint");
 const postcssreporter = require("postcss-reporter");
 const postcssimport = require("postcss-import");
 
 const postcssPlugins = [
   postcssimport(),
-  csspresetenv({ stage: 1 }),
+  postcsspresetenv({ stage: 1 }),
   tailwind(),
+  cssnano(),
   stylelint(),
   postcssreporter({ clearReportedMessages: true })
 ];
 
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(purgecss());
-  postcssPlugins.push(cssnano());
+  // postcssPlugins.push(cssnano());
 }
 
 const dev = false;

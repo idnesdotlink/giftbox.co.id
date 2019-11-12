@@ -4,6 +4,7 @@ const yaml = require("js-yaml");
 
 module.exports = function(api) {
   api.chainWebpack(config => {
+    console.log(config);
     config.mode("development");
   });
 
