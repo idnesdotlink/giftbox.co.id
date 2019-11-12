@@ -4,37 +4,8 @@ const yaml = require("js-yaml");
 
 module.exports = function(api) {
   api.chainWebpack(config => {
-    console.log(config);
     config.mode("development");
   });
-
-  // api.configureWebpack(config => {
-  //   return merge(
-  //     {
-  //       module: {
-  //         rules: [
-  //           {
-  //             test: /\.s[ac]ss$/i,
-  //             use: [
-  //               "style-loader",
-  //               "css-loader",
-  //               {
-  //                 loader: "sass-loader",
-  //                 options: {
-  //                   implementation: require("sass"),
-  //                   sassOptions: {
-  //                     fiber: require("fibers")
-  //                   }
-  //                 }
-  //               }
-  //             ]
-  //           }
-  //         ]
-  //       }
-  //     },
-  //     config
-  //   );
-  // });
 
   api.loadSource(async ({ addCollection }) => {
     const tagsPath = path.join(__dirname, "content/tags/tags.yaml");
@@ -92,29 +63,13 @@ module.exports = function(api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api
   });
 
-  api.configureWebpack(conf => {
-    const { rules } = conf.module;
-    const pcss = rules.find((v, i) => {
-      const test = `${v.test}`;
-      return test === "/\\.p(ost)?css$/";
-    });
-    console.log(pcss.oneOf[1].use);
-    return conf;
-  });
-
-  api.beforeBuild(api => {
-    console.log("before build");
-    api.configureWebpack(conf => {
-      const { rules } = conf.module;
-      console.log(rules);
-      // const scss = rules.find((v, i) => {
-      //   const test = `${v.test}`;
-      //   return test === "/\\.scss$/";
-      // });
-      // const scssloader = scss.oneOf[1].use.find((v, i) => {
-      //   return v.loader === "sass-loader";
-      // });
-      // console.log(scssloader);
-    });
-  });
+  // api.configureWebpack(conf => {
+  //   const { rules } = conf.module;
+  //   const pcss = rules.find((v, i) => {
+  //     const test = `${v.test}`;
+  //     return test === "/\\.p(ost)?css$/";
+  //   });
+  //   console.log(pcss.oneOf[1].use);
+  //   return conf;
+  // });
 };

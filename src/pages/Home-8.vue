@@ -26,7 +26,7 @@
         <div class="page-nav">
           <div class="container mx-auto">
             <nav>
-              <ul class="flex www">
+              <ul class="www">
                 <li>
                   <a class="p-2">Home</a>
                 </li>
@@ -114,6 +114,12 @@
 }
 .fixed-header .lo {
   margin-top: 50px;
+}
+.www {
+  @apply flex;
+}
+.www a:hover {
+  @apply bg-accent text-white;
 }
 </style>
 

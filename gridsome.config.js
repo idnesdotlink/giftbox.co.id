@@ -1,26 +1,3 @@
-const tailwind = require("tailwindcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
-const cssnano = require("cssnano");
-// const autoprefixer = require("autoprefixer");
-const postcsspresetenv = require("postcss-preset-env");
-const stylelint = require("stylelint");
-const postcssreporter = require("postcss-reporter");
-const postcssimport = require("postcss-import");
-
-const postcssPlugins = [
-  postcssimport(),
-  postcsspresetenv({ stage: 1 }),
-  tailwind(),
-  cssnano(),
-  stylelint(),
-  postcssreporter({ clearReportedMessages: true })
-];
-
-if (process.env.NODE_ENV === "production") {
-  postcssPlugins.push(purgecss());
-  // postcssPlugins.push(cssnano());
-}
-
 const dev = false;
 const siteUrl = dev ? "http://127.0.0.1:8002;" : "http://giftbox.idnes.xyz";
 const pathPrefix = ""; // "giftbox.co.id";
@@ -134,12 +111,14 @@ module.exports = {
       .use("eslint")
       .loader("eslint-loader");
 
-    // const Pcss = config.module.rule("pcss");
-    // Pcss.test(/\.pcss$/)
-    //   .include.add(require("path").resolve("./src"))
-    //   .end()
-    //   .use("postcss")
-    //   .loader("postcss-loader");
+    const PostCss = config.module.rule("postcss");
+    PostCss.oneOf("normal")
+      .use("postcss-loader")
+      .tap(options => {
+        options.plugins = require("./config/postcss");
+
+        return options;
+      });
   },
   css: {
     loaderOptions: {
@@ -148,10 +127,6 @@ module.exports = {
         sassOptions: {
           fiber: require("fibers")
         }
-      },
-      postcss: {
-        exclude: /node_modules/,
-        plugins: postcssPlugins
       }
     }
   }
