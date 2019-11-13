@@ -6,14 +6,16 @@
           class="page-header"
           v-ov="psg"
         >
-          <div class="container mx-auto flex flex-row ct">
-            <a
-              href="/"
-              class="home-link"
-            ><img
-                src="../../static/images/giftbox-logo.svg"
-                class=""
-              ></a>
+          <div class="container mx-auto flex md:flex-row flex-col ct">
+            <div class="logo">
+              <a
+                href="/"
+                class="home-link"
+              ><img
+                  src="../../static/images/giftbox-logo.svg"
+                  class=""
+                ></a>
+            </div>
             <nav class="clnk">
               <div class="container mx-auto flex flex-row justify-start">
                 <p class="lnk1"><i class="fab fa-instagram"></i> @giftboxpromo</p>
@@ -79,7 +81,7 @@
 }
 .ct {
   @apply flex items-center justify-between bg-white w-full;
-  height: 60px;
+  height: auto;
 }
 .page-nav {
   @apply w-full text-giftbox bg-white;
@@ -120,6 +122,10 @@
 }
 .www a:hover {
   @apply bg-accent text-white;
+}
+.logo {
+  @apply w-auto h-full;
+  min-height: 50px;
 }
 </style>
 
