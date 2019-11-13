@@ -1,3 +1,6 @@
+// import pcss from "./config/postcss";
+const pcss = require("./config/postcss");
+const WebpackBar = require("webpackbar");
 const dev = false;
 const siteUrl = dev ? "http://127.0.0.1:8002;" : "http://giftbox.idnes.xyz";
 const pathPrefix = ""; // "giftbox.co.id";
@@ -102,6 +105,7 @@ module.exports = {
     // const svgRule = config.module.rule("svg");
     // svgRule.uses.clear();
     // svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+    config.plugin("webpackbar").use(new WebpackBar());
     const Lint = config.module.rule("lint");
     // eslint-disable-next-line no-console
     Lint.test(/\.js$/)
@@ -115,8 +119,7 @@ module.exports = {
     PostCss.oneOf("normal")
       .use("postcss-loader")
       .tap(options => {
-        options.plugins = require("./config/postcss");
-
+        options.plugins = pcss;
         return options;
       });
   },

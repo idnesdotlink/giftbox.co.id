@@ -2,24 +2,21 @@
   <Layout>
     <template #header="{hallo}">
       <div class="wow">
-        <div
-          class="page-header"
-          v-ov="psg"
-        >
+        <div class="page-header" v-ov="psg">
           <div class="container mx-auto flex md:flex-row flex-col ct">
             <div class="logo">
-              <a
-                href="/"
-                class="home-link"
-              ><img
-                  src="../../static/images/giftbox-logo.svg"
-                  class=""
-                ></a>
+              <a href="/" class="home-link"
+                ><img src="../../static/images/giftbox-logo.svg" class=""
+              /></a>
             </div>
             <nav class="clnk">
               <div class="container mx-auto flex flex-row justify-start">
-                <p class="lnk1"><i class="fab fa-instagram"></i> @giftboxpromo</p>
-                <p class="lnk1"><i class="fab fa-whatsapp font-medium"></i> +62 878 123 456</p>
+                <p class="lnk1">
+                  <i class="fab fa-instagram"></i> @giftboxpromo
+                </p>
+                <p class="lnk1">
+                  <i class="fab fa-whatsapp font-medium"></i> +62 878 123 456
+                </p>
                 <p class="lnk1">Download Catalog</p>
               </div>
             </nav>
@@ -30,10 +27,10 @@
             <nav>
               <ul class="www">
                 <li>
-                  <a class="p-2">Home</a>
+                  <a>Home</a>
                 </li>
                 <li>
-                  <a class="p-2">Products</a>
+                  <a>Products</a>
                 </li>
               </ul>
             </nav>
@@ -84,8 +81,29 @@
   height: auto;
 }
 .page-nav {
-  @apply w-full text-giftbox bg-white;
+  @apply w-full;
   margin-bottom: 30px;
+}
+.page-nav ul {
+  @apply flex;
+}
+.page-nav a {
+  @apply block p-2 relative;
+}
+.page-nav a::after {
+}
+.page-nav a:hover {
+  @apply bg-accent;
+}
+.page-nav a:hover::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: blue;
 }
 .page-header {
   @apply w-full bg-white;
@@ -117,12 +135,6 @@
 .fixed-header .lo {
   margin-top: 50px;
 }
-.www {
-  @apply flex;
-}
-.www a:hover {
-  @apply bg-accent text-white;
-}
 .logo {
   @apply w-auto h-full;
   min-height: 50px;
@@ -130,10 +142,10 @@
 </style>
 
 <script>
-import Layout from '../layouts/Layout5'
-import Slider1 from '@/components/Slider-1'
-import LayoutFooter from '@/components/LayoutFooter'
-import {ObserveVisibility} from '@/directives/observe-visibility'
+import Layout from "../layouts/Layout5";
+import Slider1 from "@/components/Slider-1";
+import LayoutFooter from "@/components/LayoutFooter";
+import { ObserveVisibility } from "@/directives/observe-visibility";
 export default {
   components: {
     Layout,
@@ -143,35 +155,35 @@ export default {
   directives: {
     ov: ObserveVisibility
   },
-  data () {
+  data() {
     return {
       intersectionOptions: undefined,
       psg: false
-    }
+    };
   },
-  mounted () {
+  mounted() {
     this.intersectionOptions = {
       root: null,
-      rootMargin: '-1px',
+      rootMargin: "-1px",
       threshold: 0
-    }
+    };
     this.psg = {
       callback: this.visibilityChanged,
-      intersection: this.intersectionOptions,
-    }
+      intersection: this.intersectionOptions
+    };
   },
-  destroyed () {
-    this.active = false
-    this.intersectionOptions = undefined
+  destroyed() {
+    this.active = false;
+    this.intersectionOptions = undefined;
   },
   methods: {
-    visibilityChanged (isVisible, entry) {
-      console.log()
-      if (!isVisible) this.$root.$el.parentNode.classList.add('fixed-header')
-      else this.$root.$el.parentNode.classList.remove('fixed-header')
+    visibilityChanged(isVisible, entry) {
+      console.log();
+      if (!isVisible) this.$root.$el.parentNode.classList.add("fixed-header");
+      else this.$root.$el.parentNode.classList.remove("fixed-header");
     }
   }
-}
+};
 </script>
 
 <page-query>
