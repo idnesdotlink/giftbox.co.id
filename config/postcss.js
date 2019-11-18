@@ -5,6 +5,7 @@ const postcsspresetenv = require("postcss-preset-env");
 // const stylelint = require("stylelint");
 // const postcssreporter = require("postcss-reporter");
 const postcssimport = require("postcss-import");
+const hexrgba = require("postcss-hexrgba");
 
 // export {
 //   tailwind,
@@ -19,7 +20,8 @@ const postcssimport = require("postcss-import");
 const PostCssPlugins = [
   postcssimport(),
   tailwind(),
-  postcsspresetenv({ stage: 1 })
+  postcsspresetenv({ stage: 1 }),
+  hexrgba()
 ];
 
 if (process.env.NODE_ENV === "production") {

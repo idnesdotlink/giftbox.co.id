@@ -6,6 +6,8 @@ const siteUrl = dev ? "http://127.0.0.1:8002;" : "http://giftbox.idnes.xyz";
 const pathPrefix = ""; // "giftbox.co.id";
 const fullSiteUrl = siteUrl + (pathPrefix ? "/" + pathPrefix : "");
 
+const { srcPath, rootPath } = require("./config/shared");
+
 module.exports = {
   siteName: "Giftbox Promosindo",
   siteUrl: siteUrl,
@@ -105,6 +107,7 @@ module.exports = {
     // const svgRule = config.module.rule("svg");
     // svgRule.uses.clear();
     // svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+    console.log({ rootPath, srcPath });
     config.plugin("webpackbar").use(new WebpackBar());
     const Lint = config.module.rule("lint");
     // eslint-disable-next-line no-console
