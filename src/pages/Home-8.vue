@@ -95,7 +95,7 @@
   max-height: 30px;
 }
 .lnk1 {
-  @apply text-giftbox px-6 py-1 lnk1 text-sm font-sans;
+  @apply text-giftbox px-6 py-1 lnk1 text-xs font-sans;
 }
 .lnk1:hover {
   @apply text-accent;
