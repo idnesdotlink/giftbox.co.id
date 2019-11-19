@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs-extra");
 const yaml = require("js-yaml");
 
+/** @type import('@tyankatsu0105/types-gridsome').Server */
 module.exports = function(api) {
   api.chainWebpack(config => {
     config.mode("development");

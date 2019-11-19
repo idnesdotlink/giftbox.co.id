@@ -8,6 +8,7 @@ const fullSiteUrl = siteUrl + (pathPrefix ? "/" + pathPrefix : "");
 
 const { srcPath, rootPath } = require("./config/shared");
 
+/** @type import('@tyankatsu0105/types-gridsome').Config */
 module.exports = {
   siteName: "Giftbox Promosindo",
   siteUrl: siteUrl,
