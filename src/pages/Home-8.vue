@@ -114,7 +114,7 @@
   line-height: 30px;
 }
 .ct {
-  @apply flex items-center justify-between bg-white w-full;
+  @apply flex items-center justify-between w-full;
   height: auto;
 }
 .page-nav {
@@ -170,7 +170,6 @@
   width: auto;
 }
 .lo {
-  margin-top: -120px;
   z-index: 0;
 }
 .fixed-header .lo {
