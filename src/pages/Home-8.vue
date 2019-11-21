@@ -139,19 +139,19 @@
   @apply block p-2 relative;
 }
 .page-nav a::after {
-}
-.page-nav a:hover {
-}
-.page-nav a:hover::after {
   @apply bg-gradient-nine-one;
   content: " ";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 0;
   height: 3px;
   z-index: 2;
+  transition: width 0.3s;
+}
+.page-nav a:hover::after {
+  width: 100%;
 }
 .page-header {
   @apply w-full;
