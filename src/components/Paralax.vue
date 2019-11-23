@@ -6,6 +6,7 @@
 
 <script>
 import Rellax from 'rellax';
+import Parallax from 'parallax-js';
 
   export default {
     data () {
@@ -14,7 +15,10 @@ import Rellax from 'rellax';
       }
     },
     mounted () {
-      this.rellax = new Rellax(this.$el);
+      console.log()
+      this.rellax = new Parallax(this.$el, {
+        wrapper: this.$el.parentElement
+      });
     },
     destroyed () {
       this.rellax.destroy();
