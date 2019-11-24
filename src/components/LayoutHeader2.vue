@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="postcss" scoped>
 .header-try {
   @apply absolute top-0 left-0 right-0 h-16 z-10;
   background-color: rgba(255, 255, 255, 0.5);
@@ -35,9 +35,9 @@ export default {
 }
 .active .header-try {
   @apply fixed h-10;
-  // height: 40px;
+  /* height: 40px; */
   background-color: rgba(37, 114, 255, 0.5);
-  // animation: header-fixed 0.3s forwards;
+  /* animation: header-fixed 0.3s forwards; */
 }
 .home-link,
 .home-link img {

@@ -1,4 +1,6 @@
-import { processOptions, throttle, deepEqual } from "./utils";
+import { processOptions } from "./utils";
+import throttle from "lodash.throttle";
+import deepEqual from "fast-deep-equal";
 
 class VisibilityState {
   constructor(el, options, vnode) {

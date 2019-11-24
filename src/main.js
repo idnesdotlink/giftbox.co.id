@@ -11,6 +11,7 @@ import "material-design-icons/iconfont/material-icons.css";
 import "typeface-open-sans";
 import "typeface-montserrat";
 import "./main.postcss";
+import { scrollCheck } from "./directives/scrollCheck";
 
 // eslint-disable-next-line no-unused-vars
 export default function(Vue, { router, head, isClient }) {
@@ -34,6 +35,7 @@ export default function(Vue, { router, head, isClient }) {
     // const VueWaypoint = require("vue-waypoint").default;
     Vue.use(VTooltip);
     Vue.use(VModal);
+    Vue.directive("scroll-check", scrollCheck);
     // Vue.use(VueWaypoint);
   }
   head.htmlAttrs = {

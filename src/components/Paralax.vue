@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Rellax from 'rellax';
+import Rellax from "../directives/parallax/rellax";
 
   export default {
     data () {
