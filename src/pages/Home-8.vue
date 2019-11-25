@@ -1,57 +1,7 @@
 <template>
   <Layout>
     <template #header="{hallo}">
-      <div class="wow">
-        <div
-          class="page-header"
-          v-ov="psg"
-        >
-          <div class="container mx-auto flex md:flex-row flex-col ct">
-            <div class="logo">
-              <a
-                href="/"
-                class="home-link"
-              ><img
-                  src="../../static/images/giftbox-logo3.svg"
-                  class=""
-                /></a>
-            </div>
-            <nav class="clnk">
-              <div class="container mx-auto flex flex-row justify-start">
-                <p class="lnk1">
-                  Jl. BKR No.145, Kota Bandung, Jawa Barat.
-                </p>
-                <p class="lnk1">
-                  <SvgInstagram />
-                  @giftboxpromo
-                </p>
-                <p class="lnk1">
-                  <SvgWhatsapp />
-                  +62 878 123 456
-                </p>
-                <p class="lnk1">
-                  <SvgDownload />
-                  Download Catalog
-                </p>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="page-nav">
-          <div class="container mx-auto">
-            <nav>
-              <ul class="www">
-                <li>
-                  <a>Home</a>
-                </li>
-                <li>
-                  <a>Products</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <SiteHeader />
     </template>
     <template #default>
       <div class="lo">
@@ -77,7 +27,7 @@
 </template>
 
 <style lang="postcss">
-.wow {
+.site-header {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   z-index: 10;
   position: relative;
@@ -183,7 +133,8 @@ import Paralax from '../components/Paralax';
 import SvgInstagram from '../components/SvgInstagram';
 import SvgWhatsapp from '../components/SvgWhatsapp';
 import SvgDownload from '../components/SvgDownload';
-import ParallaxDirective from '../directives/parallax/directive'
+import ParallaxDirective from '../directives/parallax/directive';
+import SiteHeader from '../components/SiteHeader';
 export default {
   components: {
     Layout,
@@ -192,10 +143,10 @@ export default {
     Paralax,
     SvgInstagram,
     SvgWhatsapp,
-    SvgDownload
+    SvgDownload,
+    SiteHeader
   },
   directives: {
-    ov: ObserveVisibility,
     parallax: ParallaxDirective
   },
   data() {
@@ -204,28 +155,9 @@ export default {
       psg: false
     };
   },
-  mounted() {
-    this.intersectionOptions = {
-      root: null,
-      rootMargin: "-1px",
-      threshold: 0
-    };
-    this.psg = {
-      callback: this.visibilityChanged,
-      intersection: this.intersectionOptions
-    };
-  },
   destroyed() {
     this.active = false;
-    this.intersectionOptions = undefined;
   },
-  methods: {
-    visibilityChanged(isVisible, entry) {
-      console.log();
-      if (!isVisible) this.$root.$el.parentNode.classList.add("fixed-header");
-      else this.$root.$el.parentNode.classList.remove("fixed-header");
-    }
-  }
 };
 </script>
 

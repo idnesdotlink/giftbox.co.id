@@ -12,14 +12,17 @@ import "typeface-open-sans";
 import "typeface-montserrat";
 import "./main.postcss";
 import { scrollCheck } from "./directives/scrollCheck";
+import bodyClassList from "./plugins/bodyClassList";
 
 // eslint-disable-next-line no-unused-vars
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
+  Vue.mixin(bodyClassList);
   Vue.component("Layout", DefaultLayout);
   Vue.use(PortalVue);
   Vue.use(VueAgile);
   Vue.use(VueLazyload);
+  Vue.use(bodyClassList);
   if (isClient) {
     // eslint-disable-next-line no-unused-vars
     import("vue2-storage").then(m => {});
