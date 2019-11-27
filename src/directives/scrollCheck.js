@@ -14,24 +14,20 @@ const x = function(el) {
   return rect.top + scrollTop;
 };
 
-const test = function() {
-  // throttle(() => {
-  // console.log(x(y));
-  // }, 10);
+const wow = function() {
+  console.log("throttled");
 };
+
+const test = throttle(wow, 1000);
 
 const scrollCheck = {
   bind: function(el, binding, vNode) {
-    console.log("bind");
     y = vNode.elm;
-    // console.log(vNode.elm);
-    // el.setAttribute("style", "background-color: red;");
-    window.addEventListener("scroll", test);
+    window.addEventListener("scroll", test, { passive: true });
   },
   unbind: function(el, binding) {
-    console.log("unbind");
     y = undefined;
-    window.removeEventListener("scroll", test);
+    window.removeEventListener("scroll", test, { passive: true });
   },
 
   inserted: function(el) {},

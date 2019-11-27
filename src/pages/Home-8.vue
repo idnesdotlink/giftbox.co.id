@@ -5,13 +5,10 @@
     </template>
     <template #default>
       <div class="lo">
-        <!-- <Paralax>
-          <img src="../../static/images/b3.jpg" />
-        </Paralax> -->
-        <img
+        <!-- <img
           v-parallax
           src="../../static/images/b3.jpg"
-        />
+        /> -->
         <Slider1 :products="$page.allProduct.edges" />
         <div
           class="hello"
@@ -27,112 +24,17 @@
 </template>
 
 <style lang="postcss">
-.site-header {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  position: relative;
-}
-.clnk {
-}
-.clnk svg {
-  max-height: 30px;
-}
-.lnk1 {
-  @apply text-giftbox px-6 py-1 lnk1 text-xs font-sans;
-}
-.lnk1:hover {
-  @apply text-accent;
-}
-.clnk .lnk1 {
-  @apply;
-  border-right: 1px solid #ccc;
-}
-.clnk .lnk1:last-child {
-  border-right: 0 none;
-}
-.top-header {
-  @apply mx-auto text-center;
-  height: 30px;
-  background-color: blue;
-  line-height: 30px;
-}
-.ct {
-  @apply flex items-center justify-between w-full;
-  height: auto;
-}
-.page-nav {
-  @apply w-full;
-  position: relative;
-  background: rgba(#fff, 0.7);
-}
-.page-nav::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 3px;
-  background: #cccccc;
-}
-.page-nav ul {
-  @apply flex;
-}
-.page-nav a {
-  @apply block p-2 relative;
-}
-.page-nav a::after {
-  @apply bg-gradient-nine-one;
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  height: 3px;
-  z-index: 2;
-  transition: width 0.3s;
-}
-.page-nav a:hover::after {
-  width: 100%;
-}
-.page-header {
-  @apply w-full;
-  background: rgba(#fff, 0.7);
-}
-.fixed-header .page-nav {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-.home-link,
-.home-link img {
-  height: 100%;
-  max-height: 100%;
-  width: auto;
-}
-.lo {
-  z-index: 0;
-}
 .fixed-header .lo {
   transform: translateY(40px);
-}
-.logo {
-  @apply w-auto h-full;
-  min-height: 50px;
 }
 </style>
 
 <script>
 import Layout from "../layouts/Layout5";
-import Slider1 from "@/components/Slider-1";
-import LayoutFooter from "@/components/LayoutFooter";
+import Slider1 from "../components/Slider-1";
+import LayoutFooter from "../components/LayoutFooter";
 import { ObserveVisibility } from "../directives/observe-visibility";
 import Paralax from '../components/Paralax';
-import SvgInstagram from '../components/SvgInstagram';
-import SvgWhatsapp from '../components/SvgWhatsapp';
-import SvgDownload from '../components/SvgDownload';
 import ParallaxDirective from '../directives/parallax/directive';
 import SiteHeader from '../components/SiteHeader';
 export default {
@@ -141,23 +43,11 @@ export default {
     Slider1,
     LayoutFooter,
     Paralax,
-    SvgInstagram,
-    SvgWhatsapp,
-    SvgDownload,
     SiteHeader
   },
   directives: {
     parallax: ParallaxDirective
-  },
-  data() {
-    return {
-      intersectionOptions: undefined,
-      psg: false
-    };
-  },
-  destroyed() {
-    this.active = false;
-  },
+  }
 };
 </script>
 
