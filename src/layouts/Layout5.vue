@@ -6,6 +6,7 @@
     />
     <slot name="default" />
     <slot name="footer" />
+    <slot name="fab" />
   </div>
 </template>
 

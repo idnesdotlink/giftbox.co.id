@@ -142,8 +142,8 @@ export default {
       active: false,
       scrollTop: 0,
       hidden: true,
-      scrollDirection: null, // 滚动方向 up/down
-      changeDirectionScrollTop: 0, // 改变滚动方向时距离顶部的位置
+      scrollDirection: null,
+      changeDirectionScrollTop: 0,
       touchEventInfo: {
         startY: 0,
         offsetY: 0

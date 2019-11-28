@@ -53,9 +53,6 @@ export default {
   directives: {
     parallax: ParallaxDirective
   },
-  mounted () {
-    console.log(this.hallo)
-  },
   methods: {
     clickItem (e) {
       console.log(e)

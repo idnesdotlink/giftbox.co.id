@@ -27,6 +27,10 @@ export default {
         {
           text: "Product",
           to: "/products"
+        },
+        {
+          text: "Blogs",
+          to: "/blogs"
         }
       ]
     }

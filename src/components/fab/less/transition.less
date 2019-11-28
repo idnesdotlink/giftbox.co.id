@@ -54,7 +54,7 @@
 }
 
 .fab-icon-enter-to {
-  transform: rotate(0deg)
+  transform: rotate(0deg);
 }
 
 .fab-icon-leave {
@@ -67,14 +67,15 @@
   opacity: 0;
 }
 
-.fab-icon-enter, .fab-icon-leave-to {
+.fab-icon-enter,
+.fab-icon-leave-to {
   opacity: 0;
 }
 
-.fab-icon-to, .fab-icon-leave {
+.fab-icon-leave,
+.fab-icon-to {
   opacity: 1;
 }
-
 
 // alive 动画模式
 
@@ -85,8 +86,9 @@
   opacity: 0;
 }
 
-.fab-alive-leave-active, .fab-alive-enter-active {
-  .transition(.3s);  
+.fab-alive-enter-active,
+.fab-alive-leave-active {
+  .transition(.3s);
 }
 
 .fab-alive-enter {
