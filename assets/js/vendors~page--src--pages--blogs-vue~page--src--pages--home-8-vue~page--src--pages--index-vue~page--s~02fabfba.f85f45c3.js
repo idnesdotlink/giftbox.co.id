@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~page--src--pages--index-vue"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~page--src--pages--blogs-vue~page--src--pages--home-8-vue~page--src--pages--index-vue~page--s~02fabfba"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
 /*!****************************************************************!*\
