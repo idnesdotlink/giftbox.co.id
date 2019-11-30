@@ -1,24 +1,23 @@
 <template>
-  <div>
+  <div class="layout-w">
     <slot
-      name="header"
+      name="site-header"
       :hallo="'hallo'"
     />
-    <slot name="default" />
+    <div class="mm">
+      <slot name="default" />
+    </div>
     <slot name="footer" />
     <slot name="fab" />
   </div>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style lang="postcss" scoped>
-div.scroll {
-  height: 100vh;
-  width: 100%;
-  overflow: inherit;
+.layout-w {
+  display: flex;
+  flex-direction: column;
+}
+.mm {
+  flex: 1;
 }
 </style>

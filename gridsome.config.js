@@ -71,7 +71,7 @@ module.exports = {
     },
     {
       use: "gridsome-plugin-modal"
-    },
+    }
     // {
     //   use: "@gridsome/plugin-critical",
     //   options: {
@@ -80,21 +80,21 @@ module.exports = {
     //     height: 900
     //   }
     // }
-    {
-      use: "gridsome-plugin-pwa",
-      options: {
-        title: "giftbox",
-        startUrl: "/",
-        display: "standalone",
-        statusBarStyle: "default",
-        manifestPath: "manifest.json",
-        serviceWorkerPath: "service-worker.js",
-        shortName: "Gridsome",
-        themeColor: "#666600",
-        backgroundColor: "#ffffff",
-        icon: "src/favicon.png" // must be supplied!
-      }
-    }
+    // {
+    //   use: "gridsome-plugin-pwa",
+    //   options: {
+    //     title: "giftbox",
+    //     startUrl: "/",
+    //     display: "standalone",
+    //     statusBarStyle: "default",
+    //     manifestPath: "manifest.json",
+    //     serviceWorkerPath: "service-worker.js",
+    //     shortName: "Gridsome",
+    //     themeColor: "#666600",
+    //     backgroundColor: "#ffffff",
+    //     icon: "src/favicon.png" // must be supplied!
+    //   }
+    // }
   ],
   transformers: {
     // Add markdown support to all file-system sources

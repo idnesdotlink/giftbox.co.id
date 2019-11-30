@@ -1,31 +1,30 @@
 <template>
-  <div>
-    <agile
-      v-cloak
-      :autoplay="true"
-      ref="slide"
-      :slides-to-show="1"
+  <agile
+    v-cloak
+    :autoplay="true"
+    ref="slide"
+    class="coba-slide-class"
+    :slides-to-show="1"
+  >
+    <div
+      v-for="product in products"
+      :key="product.node.id"
     >
-      <div
-        v-for="product in products"
-        :key="product.node.id"
-      >
-        <p class="slide-text">{{ product.node.title }}</p>
-        <!-- <img
+      <p class="slide-text">{{ product.node.title }}</p>
+      <!-- <img
         v-lazy="product.node.image.src"
         class="h-auto w-25"
       /> -->
-        <g-image
-          :src="product.node.image.src"
-          class="slide-image"
-          height="200"
-          width="200"
-        />
-      </div>
-      <template #prevButton>prev</template>
-      <template #nextButton>next</template>
-    </agile>
-  </div>
+      <g-image
+        :src="product.node.image.src"
+        class="slide-image"
+        height="200"
+        width="200"
+      />
+    </div>
+    <template #prevButton>prev</template>
+    <template #nextButton>next</template>
+  </agile>
 </template>
 
 <script>

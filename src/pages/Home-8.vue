@@ -3,7 +3,7 @@
     <template #header="{hallo}">
       <SiteHeader />
     </template>
-    <template #default>
+    <Try #default>
       <div class="lo">
         <!-- <img
           v-parallax
@@ -16,7 +16,7 @@
           style="height: 100vh;"
         >[content]</div>
       </div>
-    </template>
+    </Try>
     <template #footer>
       <LayoutFooter />
     </template>
@@ -41,6 +41,7 @@ import Paralax from '../components/Paralax';
 import ParallaxDirective from '../directives/parallax/directive';
 import SiteHeader from '../components/SiteHeader';
 import SiteFab from "../components/SiteFab";
+import Try from "../components/Try";
 export default {
   components: {
     Layout,
@@ -48,7 +49,8 @@ export default {
     LayoutFooter,
     Paralax,
     SiteHeader,
-    SiteFab
+    SiteFab,
+    Try
   },
   directives: {
     parallax: ParallaxDirective
