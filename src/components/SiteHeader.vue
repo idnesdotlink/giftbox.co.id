@@ -7,12 +7,17 @@
       class="page-header"
       v-ov="psg"
     >
-      <div class="container mx-auto flex md:flex-row flex-col ct">
+      <div class="container mx-auto flex md:flex-row flex-col ct overflow-hidden">
         <SiteLogo />
         <nav class="clnk">
-          <div class="container mx-auto flex flex-row justify-start">
+          <div class="
+          container
+          mx-auto
+          flex
+          flex-row
+          justify-start">
             <div class="lnk1">
-              <p>Jl. BKR No.145, Kota Bandung, Jawa Barat.</p>
+              <p>Jl. BKR No.145, Kota Bandung, Jawa Barat. {{ cnt }}</p>
             </div>
             <div class="lnk1">
               <SvgInstagram />
@@ -41,6 +46,7 @@ import SvgDownload from "../components/SvgDownload";
 import { ObserveVisibility } from "../directives/observe-visibility";
 import SiteLogo from "../components/SiteLogo";
 import SiteNav from "../components/SiteNav";
+import EventBus from '../eventBus';
 export default {
   components: {
     SvgInstagram,
@@ -53,7 +59,8 @@ export default {
     return {
       intersectionOptions: undefined,
       psg: false,
-      classList: []
+      classList: [],
+      cnt: 0
     }
   },
   directives: {
@@ -69,6 +76,7 @@ export default {
       callback: this.visibilityChanged,
       intersection: this.intersectionOptions
     };
+    EventBus.$on("wow", (payload) => this.cnt++);
   },
   methods: {
     visibilityChanged(isVisible, entry) {

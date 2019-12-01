@@ -18,7 +18,7 @@
       v-for="(link, idxs) of links"
       :key="link"
       @clickItem="$router.push(link)"
-      :idx="idxs+2"
+      :idx="idxs+3"
       :title="link"
       icon="https"
     />
@@ -28,12 +28,19 @@
       title="back"
       icon="https"
     />
+    <fab-item
+      @clickItem="wow()"
+      :idx="2"
+      title="wow"
+      icon="https"
+    />
   </fab>
 </template>
 <script>
-import FAB from '@/components/fab/fab.vue'
-import FABItem from '@/components/fab/fab-item.vue'
-import FABContainer from '@/components/fab/fab-container.vue'
+import EventBus from '../eventBus';
+import FAB from '../components/fab/fab.vue'
+import FABItem from '../components/fab/fab-item.vue'
+import FABContainer from '../components/fab/fab-container.vue'
 export default { 
   data () {
     return {
@@ -46,6 +53,11 @@ export default {
     'fab': FAB,
     'fab-item': FABItem,
     'fab-container': FABContainer
+  },
+  methods: {
+    wow () {
+      EventBus.$emit("wow", {data: "hallo"})
+    }
   }
 }
 </script>
