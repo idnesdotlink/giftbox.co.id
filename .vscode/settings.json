@@ -8,10 +8,16 @@
   "less.validate": false,
   "postcss.validate": false,
   "vetur.validation.style": false,
+  "vetur.validation.template": false,
   "vetur.grammar.customBlocks": {
     "docs": "md",
     "i18n": "json",
     "page-query": "graphql",
     "static-query": "graphql"
-  }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "vue", "autoFix": true }
+  ]
 }
