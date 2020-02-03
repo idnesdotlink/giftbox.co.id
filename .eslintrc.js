@@ -6,16 +6,18 @@ module.exports = {
     es6: true
   },
   parserOptions: {
-    parser: "babel-eslint",
+    // parser: "babel-eslint",
     // specifying a module sourcetype prevent eslint from marking import statements as errors
-    sourceType: "module"
+    // sourceType: "module"
+    parser: "@typescript-eslint/parser"
   },
   extends: [
     // add more generic rulesets here, such as:
     "plugin:vue/recommended",
     "eslint:recommended",
     "plugin:prettier-vue/recommended",
-    "prettier/vue"
+    "prettier/vue",
+    "plugin:@typescript-eslint/recommended"
     // "plugin:prettier/recommended"
   ],
 
