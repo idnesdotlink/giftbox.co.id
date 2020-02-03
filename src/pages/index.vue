@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #site-header="{hallo}">
-      <SiteHeader />
+      <SiteHeader :coba="hallo" />
     </template>
     <Try #default>
       <!-- <img

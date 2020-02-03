@@ -66,6 +66,12 @@ export default {
   directives: {
     ov: ObserveVisibility
   },
+  props: {
+    coba: {
+      type: String,
+      default: ""
+    }
+  },
   mounted() {
     this.intersectionOptions = {
       root: null,
