@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es5",
+    "module": "es2015",
     "strict": true,
     "outDir": "./built/",
     "jsx": "preserve",
@@ -11,6 +11,9 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "allowJs": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [

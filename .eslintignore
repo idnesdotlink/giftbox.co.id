@@ -1,2 +1,5 @@
 gridsome.config.js
 gridsome.server.js
+.eslintrc.js
+.d.ts
+dist

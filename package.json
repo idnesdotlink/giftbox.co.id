@@ -83,6 +83,7 @@
     "@gridsome/vue-remark": "0.1.9",
     "@tyankatsu0105/types-gridsome": "^0.6.0",
     "@types/leaflet": "1.5.8",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "@vue/composition-api": "^0.3.4",
     "autoprefixer": "9.7.4",
