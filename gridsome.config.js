@@ -23,6 +23,9 @@ module.exports = {
   },
   plugins: [
     {
+      use: 'gridsome-plugin-typescript',
+    },
+    {
       use: "@gridsome/source-filesystem",
       options: {
         path: "content/posts/**/*.md",

@@ -32,10 +32,11 @@
     ]
   },
   "include": [
-    "src/*.ts",
     "src/*.vue",
-    "src/**/*.ts",
-    "src/**/*.vue"
+    "src/pages/*.vue",
+    "src/templates/*.vue",
+    "src/components/*.vue",
+    "src/components/**/*.vue",
   ],
   "exclude": [
   ]
